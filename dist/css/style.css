@@ -204,3 +204,137 @@ input {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.about-us {
+  padding: 0 35px;
+}
+
+.top-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-container .img {
+  margin-left: 4.21%;
+}
+
+.top-container .content {
+  position: relative;
+  margin-top: 150px;
+}
+
+.top-container .content .bg {
+  width: 461px;
+  height: 461px;
+  border: 1px solid #0E5C6D;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 34px;
+  left: 56px;
+}
+
+.top-container .content .title {
+  font-size: 62px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.top-container .content .title:after {
+  content: "";
+  position: absolute;
+  left: -138px;
+  top: -56px;
+  width: 299px;
+  height: 299px;
+  background: #0E5C6D;
+  -webkit-filter: blur(149px);
+          filter: blur(149px);
+  z-index: -1;
+}
+
+.top-container .content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 80px;
+}
+
+.top-container .content .text span {
+  display: block;
+  margin-right: 30px;
+  font-size: 12px;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.top-container .content .text p {
+  max-width: 375px;
+}
+
+.bottom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.bottom-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 15.93%;
+}
+
+.bottom-container .content .bg {
+  width: 638px;
+  height: 638px;
+  border-radius: 50%;
+  background: rgba(14, 92, 109, 0.07);
+  position: absolute;
+  left: 2.42%;
+  top: -231px;
+  z-index: -1;
+}
+
+.bottom-container .content q {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 408px;
+  margin-bottom: 25px;
+}
+
+.bottom-container .content span {
+  display: block;
+  color: #bbbbbb;
+}
+
+.bottom-container .img {
+  width: 384px;
+  height: 316px;
+}
+
+.bottom-container .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
