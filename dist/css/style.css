@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #1f2125;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: "Helvetica", sans-serif;
+}
+
+button,
+textarea,
+input {
+  outline: none;
+}
+
+.h-line {
+  width: 74px;
+  margin-right: 30px;
+  border-top: 1px solid #007893;
+  margin-top: 5px;
+}
+
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.hero-content {
+  width: 58.83%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2.34%;
+  padding-top: 9%;
+}
+
+.hero-date {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 70px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 133px;
+}
+
+.hero-text p {
+  max-width: 475px;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 86px;
+  right: 50px;
+  z-index: 5;
+}
+
+.hero-btn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.hero-btn button:hover {
+  cursor: pointer;
+}
+
+.hero-btn button:hover .icon {
+  background: #0E5C6D;
+}
+
+.hero-btn button:hover .icon svg {
+  -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.hero-btn button .text {
+  font-size: 16px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #fff;
+  margin-right: 16px;
+}
+
+.hero-btn button .icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.hero-btn button .icon svg {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.swiper-hero-thumb {
+  height: 203px;
+  margin-right: 11.02%;
+}
+
+.swiper-hero-thumb-slide .slide-img {
+  width: 178px;
+  height: 178px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.swiper-hero-thumb-slide .slide-img:hover {
+  cursor: pointer;
+}
+
+.swiper-hero-thumb-slide .slide-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-hero-thumb-slide .slide-img .img-caption {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.swiper-hero-thumb-slide.swiper-slide-thumb-active .slide-img {
+  height: 203px;
+}
+
+.swiper-hero-thumb-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.swiper-hero {
+  height: 100%;
+  width: 41.17%;
+}
+
+.swiper-hero-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-hero-slide .slide-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

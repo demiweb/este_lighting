@@ -1,0 +1,164 @@
+@import "../common/vars";
+
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  position: relative;
+}
+
+.hero- {
+  &content {
+    width: 58.83%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.34%;
+    padding-top: 9%;
+  }
+
+  &date {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &title {
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &text {
+    display: flex;
+    margin-bottom: 133px;
+
+    p {
+      max-width: 475px;
+    }
+  }
+
+  &btn {
+    position: absolute;
+    bottom: 86px;
+    right: 50px;
+    z-index: 5;
+
+    button {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+
+        .icon {
+          background: $color-2;
+
+          svg {
+            transform: translateX(20px);
+          }
+        }
+      }
+
+      .text {
+        font-size: 16px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: #fff;
+        margin-right: 16px;
+      }
+
+      .icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        display: flex;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s ease;
+
+        svg {
+          transition: all .4s ease;
+        }
+      }
+    }
+  }
+}
+
+.swiper-hero-thumb {
+  height: 203px;
+  margin-right: 11.02%;
+
+  &-wrapper {
+
+  }
+
+  &-slide {
+    .slide-img {
+      width: 178px;
+      height: 178px;
+      position: relative;
+      transition: all .4s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .img-caption {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+    }
+
+
+    &.swiper-slide-thumb-active {
+      .slide-img {
+        height: 203px;
+      }
+    }
+  }
+}
+
+.swiper-hero-thumb-slide {
+  display: flex;
+  align-items: flex-end;
+}
+
+.swiper-hero {
+  height: 100%;
+  width: 41.17%;
+}
+
+.swiper-hero-wrapper {
+
+}
+
+.swiper-hero-slide {
+  width: 100%;
+  height: 100%;
+
+  .slide-img {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
