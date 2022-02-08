@@ -49,14 +49,16 @@
 
 .swiper-gallery-wrapper {
   padding-bottom: 100px;
-  padding-top: 20px;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-gallery-slide {
   transition: all .4s ease;
   display: flex;
   justify-content: center;
-
+  width: 16.64% !important;
   &:hover {
     cursor: pointer;
   }
@@ -67,8 +69,14 @@
   }
 }
 
-.swiper-gallery-slide.swiper-slide-next,  {
-
+.swiper-gallery-slide.swiper-slide {
+  &-prev, &-next {
+    width: 22.10% !important;
+  }
+  &-prev {
+  }
+  &-next {
+  }
 }
 
 .swiper-gallery-slide.swiper-slide-prev {
@@ -76,6 +84,6 @@
 }
 
 .swiper-gallery-slide.swiper-slide-active {
-
+  width: 30.15% !important;
 }
 

@@ -640,7 +640,13 @@ input {
 
 .swiper-gallery-wrapper {
   padding-bottom: 100px;
-  padding-top: 20px;
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .swiper-gallery-slide {
@@ -653,6 +659,7 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 16.64% !important;
 }
 
 .swiper-gallery-slide:hover {
@@ -662,6 +669,15 @@ input {
 .swiper-gallery-slide img {
   width: 100%;
   height: 100%;
+}
+
+.swiper-gallery-slide.swiper-slide-prev,
+.swiper-gallery-slide.swiper-slide-next {
+  width: 22.1% !important;
+}
+
+.swiper-gallery-slide.swiper-slide-active {
+  width: 30.15% !important;
 }
 
 @media screen and (max-width: 1440px) {
