@@ -1,0 +1,81 @@
+@import "../common/vars";
+
+.gallery {
+  padding-top: 100px;
+  overflow-x: hidden;
+}
+
+.gallery-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-left: 31px;
+  }
+
+  span {
+    display: block;
+    font-size: 185px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: transparent;
+    -webkit-text-stroke: 1px $color-2;
+    margin-right: -159px;
+  }
+}
+
+.swiper-gallery {
+  position: relative;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.swiper-gallery-wrapper {
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.swiper-gallery-slide {
+  transition: all .4s ease;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.swiper-gallery-slide.swiper-slide-next,  {
+
+}
+
+.swiper-gallery-slide.swiper-slide-prev {
+
+}
+
+.swiper-gallery-slide.swiper-slide-active {
+
+}
+

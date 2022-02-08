@@ -12,8 +12,8 @@
     width: 58.83%;
     display: flex;
     flex-direction: column;
-    padding-left: 2.34%;
     padding-top: 9%;
+    padding-left: 8.33%;
   }
 
   &date {
@@ -46,11 +46,10 @@
     right: 50px;
     z-index: 5;
 
-    button {
+    a {
       display: flex;
       align-items: center;
-      background: transparent;
-      border: none;
+      text-decoration: none;
 
       &:hover {
         cursor: pointer;
@@ -92,19 +91,21 @@
 }
 
 .swiper-hero-thumb {
-  height: 203px;
-  margin-right: 11.02%;
-
+  width: 100%;
+  padding-right: 6.48%;
+  padding-left: 104px;
   &-wrapper {
 
   }
 
   &-slide {
     .slide-img {
-      width: 178px;
-      height: 178px;
+      width: 100%;
+      padding-top: 100%;
+      height: 0;
       position: relative;
       transition: all .4s ease;
+      overflow: hidden;
 
       &:hover {
         cursor: pointer;
@@ -114,6 +115,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .img-caption {
@@ -129,7 +133,7 @@
 
     &.swiper-slide-thumb-active {
       .slide-img {
-        height: 203px;
+        padding-top: 110%;
       }
     }
   }

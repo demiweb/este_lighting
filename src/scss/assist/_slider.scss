@@ -1,0 +1,185 @@
+@import "../common/vars";
+
+.swiper-pagination-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  color: transparent;
+  opacity: 1;
+  background: #fff;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: rgba(75, 77, 82, 1);
+  z-index: 4;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    animation: mask-right 5s steps(1, end) forwards;
+    z-index: 3;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(75, 77, 82, 1);
+    animation: mask-left 5s steps(1, end) forwards;
+    z-index: 3;
+  }
+
+  span {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 2px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.swiper-pagination-bullet-active .swiper-pagination-bullet-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: line 5s linear forwards;
+  z-index: 2;
+
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+  }
+}
+
+.swiper-button-custom- {
+  &prev, &next {
+    width: 59px;
+    height: 59px;
+    transition: all .4s ease;
+
+    &:after {
+      content: none;
+      position: absolute;
+      top: -4px;
+      transition: all .6s ease;
+    }
+
+    span {
+      color: transparent;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1.2;
+      transition: all .5s ease;
+    }
+
+    &:hover {
+      span {
+        color: #fff;
+        padding: 39px;
+        background: $color-2;
+      }
+    }
+  }
+
+  &prev {
+    left: 13.20%;
+
+    &:after {
+      content: url("../img/svg/arrow-left-1.svg");
+      left: -30%;
+    }
+
+    &:hover {
+      &:after {
+        left: -70%;
+      }
+    }
+  }
+
+  &next {
+    right: 13.20%;
+
+    &:after {
+      content: url("../img/svg/arrow-right-2.svg");
+      right: -30%;
+    }
+
+    &:hover {
+      &:after {
+        right: -70%;
+      }
+    }
+  }
+}
+
+@keyframes line {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mask-right {
+  0% {
+    visibility: hidden;
+  }
+  50%,
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes mask-left {
+  0% {
+    visibility: visible;
+  }
+  50%,
+  100% {
+    visibility: hidden;
+  }
+}

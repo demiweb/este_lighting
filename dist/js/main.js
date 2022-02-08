@@ -47,11 +47,46 @@ new Swiper('.swiper-hero', {
     speed: 1000,
     direction: 'horizontal',
     loop: true,
-    clickable: false,
     thumbs: {
         swiper: {
             el: '.swiper-hero-thumb',
             slidesPerView: 3,
         }
     }
+})
+
+new Swiper('.swiper-gallery', {
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 30,
+    },
+    speed: 1000,
+    direction: 'horizontal',
+    slidesPerView: 3,
+    centeredSlides: true,
+    autoplay: {
+        delay: 4000,
+    },
+    slideToClickedSlide: true,
+    loop: true,
+
+    navigation: {
+        prevEl: '.swiper-gallery .swiper-button-prev',
+        nextEl: '.swiper-gallery .swiper-button-next',
+    },
+
+    pagination: {
+        el: '.swiper-gallery .swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<div class="' + className + '">' + '<div class="swiper-pagination-bullet-line">' + '</div>' + '<span>' + '0' + (index + 1) + '</span>'  + '</div>'
+        },
+    },
+    on: {
+        init: function () {
+            document.querySelector('.swiper-pagination-custom').classList.add('start-anim')
+        },
+
+    },
 })

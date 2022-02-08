@@ -1,13 +1,14 @@
 @import '../common/vars';
 
 .about-us {
-  padding: 0 35px;
+  padding-bottom: 150px;
 }
 
-.top-container {
+.about-us-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
 
   .img {
     margin-left: 4.21%;
@@ -68,7 +69,7 @@
   }
 }
 
-.bottom-container {
+.about-us-bottom {
   display: flex;
   justify-content: space-between;
   position: relative;
