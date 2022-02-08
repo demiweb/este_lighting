@@ -56,20 +56,16 @@ new Swiper('.swiper-hero', {
 })
 
 new Swiper('.swiper-gallery', {
-    // effect: 'coverflow',
-    // coverflowEffect: {
-    //     rotate: 30,
-    // },
     speed: 1000,
     direction: 'horizontal',
-    slidesPerView: 5,
+    slidesPerView: 'auto',
     centeredSlides: true,
     autoplay: {
         delay: 4000,
     },
-    spaceBetween: 30,
+    spaceBetween: 120,
     slideToClickedSlide: true,
-    loop: true,
+    // loop: true,
 
     navigation: {
         prevEl: '.swiper-gallery .swiper-button-prev',

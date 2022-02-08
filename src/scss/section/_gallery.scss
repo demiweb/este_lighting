@@ -48,7 +48,7 @@
 }
 
 .swiper-gallery-wrapper {
-  padding-bottom: 100px;
+  padding-bottom: 160px;
   padding-top: 60px;
   display: flex;
   align-items: center;
@@ -58,7 +58,8 @@
   transition: all .4s ease;
   display: flex;
   justify-content: center;
-  width: 16.64% !important;
+  width: 18% !important;
+  transform: scale(0.86) !important;
   &:hover {
     cursor: pointer;
   }
@@ -71,19 +72,16 @@
 
 .swiper-gallery-slide.swiper-slide {
   &-prev, &-next {
-    width: 22.10% !important;
   }
   &-prev {
+    transform: translate(-10%, 0) scale(1.1) !important;
   }
   &-next {
+    transform: translate(10%, 0) scale(1.1) !important;
   }
 }
 
-.swiper-gallery-slide.swiper-slide-prev {
-
-}
 
 .swiper-gallery-slide.swiper-slide-active {
-  width: 30.15% !important;
+  transform: scale(1.3) !important;
 }
-

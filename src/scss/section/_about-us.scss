@@ -30,10 +30,6 @@
     }
 
     .title {
-      font-size: 62px;
-      line-height: 1.2;
-      font-weight: 700;
-      text-transform: uppercase;
       margin-bottom: 60px;
       position: relative;
 
@@ -64,6 +60,10 @@
 
       p {
         max-width: 375px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 25px;
+        }
       }
     }
   }
