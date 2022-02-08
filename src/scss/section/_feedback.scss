@@ -1,0 +1,127 @@
+@import "../common/vars";
+
+.feedback {
+  padding: 100px 0;
+}
+
+.feedback-content {
+  border: 1px solid #fff;
+  display: flex;
+  min-height: 450px;
+}
+
+.feedback-left {
+  width: 36.78%;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+
+  .bg {
+    position: absolute;
+    top: -1px;
+    right: -72px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title, p, > a {
+    color: $dark-color;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  p, > a {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  p {
+    margin-bottom: 30px;
+    max-width: 220px;
+  }
+
+  > a {
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+
+  div {
+    display: flex;
+
+    a {
+      text-decoration: none;
+
+      &:not(:last-of-type) {
+        margin-right: 27px;
+      }
+
+      img {
+        width: 29px;
+        height: 29px;
+      }
+    }
+  }
+}
+
+.feedback-right {
+  width: 72.22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title, form {
+    width: 59.22%;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    display: block;
+  }
+
+  form {
+    label {
+      width: 100%;
+      input:not([type='submit']) {
+        border-bottom: 1px solid #5C6068;
+        background: transparent;
+        padding: 30px 0 18px;
+
+        &::placeholder {
+          color: #BBBBBB;
+        }
+      }
+    }
+
+    input[type='submit'] {
+      margin-top: 30px;
+      color: #fff;
+      height: 43px;
+      background: $color-1;
+
+
+    }
+
+    input {
+      font-size: 15px;
+      line-height: 1.5;
+      border: none;
+      width: 100%;
+    }
+  }
+}

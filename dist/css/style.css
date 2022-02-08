@@ -47,6 +47,88 @@ h3 {
   text-transform: uppercase;
 }
 
+.herder {
+  width: 100%;
+  height: 78px;
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  z-index: 100;
+}
+
+.herder .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-burger span {
+  height: 1px;
+  background: #fff;
+}
+
+.header-burger span:nth-child(1) {
+  width: 30px;
+}
+
+.header-burger span:nth-child(2) {
+  width: 23px;
+  margin: 5px 0;
+}
+
+.header-burger span:nth-child(3) {
+  width: 18px;
+}
+
+.header-logo {
+  width: 95px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .swiper-pagination-custom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,6 +892,170 @@ h3 {
   width: 52.94%;
   padding-top: 52.94%;
   margin-top: 143px;
+}
+
+.feedback {
+  padding: 100px 0;
+}
+
+.feedback-content {
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 450px;
+}
+
+.feedback-left {
+  width: 36.78%;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 40px;
+}
+
+.feedback-left .bg {
+  position: absolute;
+  top: -1px;
+  right: -72px;
+}
+
+.feedback-left .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.feedback-left .title,
+.feedback-left p,
+.feedback-left > a {
+  color: #171717;
+}
+
+.feedback-left .title {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.feedback-left p,
+.feedback-left > a {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.feedback-left p {
+  margin-bottom: 30px;
+  max-width: 220px;
+}
+
+.feedback-left > a {
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.feedback-left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feedback-left div a {
+  text-decoration: none;
+}
+
+.feedback-left div a:not(:last-of-type) {
+  margin-right: 27px;
+}
+
+.feedback-left div a img {
+  width: 29px;
+  height: 29px;
+}
+
+.feedback-right {
+  width: 72.22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback-right .title,
+.feedback-right form {
+  width: 59.22%;
+}
+
+.feedback-right .title {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: block;
+}
+
+.feedback-right form label {
+  width: 100%;
+}
+
+.feedback-right form label input:not([type=submit]) {
+  border-bottom: 1px solid #5C6068;
+  background: transparent;
+  padding: 30px 0 18px;
+}
+
+.feedback-right form label input:not([type=submit])::-webkit-input-placeholder {
+  color: #BBBBBB;
+}
+
+.feedback-right form label input:not([type=submit])::-moz-placeholder {
+  color: #BBBBBB;
+}
+
+.feedback-right form label input:not([type=submit]):-ms-input-placeholder {
+  color: #BBBBBB;
+}
+
+.feedback-right form label input:not([type=submit])::-ms-input-placeholder {
+  color: #BBBBBB;
+}
+
+.feedback-right form label input:not([type=submit])::placeholder {
+  color: #BBBBBB;
+}
+
+.feedback-right form input[type=submit] {
+  margin-top: 30px;
+  color: #fff;
+  height: 43px;
+  background: #007893;
+}
+
+.feedback-right form input {
+  font-size: 15px;
+  line-height: 1.5;
+  border: none;
+  width: 100%;
 }
 
 @media screen and (max-width: 1440px) {
