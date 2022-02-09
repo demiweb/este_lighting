@@ -24,7 +24,7 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     color: transparent;
-    -webkit-text-stroke: 1px $color-2;
+    -webkit-text-stroke: 1px $main;
     margin-right: -159px;
   }
 }
@@ -81,7 +81,34 @@
   }
 }
 
-
 .swiper-gallery-slide.swiper-slide-active {
   transform: scale(1.3) !important;
+}
+
+@media screen and(max-width: 991px) {
+  .swiper-gallery-wrapper {
+    padding-bottom: 160px;
+    padding-top: 60px;
+    display: flex;
+  }
+
+  .swiper-gallery-slide {
+    transition: all .4s ease;
+    display: block;
+    width: 33.33333333% !important;
+    transform: scale(1) !important;
+  }
+
+  .swiper-gallery-slide.swiper-slide {
+    &-prev {
+      transform: translate(0, 0) scale(.73) !important;
+    }
+    &-next {
+      transform: translate(0, 0) scale(.73) !important;
+    }
+  }
+
+  .swiper-gallery-slide.swiper-slide-active {
+    transform: scale(1) !important;
+  }
 }

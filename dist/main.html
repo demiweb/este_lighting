@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- Подключение хедера -->
-<header class="herder">
+<header class="header">
    <div class="container">
        <div class="header-burger">
            <span></span>
@@ -50,16 +50,17 @@
            </a>
        </div>
        <div class="header-search">
-           <img src="img/svg/search.svg alt=">
+           <img src="img/svg/search.svg" alt="">
        </div>
        <div class="header-language">
-           UA
+           <span data-language="UA">UA</span>
        </div>
        <div class="header-login">
            <img src="img/svg/user.svg" alt="">
        </div>
        <div class="header-cart">
            <img src="img/svg/cart.svg" alt="">
+           <span class="product-quantity">3</span>
        </div>
    </div>
 </header>
@@ -110,6 +111,28 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-btn-mob">
+                <a class="btn-def" href="#">
+                    <img src="img/svg/btn-icon.svg" alt="">
+                    <span>
+                        Каталог товаров
+                    </span>
+                </a>
+            </div>
+            <div class="hero-gallery">
+                <a href="#">
+                    <img src="img/hero/slide-thumb-1.png" alt="">
+                    <span>ESTE line</span>
+                </a>
+                <a href="#">
+                    <img src="img/hero/slide-thumb-2.png" alt="">
+                    <span>BRAND line</span>
+                </a>
+                <a href="#">
+                    <img src="img/hero/slide-thumb-3.png" alt="">
+                    <span>SPECIAL line</span>
+                </a>
+            </div>
         </div>
         <div class="swiper swiper-hero">
             <div class="swiper-wrapper swiper-hero-wrapper">
@@ -156,10 +179,10 @@
                     <div class="bg">
 
                     </div>
-                    <h2 class="title">
+                    <span class="title">
                         ESTE <br>
                         lighting
-                    </h2>
+                    </span>
                     <div class="text">
                         <span>
                             о компании
@@ -192,6 +215,23 @@
                 </div>
                 <div class="img">
                     <img src="img/about-us/image-2.png" alt="">
+                </div>
+                <div class="text">
+                        <span>
+                            о компании
+                        </span>
+                    <div>
+                        <p>
+                            Бренд ESTE був створений понад 7 років тому і є одним із лідерів виробництва та продажу
+                            декоративного освітлення на українському та європейському ринках. У пошуках форм і
+                            матеріалів ми вибираємо міцні світильники, як класичні, так і сучасні, які перетворюють
+                            будь-який простір на щось особливе.
+                        </p>
+                        <p>
+                            ESTE підтримує актуальний асортимент та постійно розширює модельний ряд своєї продукції,
+                            уважно ставиться до кожного етапу свого ланцюжка поставок.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,10 +322,10 @@
                 <div class="img-right">
                     <img src="img/about-company/img-2.png" alt="">
                 </div>
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
             </div>
         </div>
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
     </section> <!--  end about-company  -->
 
     <!--  start feedback  -->
@@ -306,13 +346,13 @@
                     <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
                     <div>
                         <a href="#">
-                            <img src="img/svg/Instagram.svg" alt="">
+                            <img src="img/svg/instagram_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/LinkedIN.svg" alt="">
+                            <img src="img/svg/linkedin_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/Telegram.svg" alt="">
+                            <img src="img/svg/telegram_black.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -331,7 +371,7 @@
                         <label>
                             <input type="text" placeholder="Ваше сообщение">
                         </label>
-                        <input type="submit" value="Отправить">
+                        <input class="btn-def" type="submit" value="Отправить">
                     </form>
                 </div>
             </div>
@@ -341,7 +381,64 @@
 
 <!-- Подключение футера -->
 <footer class="footer">
-
+    <div class="container">
+        <div class="footer-logo">
+            <img src="img/svg/footer-logo.svg" alt="">
+        </div>
+        <div class="footer-nav">
+            <div class="footer-left">
+                <div>
+                    <span>
+                        Контакты
+                    </span>
+                    <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
+                    <a href="mailto:estelightning@gmail.com">estelightning@gmail.com</a>
+                    <p>Пн-Вс 9:00-19:00</p>
+                    <div>
+                        <a href="#">
+                            <img src="img/svg/instagram_white.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/linkedin_white.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/telegram_white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div>
+                    <span>
+                        Коллекции
+                    </span>
+                    <a href="#">ESTE line</a>
+                    <a href="#">BRAND line</a>
+                    <a href="#">SPECIAL line</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div>
+                    <span>
+                        Для клиентов
+                    </span>
+                    <a href="#">Оплата и доставка</a>
+                    <a href="#">Способы возврата</a>
+                    <div>
+                        <a href="#">
+                            <img src="img/svg/visa.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/mastercard.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2022 All rights reserved.
+        </div>
+    </div>
 </footer>
 
 <!-- Подключение скриптов -->

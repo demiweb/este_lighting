@@ -58,12 +58,12 @@ new Swiper('.swiper-hero', {
 new Swiper('.swiper-gallery', {
     speed: 1000,
     direction: 'horizontal',
-    slidesPerView: 'auto',
+
     centeredSlides: true,
-    autoplay: {
-        delay: 4000,
-    },
-    spaceBetween: 120,
+    // autoplay: {
+    //     delay: 4000,
+    // },
+
     slideToClickedSlide: true,
     // loop: true,
 
@@ -77,7 +77,7 @@ new Swiper('.swiper-gallery', {
         type: 'bullets',
         clickable: true,
         renderBullet: function (index, className) {
-            return '<div class="' + className + '">' + '<div class="swiper-pagination-bullet-line">' + '</div>' + '<span>' + '0' + (index + 1) + '</span>'  + '</div>'
+            return '<div class="' + className + '">' + '<div class="swiper-pagination-bullet-line">' + '</div>' + '<span>' + '0' + (index + 1) + '</span>' + '</div>'
         },
     },
     on: {
@@ -86,4 +86,44 @@ new Swiper('.swiper-gallery', {
         },
 
     },
+
+    breakpoints: {
+        991: {
+            slidesPerView: 'auto',
+            spaceBetween: 120,
+        },
+        0: {
+            slidesPerView: 3,
+            loop: true,
+            spaceBetween: 0,
+        }
+    }
 })
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header')
+    if (window.pageYOffset >= 1) {
+        header.classList.add('header-fixed');
+    } else {
+        header.classList.remove('header-fixed');
+    }
+})
+
+const language = document.querySelector('.header-language')
+
+if (!language) {
+
+} else {
+    let lang = ""
+    language.addEventListener('click', function () {
+        if (this.dataset.language === 'UA') {
+            lang = "RU"
+            this.dataset.language = lang
+            this.innerHTML = lang
+        } else {
+            lang = "UA"
+            this.dataset.language = lang
+            this.innerHTML = lang
+        }
+    })
+}

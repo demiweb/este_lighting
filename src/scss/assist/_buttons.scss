@@ -1,0 +1,10 @@
+@import '../common/vars';
+@import "../common/mixins";
+
+.btn-def {
+  @include btn($main, #fff, $main, $main-light);
+}
+
+.btn-sec {
+  @include btn(transparent, #fff, #fff, $main-light);
+}
