@@ -19,10 +19,14 @@
   justify-content: center;
   padding-left: 40px;
 
+  > *:not(.bg) {
+    z-index: 2;
+  }
+
   .bg {
     position: absolute;
     top: -1px;
-    right: -72px;
+    right: 0;
 
     img {
       width: 100%;
@@ -97,6 +101,7 @@
   form {
     label {
       width: 100%;
+
       input:not([type='submit']) {
         border-bottom: 1px solid #5C6068;
         background: transparent;
@@ -118,6 +123,45 @@
       line-height: 1.5;
       border: none;
       width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .feedback {
+    padding: 50px 0;
+  }
+  .feedback-content {
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .feedback-left {
+    padding: 22px 20px 40px;
+    width: 100%;
+  }
+  .feedback-right {
+    width: 100%;
+
+    .title, form {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 25px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and(max-width: 575px) {
+  .feedback-left {
+    .bg {
+      width: 38.92%;
+      height: auto;
+    }
+    > *:not(.bg, .title, a){
+      width: 50%;
     }
   }
 }

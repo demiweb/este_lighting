@@ -13,6 +13,7 @@
   .img {
     margin-left: 4.21%;
     width: 45.21%;
+
     img {
       width: 100%;
     }
@@ -245,6 +246,24 @@
 
     .text {
       display: block;
+    }
+  }
+}
+
+@media screen and(max-width: 575px) {
+  .about-us-top {
+    margin-bottom: 0;
+    .img {
+      position: absolute;
+    }
+    .content{
+      margin-top: 10px;
+      width: 100%;
+      .title {
+        margin-left: auto;
+        padding: 12.5% 0 33.21%;
+        width: fit-content;
+      }
     }
   }
 }
