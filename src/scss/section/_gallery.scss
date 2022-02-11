@@ -5,6 +5,7 @@
   overflow-x: hidden;
 }
 
+
 .gallery-top {
   display: flex;
   justify-content: space-between;
@@ -30,8 +31,6 @@
 }
 
 .swiper-gallery {
-  position: relative;
-
   .bg {
     position: absolute;
     top: 0;
@@ -40,6 +39,7 @@
     left: 0;
     z-index: 5;
     pointer-events: none;
+
     img {
       width: 100%;
       height: 100%;
@@ -48,18 +48,11 @@
 }
 
 .swiper-gallery-wrapper {
-  padding-bottom: 160px;
-  padding-top: 60px;
-  display: flex;
-  align-items: center;
+  padding: 100px 0;
 }
 
 .swiper-gallery-slide {
-  transition: all .4s ease;
-  display: flex;
-  justify-content: center;
-  width: 18% !important;
-  transform: scale(0.86) !important;
+
   &:hover {
     cursor: pointer;
   }
@@ -67,48 +60,53 @@
   img {
     width: 100%;
     height: 100%;
+    transform: scale(.52);
+    transition: all .4s ease;
+    margin-left: 45%;
   }
 }
 
 .swiper-gallery-slide.swiper-slide {
   &-prev, &-next {
+    img {
+      width: 100%;
+      height: 100%;
+      transform: scale(0.67);
+    }
   }
+
   &-prev {
-    transform: translate(-10%, 0) scale(1.1) !important;
+    img {
+      margin-left: 13%;
+    }
   }
+
   &-next {
-    transform: translate(10%, 0) scale(1.1) !important;
+    img {
+      margin-left: -13%;
+    }
+  }
+
+  &-next + .swiper-gallery-slide{
+    img {
+      margin-left: -45%;
+    }
   }
 }
 
 .swiper-gallery-slide.swiper-slide-active {
-  transform: scale(1.3) !important;
+  img {
+    width: 100%;
+    height: 100%;
+    transform: scale(.9);
+    margin: 0;
+  }
 }
 
 @media screen and(max-width: 991px) {
-  .swiper-gallery-wrapper {
-    padding-bottom: 160px;
-    padding-top: 60px;
-    display: flex;
-  }
-
-  .swiper-gallery-slide {
-    transition: all .4s ease;
-    display: block;
-    width: 33.33333333% !important;
-    transform: scale(1) !important;
-  }
-
-  .swiper-gallery-slide.swiper-slide {
-    &-prev {
-      transform: translate(0, 0) scale(.73) !important;
+  .gallery-top {
+    span {
+      display: none;
     }
-    &-next {
-      transform: translate(0, 0) scale(.73) !important;
-    }
-  }
-
-  .swiper-gallery-slide.swiper-slide-active {
-    transform: scale(1) !important;
   }
 }

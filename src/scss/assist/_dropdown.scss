@@ -1,0 +1,24 @@
+.dropdown-head {
+
+}
+
+.dropdown-content {
+  opacity: 0;
+  transition: all .4s ease;
+  pointer-events: none;
+}
+
+.dropdown-content.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-content-mob {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+.dropdown-content-mob.active {
+
+}

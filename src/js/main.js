@@ -60,12 +60,12 @@ new Swiper('.swiper-gallery', {
     direction: 'horizontal',
 
     centeredSlides: true,
-    // autoplay: {
-    //     delay: 4000,
-    // },
+    autoplay: {
+        delay: 4000,
+    },
 
     slideToClickedSlide: true,
-    // loop: true,
+    loop: false,
 
     navigation: {
         prevEl: '.swiper-gallery .swiper-button-prev',
@@ -77,25 +77,49 @@ new Swiper('.swiper-gallery', {
         type: 'bullets',
         clickable: true,
         renderBullet: function (index, className) {
-            return '<div class="' + className + '">' + '<div class="swiper-pagination-bullet-line">' + '</div>' + '<span>' + '0' + (index + 1) + '</span>' + '</div>'
+            return `  
+                <div class="${className}">
+                    <svg width="58" height="58">
+                        <circle class="circle-bg" cx="29" cy="29"  r="28" stroke-width="1" fill="none" stroke="#4B4D52"/>
+                        <circle class="circle-time" cx="29" cy="29"  r="28" stroke-width="1" fill="none" stroke="#fff"/>
+                    </svg>
+                    <span>
+                        0${(index + 1)}
+                    </span>
+                </div>`
         },
     },
     on: {
         init: function () {
-            document.querySelector('.swiper-pagination-custom').classList.add('start-anim')
+            const paginationActive = document.querySelector('.swiper-pagination-bullet-active');
+            if (paginationActive) {
+                paginationActive.classList.add('time-start');
+            }
         },
+        transitionStart: function () {
+            const paginationActive = document.querySelector('.swiper-pagination-bullet-active');
+            if (paginationActive) {
+                paginationActive.classList.add('time-start');
+            }
+        },
+        setTranslate: function () {
+            const paginationActive = document.querySelector('.swiper-pagination-bullet-active');
+            if (paginationActive) {
+                paginationActive.classList.remove('time-start');
+            }
+        },
+        // slideChange: function (swiper) {
+        //     swiper.autoplay.start()
+        // }
 
     },
 
     breakpoints: {
         991: {
-            slidesPerView: 'auto',
-            spaceBetween: 120,
+            slidesPerView: 3,
         },
         0: {
-            slidesPerView: 3,
-            loop: true,
-            spaceBetween: 0,
+            slidesPerView: 2,
         }
     }
 })
@@ -125,5 +149,74 @@ if (!language) {
             this.dataset.language = lang
             this.innerHTML = lang
         }
+    })
+}
+
+const rangeSlider = document.getElementById('range-slider');
+
+if (rangeSlider) {
+    noUiSlider.create(rangeSlider, {
+        start: [0, 99999],
+        step: 1,
+        range: {
+            min: [0],
+            max: [99999],
+        },
+    })
+    rangeSlider.noUiSlider.on('update', function (values) {
+        let min = document.querySelector('.price-values .min-price span');
+        let max = document.querySelector('.price-values .max-price span');
+
+        min.innerHTML = Math.round(values[0])
+        max.innerHTML = Math.round(values[1])
+    })
+}
+
+const dropdown = document.querySelectorAll('.dropdown')
+
+if (!dropdown.length) {
+
+} else {
+    dropdown.forEach(menu => {
+        const title = menu.querySelector('.dropdown-head')
+        const content = menu.querySelector('.dropdown-content')
+
+        title.addEventListener('click', function () {
+            this.classList.toggle('active')
+
+            if (this.classList.contains('active')) {
+                content.classList.add('active')
+            } else {
+                content.classList.remove('active')
+            }
+        })
+
+    })
+    window.addEventListener('click', function (elem) {
+        console.log(this.classList)
+        // if (el.target.classList.contains('dropdown-content')) {
+        //     console.log('ssss')
+        // }
+    })
+}
+
+const dropdownMob = document.querySelectorAll('.dropdown-menu-mob')
+
+if (!dropdownMob.length) {
+
+} else {
+    dropdownMob.forEach(menu => {
+        menu.addEventListener('click', function () {
+            const title = menu.querySelector('.dropdown-head-mob')
+            const content = menu.querySelector('.dropdown-content-mob')
+
+            if (title.classList.contains('active')) {
+                title.classList.remove('active')
+                content.style.maxHeight = null
+            } else {
+                title.classList.add('active')
+                content.style.maxHeight = content.scrollHeight + 'px'
+            }
+        })
     })
 }

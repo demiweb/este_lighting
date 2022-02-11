@@ -2,9 +2,9 @@
 @import "../common/mixins";
 
 .btn-def {
-  @include btn($main, #fff, $main, $main-light);
+  @include btn($main, #fff, $main, $main-light, #fff, $main-light);
 }
 
 .btn-sec {
-  @include btn(transparent, #fff, #fff, $main-light);
+  @include btn(transparent, #fff, #fff, $main-light, #fff, $main-light);
 }

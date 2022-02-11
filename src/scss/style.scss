@@ -1,5 +1,6 @@
 @import "layout";
 
+// fonts
 @import "fonts";
 
 //header
@@ -11,6 +12,7 @@
 //assist
 @import "assist/slider";
 @import "assist/buttons";
+@import "assist/dropdown";
 
 // section
 @import "section/hero";
@@ -18,3 +20,5 @@
 @import "section/gallery";
 @import "section/about-company";
 @import "section/feedback";
+@import "section/head-page";
+@import "section/products";

@@ -27,11 +27,18 @@
     position: absolute;
     top: -1px;
     right: 0;
-
+    width: 43.08%;
+    height: 0;
+    padding-top: 66.88%;
+    overflow: hidden;
+    margin-left: auto;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -108,7 +115,7 @@
         padding: 30px 0 18px;
 
         &::placeholder {
-          color: #BBBBBB;
+          color: $light-grey;
         }
       }
     }
@@ -139,6 +146,15 @@
   .feedback-left {
     padding: 22px 20px 40px;
     width: 100%;
+    .bg {
+      width: 109px;
+      height: 0;
+      padding-top: 245px;
+    }
+
+    > *:not(.bg, .title, a) {
+      width: 50%;
+    }
   }
   .feedback-right {
     width: 100%;
@@ -156,12 +172,6 @@
 
 @media screen and(max-width: 575px) {
   .feedback-left {
-    .bg {
-      width: 38.92%;
-      height: auto;
-    }
-    > *:not(.bg, .title, a){
-      width: 50%;
-    }
+
   }
 }

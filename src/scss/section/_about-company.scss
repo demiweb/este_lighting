@@ -16,7 +16,7 @@
 .about-company-signature {
   font-size: 12px;
   line-height: 1.8;
-  color: #969696;
+  color: $light-grey-2;
 }
 
 .about-company-title {
@@ -105,32 +105,6 @@
     .container {
       flex-wrap: wrap;
     }
-
-    //.circle- {
-    //  &1, &2 {
-    //    position: absolute;
-    //    border-radius: 50%;
-    //    z-index: -1;
-    //  }
-    //
-    //  &1 {
-    //    width: 18.59%;
-    //    padding-top: 18.59%;
-    //    height: 0;
-    //    background: $dark-main-1;
-    //    top: 191px;
-    //    left: 38.90%;
-    //  }
-    //
-    //  &2 {
-    //    width: 26.87%;
-    //    padding-top: 26.87%;
-    //    height: 0;
-    //    border: 1px solid $main;
-    //    top: 132px;
-    //    left: 50.31%;
-    //  }
-    //}
   }
 
   .about-company-content {

@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/style.min.css">
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+<header class="header">
+   <div class="container">
+       <div class="header-burger">
+           <span></span>
+           <span></span>
+           <span></span>
+       </div>
+       <div class="header-logo">
+           <img src="img/svg/logo.svg" alt="">
+       </div>
+       <nav class="header-nav">
+           <ul>
+               <li>
+                   <a href="#">
+                       ESTE line
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       BRAND line
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       SPECIAL line
+                   </a>
+               </li>
+           </ul>
+       </nav>
+       <div class="header-tel">
+           <a href="tel:+380(73)8483992">
+               +380 (73) 848 39 92
+           </a>
+       </div>
+       <div class="header-search">
+           <img src="img/svg/search.svg" alt="">
+       </div>
+       <div class="header-language">
+           <span data-language="UA">UA</span>
+       </div>
+       <div class="header-login">
+           <img src="img/svg/user.svg" alt="">
+       </div>
+       <div class="header-cart">
+           <img src="img/svg/cart.svg" alt="">
+           <span class="product-quantity">3</span>
+       </div>
+   </div>
+</header>
+
+<main>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="bg">
+            <img src="img/head-page/img-1.png" alt="">
+            <img class="bg-filter" src="img/head-page/head-page-bg.png" alt="">
+        </div>
+        <div class="container">
+            <h1 class="head-page-title">
+                Este line
+            </h1>
+            <div class="head-page-breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Este line</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section><!--  end head-page  -->
+
+    <section class="products">
+        <div class="container">
+            <div class="products-filter">
+                <div class="price-filter dropdown-menu-mob">
+                    <div class="title dropdown-head-mob">
+                        <span>
+                            Цена
+                        </span>
+                        <img src="img/svg/plus.svg" alt="">
+                    </div>
+                    <div class="content dropdown-content-mob">
+                        <p>1</p>
+                        <p>1</p>
+                        <p>1</p>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="type-filter dropdown-menu-mob">
+                    <div class="title dropdown-head-mob">
+                        <span>
+                            Тип освещения
+                        </span>
+                        <img src="img/svg/plus.svg" alt="">
+                    </div>
+                    <div class="content dropdown-content-mob">
+                        <p>1</p>
+                        <p>1</p>
+                        <p>1</p>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="type-filter dropdown-menu-mob">
+                    <div class="title dropdown-head-mob">
+                        <span>
+                          Тип освещения
+                        </span>
+                        <img src="img/svg/plus.svg" alt="">
+                    </div>
+                    <div class="content dropdown-content-mob">
+
+                    </div>
+                </div>
+                <div class="sort-filter dropdown-menu-mob">
+                    <div class="title dropdown-head-mob">
+                        <span>
+                            Кол. лампочек
+                        </span>
+                        <img src="img/svg/plus.svg" alt="">
+                    </div>
+                    <div class="content dropdown-content-mob">
+
+                    </div>
+                </div>
+<!--                <div class="filter-price">-->
+<!--                    <span class="filter-name">Цена</span>-->
+<!--                    <div class="price-inputs">-->
+<!--                        <div class="price-values">-->
+<!--                            <div class="min-price">-->
+<!--                                <span></span>₴-->
+<!--                            </div>-->
+<!--                            <span>&mdash;</span>-->
+<!--                            <div class="max-price">-->
+<!--                                <span></span>₴-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div id="range-slider"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="filter-dropdown dropdown">-->
+<!--                    <div class="filter-dropdown-title dropdown-head">-->
+<!--                        Тип освещения-->
+<!--                    </div>-->
+<!--                    <div class="filter-dropdown-content dropdown-content">-->
+<!--                        <form action="">-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                Люстры (10)-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                LED Люстры (20)-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                Бра (11)-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                Торшеры (9)-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                Подвесные лампы (14)-->
+<!--                            </label>-->
+<!--                            <input type="submit" class="btn-def" value="Применить фильтр">-->
+<!--                            <input type="reset" class="btn-sec" value="Очистить">-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="filter-dropdown dropdown">-->
+<!--                    <div class="filter-dropdown-title dropdown-head">-->
+<!--                        Кол. лампочек-->
+<!--                    </div>-->
+<!--                    <div class="filter-dropdown-content dropdown-content">-->
+<!--                        <form action="">-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                1-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                2-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                3-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                4-->
+<!--                            </label>-->
+<!--                            <label>-->
+<!--                                <input type="checkbox">-->
+<!--                                <span class="checkbox"></span>-->
+<!--                                5-->
+<!--                            </label>-->
+<!--                            <input type="submit" class="btn-def" value="Применить фильтр">-->
+<!--                            <input type="reset" class="btn-sec" value="Очистить">-->
+
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="sort">-->
+<!--                    <span class="filter-name">Сортировка</span>-->
+<!--                    <a href="#" class="current">Новинки</a>-->
+<!--                    <a href="#">Популярные</a>-->
+<!--                    <a href="#">Акции</a>-->
+<!--                </div>-->
+
+            </div>
+            <ul class="products-list">
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    <img src="img/svg/minus.svg" alt="">
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    <img src="img/svg/plus.svg" alt="">
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+                <li class="products-item">
+                    <div class="products-item-top">
+                        <img class="item-img" src="img/products/img-1.png" alt="">
+                        <div class="item-panel">
+                            <div>
+                                <span class="minus">
+                                    -
+                                </span>
+                                <span class="quantity">
+                                    1
+                                </span>
+                                <span class="plus">
+                                    +
+                                </span>
+                            </div>
+                            <button class="btn-def">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item-bottom">
+                        <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                        <span class="prev-price">2171.10 ₴</span>
+                        <span class="new-price">1670.10 ₴</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="products-description">
+                <h2>
+                    Люстры este lighting
+                </h2>
+                <ul>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor ullamcorper leo venenatis cursus
+                        urna
+                        nam venenatis ipsum. Felis convallis scelerisque amet, aenean cras euismod est. Ut mollis ornare
+                        iaculis sed neque, mollis urna, nec, eros. Pellentesque feugiat aliquam, nibh arcu egestas at.
+                        Cras
+                        tellus purus eu, dolor tortor nulla interdum pulvinar massa. Facilisis ultricies ut sed massa
+                        ultricies at. Porttitor pharetra at arcu diam ultrices iaculis pretium.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel nullam purus, dolor feugiat.
+                        <br>
+                        <br>
+                        Tortor enim, nibh sollicitudin augue in sed gravida eget. Nulla malesuada nunc dictumst nisl,
+                        magnis
+                        tellus aenean. Ultricies cursus neque, tristique quam id orci amet faucibus. Risus ut diam
+                        lectus
+                        nisi viverra etiam massa. Quis pellentesque tempus morbi proin accumsan, vitae leo ipsum tellus.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel nullam purus, dolor feugiat. Tortor
+                        enim, nibh sollicitudin augue in sed gravida eget.
+                        <br>
+                        <br>
+                        Nulla malesuada nunc dictumst nisl, magnis tellus aenean. Ultricies cursus neque, tristique quam
+                        id
+                        orci amet faucibus.
+                        Risus ut diam lectus nisi viverra etiam massa. Quis pellentesque tempus morbi proin accumsan,
+                        vitae
+                        leo ipsum tellus.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Подключение футера -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">
+            <img src="img/svg/footer-logo.svg" alt="">
+        </div>
+        <div class="footer-nav">
+            <div class="footer-left">
+                <div>
+                    <span>
+                        Контакты
+                    </span>
+                    <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
+                    <a href="mailto:estelightning@gmail.com">estelightning@gmail.com</a>
+                    <p>Пн-Вс 9:00-19:00</p>
+                    <div>
+                        <a href="#">
+                            <img src="img/svg/instagram_white.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/linkedin_white.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/telegram_white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div>
+                    <span>
+                        Коллекции
+                    </span>
+                    <a href="#">ESTE line</a>
+                    <a href="#">BRAND line</a>
+                    <a href="#">SPECIAL line</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div>
+                    <span>
+                        Для клиентов
+                    </span>
+                    <a href="#">Оплата и доставка</a>
+                    <a href="#">Способы возврата</a>
+                    <div>
+                        <img src="img/svg/visa.svg" alt="">
+                        <img src="img/svg/mastercard.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2022 All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Подключение скриптов -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!--<script src="js/main.min.js"></script>-->
+<script src="js/main.js"></script>
+</body>
+</html>

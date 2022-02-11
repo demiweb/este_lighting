@@ -1,6 +1,6 @@
 @import "vars";
 
-@mixin btn($bg, $color, $border, $bg-hover) {
+@mixin btn($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {
   background: $bg;
   color: $color;
   font-size: 15px;
@@ -9,10 +9,12 @@
   justify-content: center;
   align-items: center;
   transition: background-color .4s ease;
-  border: $border;
+  border: 1px solid $border;
   padding: 0 20px;
 
   &:hover {
     background: $bg-hover;
+    color: $color-hover;
+    border: $border-hover;
   }
 }
