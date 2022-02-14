@@ -124,6 +124,30 @@ new Swiper('.swiper-gallery', {
     }
 })
 
+new Swiper('.product-swiper', {
+    speed: 1000,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    thumbs: {
+        swiper: {
+            el: '.product-swiper-thumb',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+        }
+    }
+})
+
+new Swiper('.recommendations-swiper', {
+    speed: 1000,
+    direction: 'horizontal',
+    slidesPerView: 4,
+    loop: true,
+    showOverflow: true,
+    spaceBetween: 30,
+})
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header')
     if (window.pageYOffset >= 1) {
@@ -165,24 +189,33 @@ if (rangeSlider) {
     })
     rangeSlider.noUiSlider.on('update', function (values) {
         let min = document.querySelector('.price-values .min-price span');
+        let minInput = document.querySelector('.price-values .min-price input');
         let max = document.querySelector('.price-values .max-price span');
+        let maxInput = document.querySelector('.price-values .max-price input');
 
-        min.innerHTML = Math.round(values[0])
-        max.innerHTML = Math.round(values[1])
+        const resetBtn = document.getElementById('reset-form')
+
+        minInput.value = Math.round(values[0])
+        maxInput.value = Math.round(values[1])
+
+        min.innerHTML =  minInput.value
+        max.innerHTML =  maxInput.value
     })
 }
 
-const dropdown = document.querySelectorAll('.dropdown')
+const dropdown = document.querySelectorAll('.dropdown-menu')
 
 if (!dropdown.length) {
 
-} else {
+} else if(dropdown.length && window.innerWidth >= 991) {
     dropdown.forEach(menu => {
         const title = menu.querySelector('.dropdown-head')
         const content = menu.querySelector('.dropdown-content')
 
         title.addEventListener('click', function () {
             this.classList.toggle('active')
+
+            // dropdown.forEach(elem => elem.querySelector(content).classList.remove('active'))
 
             if (this.classList.contains('active')) {
                 content.classList.add('active')
@@ -200,15 +233,40 @@ if (!dropdown.length) {
     })
 }
 
-const dropdownMob = document.querySelectorAll('.dropdown-menu-mob')
+const dropdownMob = document.querySelectorAll('.accordion-menu-mob')
 
 if (!dropdownMob.length) {
 
-} else {
+} else if (dropdownMob.length && window.innerWidth <= 991) {
     dropdownMob.forEach(menu => {
-        menu.addEventListener('click', function () {
-            const title = menu.querySelector('.dropdown-head-mob')
-            const content = menu.querySelector('.dropdown-content-mob')
+        const title = menu.querySelector('.accordion-head-mob')
+        const content = menu.querySelector('.accordion-content-mob')
+
+        title.addEventListener('click', function (elem) {
+            elem.stopPropagation();
+
+            if (title.classList.contains('active')) {
+                title.classList.remove('active')
+                content.style.maxHeight = null
+            } else {
+                title.classList.add('active')
+                content.style.maxHeight = content.scrollHeight + 'px'
+            }
+        })
+    })
+}
+
+const dropdownDesc = document.querySelectorAll('.accordion-menu')
+
+if (!dropdownDesc.length) {
+
+} else {
+    dropdownDesc.forEach(menu => {
+        const title = menu.querySelector('.accordion-head')
+        const content = menu.querySelector('.accordion-content')
+
+        title.addEventListener('click', function (elem) {
+            elem.stopPropagation();
 
             if (title.classList.contains('active')) {
                 title.classList.remove('active')

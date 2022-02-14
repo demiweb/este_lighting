@@ -41,31 +41,3 @@
   font-weight: 300;
   margin-bottom: 9px;
 }
-
-.head-page-breadcrumb {
-  margin-bottom: 27px;
-  ol {
-    list-style: none;
-    display: flex;
-    li {
-      a {
-        color: #fff;
-        text-decoration: none;
-
-        &:after {
-          content: '/';
-          margin: 0 9px;
-        }
-
-        span {
-          font-size: 15px;
-        }
-      }
-
-      > span {
-        font-size: 15px;
-        color: $light-grey;
-      }
-    }
-  }
-}

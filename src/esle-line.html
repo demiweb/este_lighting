@@ -27,7 +27,7 @@
             <h1 class="head-page-title">
                 Este line
             </h1>
-            <div class="head-page-breadcrumb">
+            <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
@@ -43,157 +43,147 @@
                 </ol>
             </div>
         </div>
-    </section><!--  end head-page  -->
+    </section> <!--  end head-page  -->
 
+    <!--  start products  -->
     <section class="products">
         <div class="container">
-            <div class="products-filter">
-                <div class="price-filter dropdown-menu-mob">
-                    <div class="title dropdown-head-mob">
-                        <span>
-                            Цена
-                        </span>
-                        <img src="img/svg/plus.svg" alt="">
-                    </div>
-                    <div class="content dropdown-content-mob">
-                        <p>1</p>
-                        <p>1</p>
-                        <p>1</p>
-                        <p>1</p>
-                    </div>
-                </div>
-                <div class="type-filter dropdown-menu-mob">
-                    <div class="title dropdown-head-mob">
-                        <span>
-                            Тип освещения
-                        </span>
-                        <img src="img/svg/plus.svg" alt="">
-                    </div>
-                    <div class="content dropdown-content-mob">
-                        <p>1</p>
-                        <p>1</p>
-                        <p>1</p>
-                        <p>1</p>
-                    </div>
-                </div>
-                <div class="type-filter dropdown-menu-mob">
-                    <div class="title dropdown-head-mob">
-                        <span>
-                          Тип освещения
-                        </span>
-                        <img src="img/svg/plus.svg" alt="">
-                    </div>
-                    <div class="content dropdown-content-mob">
 
-                    </div>
+            <div class="products-filter accordion-menu-mob">
+                <div class="products-filter-header accordion-head-mob">
+                    <span>
+                        Фильтры
+                    </span>
+                    <img src="img/svg/filter-icon.svg" alt="">
                 </div>
-                <div class="sort-filter dropdown-menu-mob">
-                    <div class="title dropdown-head-mob">
-                        <span>
-                            Кол. лампочек
-                        </span>
-                        <img src="img/svg/plus.svg" alt="">
+                <form class="products-filter-content accordion-content-mob">
+                    <div class="price-filter accordion-menu-mob">
+                        <div class="title accordion-head-mob">
+                            <span>
+                                Цена
+                            </span>
+                        </div>
+                        <div class="content accordion-content-mob">
+                            <div class="price-values">
+                                <div class="min-price">
+                                    <label>
+                                        <input type="number">
+                                    </label>
+                                    <span></span>₴
+                                </div>
+                                <span>&mdash;</span>
+                                <div class="max-price">
+                                    <label>
+                                        <input type="number">
+                                    </label>
+                                    <span></span>₴
+                                </div>
+                            </div>
+                            <div id="range-slider"></div>
+                        </div>
                     </div>
-                    <div class="content dropdown-content-mob">
-
+                    <div class="type-filter accordion-menu-mob dropdown-menu">
+                        <div class="title accordion-head-mob dropdown-head">
+                            <span>
+                                Тип освещения
+                            </span>
+                        </div>
+                        <div class="content accordion-content-mob dropdown-content">
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                Люстры (10)
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                LED Люстры (20)
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                Бра (11)
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                Торшеры (9)
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                Подвесные лампы (14)
+                            </label>
+                            <input type="submit" class="btn-def" value="Применить фильтр">
+                            <input type="reset" class="btn-sec" value="Очистить">
+                        </div>
                     </div>
-                </div>
-<!--                <div class="filter-price">-->
-<!--                    <span class="filter-name">Цена</span>-->
-<!--                    <div class="price-inputs">-->
-<!--                        <div class="price-values">-->
-<!--                            <div class="min-price">-->
-<!--                                <span></span>₴-->
-<!--                            </div>-->
-<!--                            <span>&mdash;</span>-->
-<!--                            <div class="max-price">-->
-<!--                                <span></span>₴-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div id="range-slider"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="filter-dropdown dropdown">-->
-<!--                    <div class="filter-dropdown-title dropdown-head">-->
-<!--                        Тип освещения-->
-<!--                    </div>-->
-<!--                    <div class="filter-dropdown-content dropdown-content">-->
-<!--                        <form action="">-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                Люстры (10)-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                LED Люстры (20)-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                Бра (11)-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                Торшеры (9)-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                Подвесные лампы (14)-->
-<!--                            </label>-->
-<!--                            <input type="submit" class="btn-def" value="Применить фильтр">-->
-<!--                            <input type="reset" class="btn-sec" value="Очистить">-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="filter-dropdown dropdown">-->
-<!--                    <div class="filter-dropdown-title dropdown-head">-->
-<!--                        Кол. лампочек-->
-<!--                    </div>-->
-<!--                    <div class="filter-dropdown-content dropdown-content">-->
-<!--                        <form action="">-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                1-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                2-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                3-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                4-->
-<!--                            </label>-->
-<!--                            <label>-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkbox"></span>-->
-<!--                                5-->
-<!--                            </label>-->
-<!--                            <input type="submit" class="btn-def" value="Применить фильтр">-->
-<!--                            <input type="reset" class="btn-sec" value="Очистить">-->
+                    <div class="type-filter accordion-menu-mob dropdown-menu">
+                        <div class="title accordion-head-mob dropdown-head">
+                            <span>
+                                Кол. лампочек
+                            </span>
+                        </div>
+                        <div class="content accordion-content-mob dropdown-content">
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                1шт.
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                2шт.
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                3шт.
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                4шт.
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                5шт.
+                            </label>
+                            <input type="submit" class="btn-def" value="Применить фильтр">
+                            <input type="reset" class="btn-sec" value="Очистить">
+                        </div>
+                    </div>
+                    <div class="sort-filter accordion-menu-mob">
+                        <div class="title accordion-head-mob">
+                            <span>
+                                Сортировка
+                            </span>
+                        </div>
+                        <div class="content accordion-content-mob">
+                            <label>
+                                <input type="radio" name="sort-by" checked>
+                                <span class="radio"></span>
+                                Новинки
+                            </label>
+                            <label>
+                                <input type="radio" name="sort-by">
+                                <span class="radio"></span>
+                                Популярные
+                            </label>
+                            <label>
+                                <input type="radio" name="sort-by">
+                                <span class="radio"></span>
+                                Акции
+                            </label>
 
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="sort">-->
-<!--                    <span class="filter-name">Сортировка</span>-->
-<!--                    <a href="#" class="current">Новинки</a>-->
-<!--                    <a href="#">Популярные</a>-->
-<!--                    <a href="#">Акции</a>-->
-<!--                </div>-->
-
+                        </div>
+                    </div>
+                    <input class="btn-def" type="submit" value="Применить все фильтры">
+                    <input class='btn-sec' type="reset" value="Очистить">
+                </form>
             </div>
+
             <ul class="products-list">
                 <li class="products-item">
                     <div class="products-item-top">
@@ -443,7 +433,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> <!--  end products  -->
 
 </main>
 

@@ -11,6 +11,7 @@
   transition: background-color .4s ease;
   border: 1px solid $border;
   padding: 0 20px;
+  text-decoration: none;
 
   &:hover {
     background: $bg-hover;

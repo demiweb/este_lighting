@@ -1,24 +1,42 @@
-.dropdown-head {
+@import "../common/vars";
 
+@media screen and(min-width: 992px) {
+  .dropdown-menu {
+    position: relative;
+  }
+
+  .dropdown-head {
+
+  }
+
+  .dropdown-content {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 280px;
+    padding: 30px;
+    background: $dark-color-2;
+    opacity: 0;
+    z-index: 10;
+    transition: all .4s ease;
+    pointer-events: none;
+  }
+
+  .dropdown-content.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
-.dropdown-content {
-  opacity: 0;
-  transition: all .4s ease;
-  pointer-events: none;
-}
+@media screen and(max-width: 991px) {
 
-.dropdown-content.active {
-  opacity: 1;
-  pointer-events: auto;
-}
+  .accordion-content-mob {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s ease;
+  }
 
-.dropdown-content-mob {
-  max-height: 0;
-  overflow: hidden;
-  transition: all .4s ease;
-}
+  .accordion-content-mob.active {
 
-.dropdown-content-mob.active {
-
+  }
 }
