@@ -1,0 +1,122 @@
+@import '../common/vars';
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s ease;
+  overflow-y: auto;
+
+  &.show {
+    opacity: 1;
+    pointer-events: unset;
+    z-index: 100;
+  }
+}
+
+.popup- {
+
+  &content {
+    position: relative;
+    margin: 10% auto 10%;
+    max-width: 436px;
+    padding: 50px;
+    background: $popup-bg;
+  }
+
+  &title {
+    margin-bottom: 20px;
+  }
+
+  &text {
+    color: $light-grey-2;
+    margin-bottom: 40px;
+  }
+
+  &form {
+    label {
+      width: 100%;
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid #5C6068;
+        background: transparent;
+        color: #fff;
+        padding: 12px 0;
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+
+    input {
+      font-size: 15px;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      padding: 16px 0;
+      margin-top: 40px;
+    }
+  }
+
+  &close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &message {
+    max-width: 200px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: 0 auto 32px;
+    text-align: center;
+  }
+
+  &icon {
+    display: block;
+    margin: auto;
+  }
+}
+
+#success-popup {
+  .popup- {
+    &content {
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
+@media screen and(max-width: 575px) {
+  .popup {
+    padding: 0 20px;
+  }
+
+  .popup- {
+    &content {
+      padding: 50px 20px;
+    }
+    &form {
+      input[type='submit'] {
+        white-space: normal;
+      }
+    }
+  }
+}

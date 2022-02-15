@@ -176,7 +176,7 @@
   }
 }
 
-@media screen and(max-width: 1280px) {
+@media screen and(max-width: 1279px) {
   .hero- {
     &content {
       padding-left: 30px;
@@ -184,7 +184,7 @@
   }
 }
 
-@media screen and(max-width: 997px) {
+@media screen and(max-width: 991px) {
   .hero {
     display: flex;
     position: relative;
@@ -198,7 +198,11 @@
     }
 
     &text {
-      margin-bottom: 30px;
+      flex-direction: column;
+      margin: 0;
+      p {
+        margin: 0 0 30px;
+      }
     }
 
     &btn-mob {
@@ -268,15 +272,6 @@
   .hero- {
     &title {
       margin-bottom: 15px;
-    }
-
-    &text {
-      flex-direction: column;
-      margin: 0;
-
-      p {
-        margin: 0 0 30px;
-      }
     }
 
     &gallery {

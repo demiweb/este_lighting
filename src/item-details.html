@@ -19,36 +19,9 @@
 <main>
     <!--  start product-details  -->
     <section class="product-details">
-        <div class="product-details-left">
-            <div class="swiper product-swiper">
-                <div class="swiper-wrapper product-swiper-wrapper">
-                    <div class="swiper-slide product-swiper-slide">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                    <div class="swiper-slide product-swiper-slide">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                    <div class="swiper-slide product-swiper-slide">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper product-swiper-thumb">
-                <div class="swiper-wrapper product-swiper-wrapper-thumb">
-                    <div class="swiper-slide product-swiper-slide-thumb">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                    <div class="swiper-slide product-swiper-slide-thumb">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                    <div class="swiper-slide product-swiper-slide-thumb">
-                        <img src="img/product-detail/img-1.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product-details-right">
-            <div class="product-details-right-wrapper">
+
+        <div class="product-details-content">
+            <div class="product-details-content-wrapper">
                 <div class="breadcrumb">
                     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
@@ -73,6 +46,34 @@
                 <h1>
                     Підвіс Este 6808/1P Chrome
                 </h1>
+                <div class="product-details-slider">
+                    <div class="swiper product-swiper">
+                        <div class="swiper-wrapper product-swiper-wrapper">
+                            <div class="swiper-slide product-swiper-slide">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide product-swiper-slide">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide product-swiper-slide">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper product-swiper-thumb">
+                        <div class="swiper-wrapper product-swiper-wrapper-thumb">
+                            <div class="swiper-slide product-swiper-slide-thumb">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide product-swiper-slide-thumb">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide product-swiper-slide-thumb">
+                                <img src="img/product-detail/img-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="collection">
                     Коллекция 00154
                 </div>
@@ -200,7 +201,7 @@
                     <p>
                         Нужна консультация?
                     </p>
-                    <a class="btn-def" href="#">Задать вопрос</a>
+                    <a class="btn-def show-popup" href="#consultation-popup">Задать вопрос</a>
                 </div>
             </div>
         </div>
@@ -208,122 +209,162 @@
 
     <!--  start recommendations  -->
     <section class="recommendations">
-       <div class="container">
-           <h2>
-               Люстры este lighting
-           </h2>
-           <div class="swiper recommendations-swiper">
-               <div class="swiper-wrapper recommendations-swiper-wrapper">
-                   <div class="swiper-slide recommendations-swiper-slide">
-                       <div class="slide-top">
-                           <img class="slide-img" src="img/products/img-1.png" alt="">
-                           <div class="slide-panel">
-                               <div>
+        <div class="container">
+            <h2>
+                Специально для вас
+            </h2>
+            <div class="swiper recommendations-swiper">
+                <div class="swiper-wrapper recommendations-swiper-wrapper">
+                    <div class="swiper-slide recommendations-swiper-slide">
+                        <div class="slide-top">
+                            <img class="slide-img" src="img/products/img-1.png" alt="">
+                            <div class="slide-panel">
+                                <div>
                                 <span class="minus">
                                     <img src="img/svg/minus.svg" alt="">
                                 </span>
-                                   <span class="quantity">
+                                    <span class="quantity">
                                     1
                                 </span>
-                                   <span class="plus">
+                                    <span class="plus">
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
-                               </div>
-                               <button class="btn-def">
-                                   В корзину
-                               </button>
-                           </div>
-                       </div>
-                       <div class="slide-bottom">
-                           <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                           <span class="prev-price">2171.10 ₴</span>
-                           <span class="new-price">1670.10 ₴</span>
-                       </div>
-                   </div>
-                   <div class="swiper-slide recommendations-swiper-slide">
-                       <div class="slide-top">
-                           <img class="slide-img" src="img/products/img-1.png" alt="">
-                           <div class="slide-panel">
-                               <div>
+                                </div>
+                                <button class="btn-def">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide-bottom">
+                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                            <span class="prev-price">2171.10 ₴</span>
+                            <span class="new-price">1670.10 ₴</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide recommendations-swiper-slide">
+                        <div class="slide-top">
+                            <img class="slide-img" src="img/products/img-1.png" alt="">
+                            <div class="slide-panel">
+                                <div>
                                 <span class="minus">
                                     <img src="img/svg/minus.svg" alt="">
                                 </span>
-                                   <span class="quantity">
+                                    <span class="quantity">
                                     1
                                 </span>
-                                   <span class="plus">
+                                    <span class="plus">
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
-                               </div>
-                               <button class="btn-def">
-                                   В корзину
-                               </button>
-                           </div>
-                       </div>
-                       <div class="slide-bottom">
-                           <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                           <span class="prev-price">2171.10 ₴</span>
-                           <span class="new-price">1670.10 ₴</span>
-                       </div>
-                   </div>
-                   <div class="swiper-slide recommendations-swiper-slide">
-                       <div class="slide-top">
-                           <img class="slide-img" src="img/products/img-1.png" alt="">
-                           <div class="slide-panel">
-                               <div>
+                                </div>
+                                <button class="btn-def">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide-bottom">
+                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                            <span class="prev-price">2171.10 ₴</span>
+                            <span class="new-price">1670.10 ₴</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide recommendations-swiper-slide">
+                        <div class="slide-top">
+                            <img class="slide-img" src="img/products/img-1.png" alt="">
+                            <div class="slide-panel">
+                                <div>
                                 <span class="minus">
                                     <img src="img/svg/minus.svg" alt="">
                                 </span>
-                                   <span class="quantity">
+                                    <span class="quantity">
                                     1
                                 </span>
-                                   <span class="plus">
+                                    <span class="plus">
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
-                               </div>
-                               <button class="btn-def">
-                                   В корзину
-                               </button>
-                           </div>
-                       </div>
-                       <div class="slide-bottom">
-                           <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                           <span class="prev-price">2171.10 ₴</span>
-                           <span class="new-price">1670.10 ₴</span>
-                       </div>
-                   </div>
-                   <div class="swiper-slide recommendations-swiper-slide">
-                       <div class="slide-top">
-                           <img class="slide-img" src="img/products/img-1.png" alt="">
-                           <div class="slide-panel">
-                               <div>
+                                </div>
+                                <button class="btn-def">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide-bottom">
+                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                            <span class="prev-price">2171.10 ₴</span>
+                            <span class="new-price">1670.10 ₴</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide recommendations-swiper-slide">
+                        <div class="slide-top">
+                            <img class="slide-img" src="img/products/img-1.png" alt="">
+                            <div class="slide-panel">
+                                <div>
                                 <span class="minus">
                                     <img src="img/svg/minus.svg" alt="">
                                 </span>
-                                   <span class="quantity">
+                                    <span class="quantity">
                                     1
                                 </span>
-                                   <span class="plus">
+                                    <span class="plus">
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
-                               </div>
-                               <button class="btn-def">
-                                   В корзину
-                               </button>
-                           </div>
-                       </div>
-                       <div class="slide-bottom">
-                           <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                           <span class="prev-price">2171.10 ₴</span>
-                           <span class="new-price">1670.10 ₴</span>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
+                                </div>
+                                <button class="btn-def">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide-bottom">
+                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
+                            <span class="prev-price">2171.10 ₴</span>
+                            <span class="new-price">1670.10 ₴</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section> <!--  end recommendations  -->
 </main>
 
+<div class="popup popup-consultation" id="consultation-popup">
+    <div class="popup-content">
+        <h4 class="popup-title">
+            Введите данные для консультации
+        </h4>
+        <p class="popup-text">
+            Мы свяжемся с вами, чтобы обсудить интересующие вас вопросы
+        </p>
+        <form action="" class="popup-form">
+            <label>
+                <input type="text" placeholder="Имя">
+            </label>
+            <label>
+                <input type="text" placeholder="Фамилия">
+            </label>
+            <label>
+                <input type="number" placeholder="+ 38 (0__) ___ __ __">
+            </label>
+            <label>
+                <input type="email" placeholder=" E-mail">
+            </label>
+            <input class="btn-def" type="submit" value="Отправить запрос на консультацию">
+        </form>
+        <a href="#consultation-popup" class="popup-close">
+            <img src="img/svg/close.svg" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="popup popup-consultation-success" id="success-popup">
+    <div class="popup-content">
+        <p class="popup-message">
+            Ваши данные успешно отправлены!
+        </p>
+        <img  class="popup-icon" src="img/svg/success.svg" alt="">
+        <a href="#success-popup" class="popup-close">
+            <img src="img/svg/close.svg" alt="">
+        </a>
+    </div>
+</div>
 <!-- Подключение футера -->
 @@include('parts/footer.html')
 

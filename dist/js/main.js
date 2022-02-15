@@ -144,8 +144,23 @@ new Swiper('.recommendations-swiper', {
     direction: 'horizontal',
     slidesPerView: 4,
     loop: true,
-    showOverflow: true,
+    watchOverflow: false,
     spaceBetween: 30,
+
+    breakpoints: {
+        991: {
+            slidesPerView: 4,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        575: {
+            slidesPerView: 2,
+        },
+        0: {
+            slidesPerView: 1,
+        }
+    }
 })
 
 window.addEventListener('scroll', () => {
@@ -198,8 +213,8 @@ if (rangeSlider) {
         minInput.value = Math.round(values[0])
         maxInput.value = Math.round(values[1])
 
-        min.innerHTML =  minInput.value
-        max.innerHTML =  maxInput.value
+        min.innerHTML = minInput.value
+        max.innerHTML = maxInput.value
     })
 }
 
@@ -207,7 +222,7 @@ const dropdown = document.querySelectorAll('.dropdown-menu')
 
 if (!dropdown.length) {
 
-} else if(dropdown.length && window.innerWidth >= 991) {
+} else if (dropdown.length && window.innerWidth >= 991) {
     dropdown.forEach(menu => {
         const title = menu.querySelector('.dropdown-head')
         const content = menu.querySelector('.dropdown-content')
@@ -276,5 +291,117 @@ if (!dropdownDesc.length) {
                 content.style.maxHeight = content.scrollHeight + 'px'
             }
         })
+    })
+}
+
+const showPopupBtn = document.querySelectorAll('.show-popup')
+
+if (!showPopupBtn.length) {
+
+} else {
+    showPopupBtn.forEach(btn => {
+        btn.addEventListener('click', function (elem) {
+            elem.preventDefault()
+
+            const id = this.getAttribute('href').replace('#', '')
+
+            showPopup(id)
+        })
+    })
+
+}
+
+const popup = document.querySelectorAll('.popup');
+
+if (!popup.length) {
+
+} else {
+    popup.forEach(elem => {
+        const popupClose = elem.querySelector('.popup-close');
+        const popupContent = elem.querySelector('.popup-content');
+        const popupSuccess = elem.querySelector('input[type="submit"]')
+
+        popupClose.addEventListener('click', function (close) {
+            close.preventDefault();
+
+            const id = this.getAttribute('href').replace('#', '');
+
+            document.getElementById(id).classList.remove('show');
+
+            document.querySelector('body').classList.remove('no-scroll')
+
+        })
+
+        popupContent.addEventListener('click', function (content) {
+            content.stopPropagation();
+        })
+
+        if (popupSuccess) {
+            popupSuccess.addEventListener('click', function (success) {
+                success.preventDefault();
+
+                popupSuccess.closest('.popup').classList.remove('show')
+
+                document.getElementById('success-popup').classList.add('show')
+            })
+        }
+
+
+        elem.addEventListener('click', function () {
+            this.classList.remove('show')
+            document.querySelector('body').classList.remove('no-scroll')
+
+        })
+    })
+}
+
+function showPopup(id) {
+    const popup = document.getElementById(id);
+    popup.classList.add('show');
+    document.querySelector('body').classList.add('no-scroll');
+}
+
+const burgerBtn = document.querySelector('.header-burger');
+
+if (!burgerBtn) {
+
+} else {
+    const burgerMenu = document.querySelector('.header-burger-menu');
+    const burgerClose = document.querySelector('.burger-menu-close');
+
+    burgerBtn.addEventListener('click', function (btn) {
+        burgerMenu.classList.add('open')
+        document.querySelector('body').classList.add('no-scroll');
+    })
+
+    burgerClose.addEventListener('click', function (close) {
+        close.preventDefault();
+        burgerMenu.classList.remove('open');
+        document.querySelector('body').classList.remove('no-scroll');
+    })
+}
+
+const navBtn = document.querySelectorAll('.catalog-menu');
+
+if (!navBtn.length) {
+
+} else {
+    const burgerMenu = document.querySelector('.header-burger-menu');
+    const headerNav = document.querySelector('.header-nav');
+    const headerClose = document.querySelector('.nav-close');
+
+    navBtn.forEach(btn => {
+        btn.addEventListener('click', function (button) {
+            button.preventDefault();
+            document.querySelector('body').classList.add('no-scroll');
+
+            burgerMenu.classList.remove('open');
+            headerNav.classList.add('open');
+        })
+
+        headerClose.addEventListener('click', function (close) {
+            headerNav.classList.remove('open');
+            document.querySelector('body').classList.remove('no-scroll');
+        });
     })
 }
