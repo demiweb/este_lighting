@@ -1,5 +1,23 @@
 @import '../common/vars';
 
+#popup-login, #popup-login-forgot {
+  background: transparent;
+  //opacity: 1;
+  //z-index: 100 !important;
+  //pointer-events: unset;
+
+  .popup- {
+    &content {
+      position: relative;
+      margin: 98px 16% 10% auto;
+      max-width: 436px;
+      padding: 50px;
+      background: $popup-bg;
+    }
+  }
+
+}
+
 .popup {
   position: fixed;
   top: 0;
@@ -8,10 +26,10 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: -1;
-  opacity: 0;
   pointer-events: none;
   transition: all .4s ease;
   overflow-y: auto;
+  opacity: 0;
 
   &.show {
     opacity: 1;
@@ -28,6 +46,7 @@
     max-width: 436px;
     padding: 50px;
     background: $popup-bg;
+    border: 1px solid #414348;
   }
 
   &title {
@@ -42,10 +61,14 @@
   &form {
     label {
       width: 100%;
-      display: block;
+      display: flex;
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
+      }
+
+      &:last-of-type {
+        margin-top: 30px;
       }
 
       input {
@@ -54,10 +77,14 @@
         background: transparent;
         color: #fff;
         padding: 12px 0;
+        height: auto;
 
         &::placeholder {
           color: #fff;
         }
+      }
+      input[type='checkbox'] {
+        display: none;
       }
     }
 
@@ -69,6 +96,47 @@
     input[type='submit'] {
       padding: 16px 0;
       margin-top: 40px;
+    }
+  }
+
+  &footer {
+    margin-top: 30px;
+    > a {
+      display: block;
+      text-align: center;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 15px 0;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        background: #35383E;
+        top: 50%;
+        width: calc(61% - 21px);
+        height: 1px;
+        transform: translateY(-50%);
+      }
+
+      &:after {
+        right: -50px;
+      }
+
+      &:before {
+        left: -50px;
+      }
+    }
+    p {
+      display: flex;
+      justify-content: center;
+    }
+    a {
+      color: $main-light;
+      text-decoration: none;
     }
   }
 

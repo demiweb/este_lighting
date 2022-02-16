@@ -1,0 +1,14 @@
+@import '../common/vars';
+@import '../common/mixins';
+
+.checkbox-btn {
+  @include input-checkbox(transparent, #fff, $main, $main);
+}
+
+.radio-btn {
+  @include input-radio(#fff, transparent, #fff, #fff, $main, $main);
+}
+
+.radio-btn-circle {
+  @include input-radio-circle();
+}

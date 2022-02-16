@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <!--  start authorization  -->
+    <section class="authorization">
+        <div class="authorization-left">
+            <h1 class="authorization-title">
+                Вход в аккаунт
+            </h1>
+            <form action="" class="authorization-form">
+                <label class="w-100">
+                    <input type="text" placeholder="+ 38 (0__) ___ __ __">
+                </label>
+                <label class="w-100">
+                    <input type="password" placeholder="Пароль">
+                </label>
+                <label class="checkbox-btn">
+                    <input type="checkbox">
+                    <span class="input-checkbox"></span>
+                    Запонить меня
+                </label>
+
+                <input class="btn-def" type="submit" value="Создать аккаунт">
+            </form>
+            <a href="#">Забыли пароль?</a>
+            <span>или</span>
+            <p>
+                Нет аккаунта?&nbsp;
+                <a href="#">Регистрация</a>
+            </p>
+        </div>
+        <div class="authorization-right">
+            <img src="img/img-1.png" alt="">
+        </div>
+    </section> <!--  end authorization  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

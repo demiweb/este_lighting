@@ -201,7 +201,7 @@
                     <p>
                         Нужна консультация?
                     </p>
-                    <a class="btn-def show-popup" href="#consultation-popup">Задать вопрос</a>
+                    <a class="btn-main show-popup" href="#popup-consultation">Задать вопрос</a>
                 </div>
             </div>
         </div>
@@ -230,7 +230,7 @@
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
                                 </div>
-                                <button class="btn-def">
+                                <button class="btn-main">
                                     В корзину
                                 </button>
                             </div>
@@ -256,7 +256,7 @@
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
                                 </div>
-                                <button class="btn-def">
+                                <button class="btn-main">
                                     В корзину
                                 </button>
                             </div>
@@ -282,7 +282,7 @@
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
                                 </div>
-                                <button class="btn-def">
+                                <button class="btn-main">
                                     В корзину
                                 </button>
                             </div>
@@ -308,7 +308,7 @@
                                     <img src="img/svg/plus.svg" alt="">
                                 </span>
                                 </div>
-                                <button class="btn-def">
+                                <button class="btn-main">
                                     В корзину
                                 </button>
                             </div>
@@ -325,46 +325,9 @@
     </section> <!--  end recommendations  -->
 </main>
 
-<div class="popup popup-consultation" id="consultation-popup">
-    <div class="popup-content">
-        <h4 class="popup-title">
-            Введите данные для консультации
-        </h4>
-        <p class="popup-text">
-            Мы свяжемся с вами, чтобы обсудить интересующие вас вопросы
-        </p>
-        <form action="" class="popup-form">
-            <label>
-                <input type="text" placeholder="Имя">
-            </label>
-            <label>
-                <input type="text" placeholder="Фамилия">
-            </label>
-            <label>
-                <input type="number" placeholder="+ 38 (0__) ___ __ __">
-            </label>
-            <label>
-                <input type="email" placeholder=" E-mail">
-            </label>
-            <input class="btn-def" type="submit" value="Отправить запрос на консультацию">
-        </form>
-        <a href="#consultation-popup" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
+<!-- Подключение popup -->
+@@include('parts/popup.html')
 
-<div class="popup popup-consultation-success" id="success-popup">
-    <div class="popup-content">
-        <p class="popup-message">
-            Ваши данные успешно отправлены!
-        </p>
-        <img  class="popup-icon" src="img/svg/success.svg" alt="">
-        <a href="#success-popup" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
 <!-- Подключение футера -->
 @@include('parts/footer.html')
 

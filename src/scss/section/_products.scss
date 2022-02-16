@@ -133,7 +133,10 @@
   .content {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    width: 280px;
+    padding: 30px;
+    left: 0;
+    top: 28px;
 
     label {
       display: flex;
@@ -145,33 +148,6 @@
 
       input {
         display: none;
-      }
-    }
-
-
-    input:checked + .checkbox, input:checked > .checkbox {
-      border: 1px solid $main;
-      background: $main;
-
-      &:after {
-        content: '\2714';
-        font-size: 10px;
-      }
-    }
-
-    .checkbox {
-      margin-right: 17px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 16px;
-      border-radius: 4px;
-      border: 1px solid #fff;
-      background: transparent;
-
-      &:after {
-        content: none;
       }
     }
 
@@ -292,15 +268,8 @@
 
         &:hover {
           background: $main-light;
-
         }
       }
-
-      .quantity {
-
-      }
-
-
     }
 
     button {
@@ -604,24 +573,6 @@
         input {
           display: none;
         }
-      }
-
-      input:checked + .radio, input:checked > .radio {
-        width: 18px;
-        height: 18px;
-        position: unset;
-        border: 2px solid $main;
-        background: $main;
-        box-shadow: inset 0 0 0 3px black;
-      }
-
-      .radio {
-        display: block;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 2px solid #D8D8D8;
-        margin-right: 17px;
       }
     }
   }

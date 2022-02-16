@@ -1,21 +1,166 @@
 @import "vars";
 
-@mixin btn($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {
-  background: $bg;
-  color: $color;
-  font-size: 15px;
-  line-height: 1.4;
+@mixin btn($color, $bg, $border, $h-color, $h-bg, $h-border) {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color .4s ease;
-  border: 1px solid $border;
   padding: 0 20px;
+  background: $bg;
+  border: 1px solid $border;
+  color: $color;
+  font-size: 15px;
+  line-height: 1.4;
+  transition: background-color .4s ease;
   text-decoration: none;
 
   &:hover {
-    background: $bg-hover;
-    color: $color-hover;
-    border: $border-hover;
+    cursor: pointer;
+    background: $h-bg;
+    color: $h-color;
+    border: 1px solid $h-border;
+  }
+}
+
+@mixin btn-small-sec($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {
+
+}
+
+@mixin btn-big-sec($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {
+
+}
+
+@mixin btn-slider($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {
+
+}
+
+@mixin btn-circle($color, $bg, $border, $h-color, $h-bg, $h-border) {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  .text {
+    color: $color;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    position: relative;
+    transition: all .3s ease;
+    transform-origin: center;
+    margin-left: 20px;
+    background: $bg;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+      transition: all .3s ease;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .text {
+      color: $h-color;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      background: $h-bg;
+      transform: scale(1.26);
+      border: 1px solid $h-border;
+
+      img {
+        left: 63.15%;
+      }
+    }
+  }
+}
+
+@mixin input-radio($color, $bg, $border, $a-color, $a-bg, $a-border) {
+  .radio-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: $color;
+    border: 1px solid $border;
+    background: $bg;
+  }
+
+  input:checked + .radio-input,
+  input:checked > .radio-input, {
+    color: $a-color;
+    border: 1px solid $a-border;
+    background: $a-bg;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin input-radio-circle() {
+  .input-radio-circle {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #D8D8D8;
+    margin-right: 17px;
+  }
+
+  input:checked + .input-radio-circle,
+  input:checked > .input-radio-circle, {
+    width: 18px;
+    height: 18px;
+    position: unset;
+    border: 2px solid $main;
+    background: $main;
+    box-shadow: inset 0 0 0 3px black;
+  }
+}
+
+@mixin input-checkbox($bg, $border, $a-bg, $a-border) {
+  .input-checkbox {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid $border;
+    background: $bg;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  input:checked + .input-checkbox,
+  input:checked > .input-checkbox, {
+    border: 1px solid $a-border;
+    background: $a-bg;
+
+    &:after {
+      content: '\2714';
+      font-size: 10px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

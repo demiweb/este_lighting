@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 70px;
   line-height: 1.1;
   font-weight: 700;
 }
@@ -56,7 +56,9 @@ button, textarea, input {
   margin-right: 30px;
   border-top: 1px solid $main-light;
   margin-top: 5px;
-
+}
+.w-100 {
+  width: 100% !important;
 }
 
 .container {
@@ -85,7 +87,7 @@ button, textarea, input {
   }
 
   h1 {
-    font-size: 58px;
+    font-size: 40px;
   }
 
   h2 {

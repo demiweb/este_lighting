@@ -163,6 +163,8 @@ new Swiper('.recommendations-swiper', {
     }
 })
 
+
+// Фикс header при скролле
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header')
     if (window.pageYOffset >= 1) {
@@ -172,6 +174,8 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
+// Изменение языка
 const language = document.querySelector('.header-language')
 
 if (!language) {
@@ -191,6 +195,8 @@ if (!language) {
     })
 }
 
+
+// Price фильтр
 const rangeSlider = document.getElementById('range-slider');
 
 if (rangeSlider) {
@@ -218,11 +224,13 @@ if (rangeSlider) {
     })
 }
 
+
+// Обработка dropdown при клике
 const dropdown = document.querySelectorAll('.dropdown-menu')
 
 if (!dropdown.length) {
 
-} else if (dropdown.length && window.innerWidth >= 991) {
+} else if (dropdown.length && window.innerWidth > 991) {
     dropdown.forEach(menu => {
         const title = menu.querySelector('.dropdown-head')
         const content = menu.querySelector('.dropdown-content')
@@ -240,20 +248,46 @@ if (!dropdown.length) {
         })
 
     })
-    window.addEventListener('click', function (elem) {
-        console.log(this.classList)
-        // if (el.target.classList.contains('dropdown-content')) {
-        //     console.log('ssss')
-        // }
+}
+
+
+// Обработка dropdown при наведении
+const dropdownHover = document.querySelectorAll('.dropdown-menu-hover')
+
+if (!dropdownHover.length) {
+
+} else if (dropdownHover.length && window.innerWidth > 991) {
+    dropdownHover.forEach(menu => {
+        const title = menu.querySelector('.dropdown-head-hover')
+        const content = menu.querySelector('.dropdown-content-hover')
+
+
+        title.addEventListener('mouseover', function () {
+            this.classList.add('active');
+            content.classList.add('active');
+        })
+        title.addEventListener('mouseleave', function (event) {
+            this.classList.remove('active');
+            content.classList.remove('active');
+        })
+        content.addEventListener('mouseover', function () {
+            this.classList.add('active')
+        });
+
+        content.addEventListener('mouseleave', function () {
+            this.classList.remove('active')
+        });
     })
 }
 
-const dropdownMob = document.querySelectorAll('.accordion-menu-mob')
 
-if (!dropdownMob.length) {
+// Обработка accordion при ширине окна < 991px
+const accordionMob = document.querySelectorAll('.accordion-menu-mob')
 
-} else if (dropdownMob.length && window.innerWidth <= 991) {
-    dropdownMob.forEach(menu => {
+if (!accordionMob.length) {
+
+} else if (accordionMob.length && window.innerWidth < 991) {
+    accordionMob.forEach(menu => {
         const title = menu.querySelector('.accordion-head-mob')
         const content = menu.querySelector('.accordion-content-mob')
 
@@ -271,12 +305,14 @@ if (!dropdownMob.length) {
     })
 }
 
-const dropdownDesc = document.querySelectorAll('.accordion-menu')
 
-if (!dropdownDesc.length) {
+// Обработка accordion при ширине окна > 991px
+const accordionDesc = document.querySelectorAll('.accordion-menu')
+
+if (!accordionDesc.length) {
 
 } else {
-    dropdownDesc.forEach(menu => {
+    accordionDesc.forEach(menu => {
         const title = menu.querySelector('.accordion-head')
         const content = menu.querySelector('.accordion-content')
 
@@ -294,6 +330,8 @@ if (!dropdownDesc.length) {
     })
 }
 
+
+// Навешивание обработчика событий кнопкам для всплытия popup окон
 const showPopupBtn = document.querySelectorAll('.show-popup')
 
 if (!showPopupBtn.length) {
@@ -308,9 +346,10 @@ if (!showPopupBtn.length) {
             showPopup(id)
         })
     })
-
 }
 
+
+// Обработка всплытия popup окна
 const popup = document.querySelectorAll('.popup');
 
 if (!popup.length) {
@@ -319,48 +358,81 @@ if (!popup.length) {
     popup.forEach(elem => {
         const popupClose = elem.querySelector('.popup-close');
         const popupContent = elem.querySelector('.popup-content');
-        const popupSuccess = elem.querySelector('input[type="submit"]')
+        const successBtn = elem.querySelector('input[type="submit"]');
+        const popupForgot = elem.querySelector('.popup-forgot');
 
         popupClose.addEventListener('click', function (close) {
             close.preventDefault();
 
-            const id = this.getAttribute('href').replace('#', '');
+            const id = this.closest('.popup')
 
-            document.getElementById(id).classList.remove('show');
+            id.classList.remove('show');
 
             document.querySelector('body').classList.remove('no-scroll')
-
         })
 
         popupContent.addEventListener('click', function (content) {
             content.stopPropagation();
         })
 
-        if (popupSuccess) {
-            popupSuccess.addEventListener('click', function (success) {
-                success.preventDefault();
 
-                popupSuccess.closest('.popup').classList.remove('show')
+        if (successBtn) {
+            successBtn.addEventListener('click', function (btn) {
+                btn.preventDefault();
 
-                document.getElementById('success-popup').classList.add('show')
+                const currentPopup = successBtn.closest('.popup');
+                const successPopup = document.getElementById('popup-consultation-success');
+                const popupMessage = successBtn.dataset.message;
+
+                if (currentPopup.classList.contains('popup-login')) {
+                    currentPopup.classList.remove('show');
+
+                    successPopup.classList.add('show');
+                    successPopup.querySelector('.popup-message').innerText = popupMessage;
+                } else if (currentPopup.classList.contains('popup-login-forgot')) {
+                    currentPopup.classList.remove('show');
+
+                    document.getElementById('popup-login').classList.add('show')
+                } else {
+                    currentPopup.classList.remove('show');
+
+                    successPopup.classList.add('show');
+                    successPopup.querySelector('.popup-message').innerText = popupMessage;
+                }
             })
         }
 
+        if (popupForgot) {
+            popupForgot.addEventListener('click', function (forgot) {
+                forgot.preventDefault();
+
+                popup.forEach(popup => {
+                    popup.classList.remove('show')
+                })
+
+                const id = this.getAttribute('href').replace('#', '');
+
+                showPopup(id)
+            })
+        }
 
         elem.addEventListener('click', function () {
             this.classList.remove('show')
             document.querySelector('body').classList.remove('no-scroll')
-
         })
     })
 }
 
+
+// Функция всплытия popup окна
 function showPopup(id) {
     const popup = document.getElementById(id);
     popup.classList.add('show');
     document.querySelector('body').classList.add('no-scroll');
 }
 
+
+// Обработка кнопки burger
 const burgerBtn = document.querySelector('.header-burger');
 
 if (!burgerBtn) {
@@ -381,6 +453,8 @@ if (!burgerBtn) {
     })
 }
 
+
+// Обработка кнопок вызова панели навигации при ширине окна < 991px
 const navBtn = document.querySelectorAll('.catalog-menu');
 
 if (!navBtn.length) {
@@ -405,3 +479,4 @@ if (!navBtn.length) {
         });
     })
 }
+
