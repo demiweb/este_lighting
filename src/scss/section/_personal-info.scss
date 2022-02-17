@@ -4,19 +4,6 @@
 .personal-info {
   padding: 50px 0 100px;
 
-  input:not([type='submit']) {
-    font-size: 15px;
-    padding: 0 0 12px;
-    border: none;
-    border-bottom: 1px solid $stroke-dark;
-    background: transparent;
-    color: #fff;
-
-    &::placeholder {
-      color: #fff;
-    }
-  }
-
   .container {
     display: flex;
   }

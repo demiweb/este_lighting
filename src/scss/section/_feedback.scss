@@ -32,6 +32,7 @@
     padding-top: 66.88%;
     overflow: hidden;
     margin-left: auto;
+
     img {
       width: 100%;
       height: 100%;
@@ -52,6 +53,7 @@
     font-weight: 700;
     display: block;
     margin-bottom: 30px;
+    text-transform: uppercase;
   }
 
   p, > a {
@@ -101,22 +103,19 @@
   .title {
     font-size: 30px;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 300;
     display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
   }
 
   form {
     label {
+      display: block;
       width: 100%;
 
-      input:not([type='submit']) {
-        border-bottom: 1px solid $stroke-dark;
-        background: transparent;
-        padding: 30px 0 18px;
-
-        &::placeholder {
-          color: $light-grey;
-        }
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
       }
     }
 
@@ -126,9 +125,6 @@
     }
 
     input {
-      font-size: 15px;
-      line-height: 1.5;
-      border: none;
       width: 100%;
     }
   }
@@ -146,6 +142,7 @@
   .feedback-left {
     padding: 22px 20px 40px;
     width: 100%;
+
     .bg {
       width: 109px;
       height: 0;

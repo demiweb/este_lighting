@@ -70,17 +70,7 @@
       width: calc((100% / 2) - 15px);
 
       input {
-        font-size: 15px;
         width: 100%;
-        padding: 12px 0;
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid $stroke-dark;
-        color: #fff;
-
-        &::placeholder {
-          color: #fff;
-        }
       }
     }
 

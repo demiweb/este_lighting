@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="container">
+            <h1 class="head-page-title">
+                О компании
+            </h1>
+            <div class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">О компании</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section> <!--  end head-page  -->
+
+    <!--  start about  -->
+    <section class="about">
+        <div class="bg">
+            <img src="img/about/bg-img.png" alt="">
+        </div>
+        <div class="container">
+            <div class="about-logo">
+                <img src="img/svg/about-logo.svg" alt="">
+            </div>
+            <div class="about-top">
+                <q>Наша команда знає світло зовні та всередині, впорається із найскладнійшими світловими рішеннями та
+                    реалізує всі Ваші індивідуальні проекти.</q>
+                <span>-Marie Bernmen</span>
+                <span>CEO</span>
+            </div>
+            <div class="about-middle">
+                <div class="about-middle-left">
+                    <div class="h-line"></div>
+                    <p>
+                        Бренд ESTE був створений понад 7 років тому і є одним із лідерів виробництва та продажу
+                        декоративного освітлення на українському та європейському ринках. У пошуках форм і матеріалів ми
+                        вибираємо міцні світильники, як класичні, так і сучасні, які перетворюють будь-який простір на
+                        щось особливе.
+                        <br>
+                        <br>
+
+                        ESTE підтримує актуальний асортимент та постійно розширює модельний ряд своєї продукції, уважно
+                        ставиться до кожного етапу свого ланцюжка поставок.
+                    </p>
+                </div>
+                <div class="about-middle-right">
+                    <div class="img">
+                        <img src="img/about/img-1.png" alt="">
+                    </div>
+                    <div class="shadow-circle"></div>
+                </div>
+            </div>
+            <div class="about-bottom">
+                <div class="img">
+                    <img src="img/about/img-2.png" alt="">
+                </div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section><!--  end about  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

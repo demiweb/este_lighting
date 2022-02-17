@@ -1,0 +1,146 @@
+@import '../common/vars';
+@import '../common/mixins';
+
+.about {
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.about- {
+
+  &logo {
+    padding-top: 9.91%;
+    width: 23.11%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    margin: 70px 0 30px 105px;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &top {
+    padding: 0 8.60% 0 46.31%;
+    margin-bottom: 90px;
+
+    q {
+      display: block;
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    span {
+      display: block;
+      color: $light-grey;
+    }
+  }
+
+  &middle {
+    display: flex;
+
+    .about-middle- {
+      &left {
+        width: 46.31%;
+        display: flex;
+        padding-top: 30px;
+
+        p {
+
+        }
+      }
+
+      &right {
+        width: 53.69%;
+        position: relative;
+
+        .img {
+          width: 63.26%;
+          padding-top: 69.66%;
+          margin: 0 8.60% 0 auto;
+          height: 0;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .shadow-circle {
+          position: absolute;
+          bottom: -99px;
+          right: 54.74%;
+          width: 38.02%;
+          padding-top: 38.02%;
+          overflow: hidden;
+          height: 0;
+          border-radius: 50%;
+          background: $main;
+          filter: blur(50px);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &bottom {
+    margin-bottom: 120px;
+    position: relative;
+
+    .img {
+      width: 23.11%;
+      padding-top: 21.31%;
+      height: 0;
+      overflow: hidden;
+      position: relative;
+      margin-left: 17.13%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .circle {
+      width: 28.19%;
+      padding-top: 28.19%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid $main;
+      position: absolute;
+      left: 28.68%;
+      top: -133px;
+      z-index: -1;
+    }
+  }
+}

@@ -16,9 +16,9 @@ body {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 55px;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 h2 {
@@ -44,6 +44,12 @@ h4 {
 button, textarea, input {
   outline: none;
   font-family: 'HelveticaNeueCyr', sans-serif;
+}
+
+.header-plug {
+  width: 100%;
+  height: 77px;
+  background: #000;
 }
 
 .no-scroll {

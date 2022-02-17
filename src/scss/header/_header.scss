@@ -94,7 +94,6 @@
               input {
                 display: none;
               }
-              //w182
             }
           }
         }
@@ -191,15 +190,10 @@
 
     input {
       width: 100%;
-      padding: 0 40px 25px 0;
-      border: none;
-      border-bottom: 1px solid $stroke-dark;
-      background: transparent;
-      font-size: 35px;
-      color: #fff;
+      padding: 0 40px 25px 0 !important;
+      font-size: 35px !important;
 
       &::placeholder {
-        color: #fff;
         font-weight: 300;
       }
     }
@@ -556,10 +550,10 @@
           margin-bottom: 40px;
 
           input {
-            font-size: 25px;
+            font-size: 25px !important;
 
             &::placeholder {
-              font-size: 25px;
+              font-size: 25px !important;
             }
           }
 

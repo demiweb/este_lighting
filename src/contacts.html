@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="container">
+            <h1 class="head-page-title">
+                Контакты
+            </h1>
+            <div class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Контакты</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section> <!--  end head-page  -->
+
+    <!--  start feedback  -->
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback-content">
+                <div class="feedback-left">
+                    <div class="bg">
+                        <img src="img/feedback/img-1.png" alt="">
+                    </div>
+                    <span class="title">
+                        Наши <br>
+                        контакты
+                    </span>
+                    <p>
+                        Leave a request in the form and we will contact you shortly
+                    </p>
+                    <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
+                    <div>
+                        <a href="#">
+                            <img src="img/svg/instagram_black.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/linkedin_black.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/svg/telegram_black.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="feedback-right">
+                    <span class="title">
+                        Заполните Форму,
+                        чтобы связаться с нами
+                    </span>
+                    <form action="">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                        <label>
+                            <input type="tel" placeholder="+38 (0__) ___ __ __">
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Ваше сообщение">
+                        </label>
+                        <input class="btn-main" type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> <!--  end feedback  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

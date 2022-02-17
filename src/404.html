@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <div class="header-plug"></div>
+
+    <!--  start error-page  -->
+    <section class="error-page">
+        <div class="container">
+            <div class="error-page-content">
+                <div class="img">
+                    <img src="img/404/img-1.png" alt="">
+                </div>
+                <p>Кажется, такой страницы не существует, можете вернуться на главную!</p>
+                <a href="#" class="btn-main">Главная страница</a>
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="shadow-circle"></div>
+            </div>
+        </div>
+    </section> <!--  start error-page  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

@@ -12,3 +12,16 @@
 .radio-btn-circle {
   @include input-radio-circle();
 }
+
+input:not([type='radio'], [type='submit'], [type='checkbox'], [type='date'], [type='reset']) {
+  padding: 0 0 12px;
+  border: none;
+  border-bottom: 1px solid $stroke-dark;
+  font-size: 15px;
+  color: #fff;
+  background: transparent;
+
+  &::placeholder {
+    color: #fff;
+  }
+}

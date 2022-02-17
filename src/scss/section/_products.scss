@@ -193,7 +193,8 @@
       display: none;
     }
 
-    input:checked + .input-radio-circle, input:checked > .input-radio-circle {
+    input:checked + .input-radio-circle,
+    input:checked > .input-radio-circle {
       position: absolute;
       bottom: -5px;
       display: block;
