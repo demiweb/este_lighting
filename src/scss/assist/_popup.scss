@@ -12,7 +12,7 @@
       margin: 98px 16% 10% auto;
       max-width: 436px;
       padding: 50px;
-      background: $popup-bg;
+      background: $grafit-1;
     }
   }
 
@@ -45,7 +45,7 @@
     margin: 10% auto 10%;
     max-width: 436px;
     padding: 50px;
-    background: $popup-bg;
+    background: $grafit-1;
     border: 1px solid #414348;
   }
 
@@ -73,7 +73,7 @@
 
       input {
         border: none;
-        border-bottom: 1px solid #5C6068;
+        border-bottom: 1px solid $stroke-dark;
         background: transparent;
         color: #fff;
         padding: 12px 0;
@@ -89,7 +89,6 @@
     }
 
     input {
-      font-size: 15px;
       width: 100%;
     }
 
@@ -115,7 +114,7 @@
       &:after, &:before {
         content: '';
         position: absolute;
-        background: #35383E;
+        background: $grafit-2;
         top: 50%;
         width: calc(61% - 21px);
         height: 1px;
@@ -135,7 +134,7 @@
       justify-content: center;
     }
     a {
-      color: $main-light;
+      color: $main-hover;
       text-decoration: none;
     }
   }

@@ -1,12 +1,52 @@
-.accordion-menu {
-  &:hover {
-    cursor: pointer;
+@import '../common/vars';
+@import '../common/mixins';
+
+.accordion- {
+  &menu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &head {
+    display: flex;
+    align-items: center;
+    &:after {
+      content: '\002B';
+      font-size: 20px;
+      line-height: 20px;
+      transition: all .4s ease;
+    }
+    &.active {
+      &:after {
+        content: '\2013';
+      }
+    }
+    &:hover {
+      &:after {
+        color: $main-hover;
+      }
+    }
+  }
+
+  &content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s ease;
   }
 }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all .4s ease;
-}
+@media screen and(max-width: 991px) {
 
+  .accordion-content- {
+    &mob {
+      max-height: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+    }
+  }
+
+  .accordion-content-mob.active {
+
+  }
+}

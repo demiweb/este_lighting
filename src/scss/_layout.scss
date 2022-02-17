@@ -7,7 +7,7 @@
 }
 
 body {
-  background: $bg-color;
+  background: $grafit-1;
   color: $primary-color;
   font-size: 14px;
   line-height: 1.4;
@@ -54,7 +54,7 @@ button, textarea, input {
   width: 74px;
   flex: 0 0 74px;
   margin-right: 30px;
-  border-top: 1px solid $main-light;
+  border-top: 1px solid $main-hover;
   margin-top: 5px;
 }
 .w-100 {

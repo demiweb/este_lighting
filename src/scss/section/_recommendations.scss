@@ -22,7 +22,7 @@
 }
 
 .recommendations-swiper-slide {
-  border: 1px solid #414348;
+  border: 1px solid $grafit-2;
   &:hover {
     cursor: pointer;
     .slide-panel {
@@ -75,7 +75,7 @@
         transition: all .3s ease;
 
         &:hover {
-          background: $main-light;
+          background: $main-hover;
 
         }
       }

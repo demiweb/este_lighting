@@ -193,7 +193,7 @@
       width: 100%;
       padding: 0 40px 25px 0;
       border: none;
-      border-bottom: 1px solid #5C6068;
+      border-bottom: 1px solid $stroke-dark;
       background: transparent;
       font-size: 35px;
       color: #fff;
@@ -325,7 +325,7 @@
 
                 &:hover {
                   &:before {
-                    background: $main-light;
+                    background: $main-hover;
                   }
                 }
 
