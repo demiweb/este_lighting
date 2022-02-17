@@ -2,11 +2,11 @@
 @import "../common/mixins";
 
 .btn-main {
-  @include btn(#fff, $main, $main, #fff, $main-light, $main-light);
+  @include btn(#fff, $main, $main, #fff, $main-hover, $main-hover);
 }
 
 .btn-sec {
-  @include btn(#fff, transparent, $stroke, #fff, $main-light, $main-light);
+  @include btn(#fff, transparent, $stroke, #fff, $main-hover, $main-hover);
 }
 
 .btn-circle {

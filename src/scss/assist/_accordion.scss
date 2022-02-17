@@ -1,12 +1,28 @@
-.accordion-menu {
-  &:hover {
-    cursor: pointer;
+.accordion- {
+  &menu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s ease;
   }
 }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all .4s ease;
-}
+@media screen and(max-width: 991px) {
 
+  .accordion-content- {
+    &mob {
+      max-height: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+    }
+  }
+
+  .accordion-content-mob.active {
+
+  }
+}

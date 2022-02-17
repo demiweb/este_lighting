@@ -10,13 +10,14 @@
 @import "footer/footer";
 
 //assist
-@import "assist/slider";
 @import "assist/buttons";
-@import "assist/dropdown";
 @import "assist/breadcrumb";
-@import "assist/accordion";
-@import "assist/popup";
 @import "assist/inputs";
+@import "assist/popup";
+@import "assist/slider";
+@import "assist/dropdown";
+@import "assist/accordion";
+@import "assist/tabs";
 
 // section
 @import "section/hero";
@@ -29,3 +30,4 @@
 @import "section/product-details";
 @import "section/recommendations";
 @import "section/authorization";
+@import "section/personal-info";

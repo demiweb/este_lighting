@@ -110,7 +110,7 @@
       width: 100%;
 
       input:not([type='submit']) {
-        border-bottom: 1px solid #5C6068;
+        border-bottom: 1px solid $stroke-dark;
         background: transparent;
         padding: 30px 0 18px;
 

@@ -75,12 +75,11 @@
 
     #range-slider.noUi-horizontal {
       width: 192px;
-
       border: none;
       border-radius: 0;
       height: 3px;
       margin: 9px 0;
-      background: #5C6068;
+      background: $stroke-dark;
       box-shadow: none;
 
       &:before {
@@ -107,7 +106,7 @@
         }
 
         &handle-lower, &handle-upper {
-          border: 2px solid $main-light;
+          border: 2px solid $main-hover;
           border-radius: 0;
           background: $dark-color;
           box-shadow: none;
@@ -189,7 +188,12 @@
       }
     }
 
-    input:checked + .radio, input:checked > .radio {
+    .input-radio-circle {
+      border-radius: 0;
+      display: none;
+    }
+
+    input:checked + .input-radio-circle, input:checked > .input-radio-circle {
       position: absolute;
       bottom: -5px;
       display: block;
@@ -210,7 +214,7 @@
 
 .products-item {
   width: calc((100% / 4) - (90px / 4));
-  border: 1px solid #414348;
+  border: 1px solid $grafit-2;
 
   &:hover {
     cursor: pointer;
@@ -267,7 +271,7 @@
         transition: all .3s ease;
 
         &:hover {
-          background: $main-light;
+          background: $main-hover;
         }
       }
     }
@@ -369,7 +373,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      background: #5C6068;
+      background: $stroke-dark;
       margin-bottom: 2px;
       padding: 0 12px 0 20px;
       position: relative;
@@ -404,7 +408,7 @@
 
     &header {
       height: 34px;
-      border: 1px solid #D8D8D8;
+      border: 1px solid $stroke;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -487,7 +491,7 @@
         border-radius: 0;
         height: 3px;
         margin: 9px 0;
-        background: #5C6068;
+        background: $stroke-dark;
         box-shadow: none;
         width: 100%;
 
@@ -522,7 +526,7 @@
           }
 
           &handle-lower, &handle-upper {
-            border: 2px solid $main-light;
+            border: 2px solid $main-hover;
             border-radius: 0;
             background: $dark-color;
             box-shadow: none;

@@ -12,7 +12,7 @@
     }
     &content, &content-hover {
       position: absolute;
-      background: $dark-color-2;
+      background: $grafit-2;
       opacity: 0;
       z-index: 10;
       transition: all .4s ease;
@@ -26,15 +26,3 @@
 
 }
 
-@media screen and(max-width: 991px) {
-
-  .accordion-content-mob {
-    max-height: 0;
-    overflow: hidden;
-    transition: all .4s ease;
-  }
-
-  .accordion-content-mob.active {
-
-  }
-}
