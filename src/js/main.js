@@ -480,3 +480,27 @@ if (!navBtn.length) {
     })
 }
 
+
+const filterTitle = document.querySelectorAll('.ocf-slider-input-group');
+
+if (!filterTitle.length) {
+
+} else {
+    if (window.innerWidth < 991) {
+        filterTitle.forEach(row => {
+            filterRename(row)
+        })
+    }
+}
+
+function filterRename(el) {
+    const names = el.querySelectorAll('.ocf-input-group-addon')
+
+    names.forEach((name, idx) => {
+        if (idx) {
+            name.innerHTML = 'До'
+        } else {
+            name.innerHTML = 'От'
+        }
+    })
+}

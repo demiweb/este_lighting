@@ -1,8 +1,14 @@
 .breadcrumb {
-  margin-bottom: 27px;
+  margin-bottom: 27px !important;
+  padding: 0 !important;
+  list-style: none;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+
   ol {
     list-style: none;
     display: flex;
+
     li {
       a {
         color: #fff;

@@ -33,8 +33,37 @@
     justify-content: flex-end;
     align-items: flex-start;
   }
+  .container-100 {
+    max-width: 100%!important;
+    padding: 0 30px !important;
+    min-width: 100% !important;
+  }
 }
 
 .head-page-title {
   margin-bottom: 9px;
+}
+
+@media screen and(max-width: 767px) {
+  .head-page {
+    height: 240px;
+    position: relative;
+
+    .bg {
+
+
+      img {
+
+      }
+      .bg-filter{
+
+      }
+    }
+    .container {
+
+    }
+    .container-100 {
+      padding: 0 20px !important;
+    }
+  }
 }
