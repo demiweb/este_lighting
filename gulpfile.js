@@ -64,6 +64,12 @@ function fonts () {
         .pipe(dest('dist/fonts/'))
 }
 
+function ocfilter () {
+    return src('src/ocfilter/**/*.*')
+        .pipe(dest('dist/ocfilter/'))
+}
+
+
 function clean () {
     return del('dist/')
 }
@@ -74,6 +80,7 @@ function watchFiles() {
     watch('src/js/**/*.js', series(js, browserSyncReload))
     watch('src/img/**/*.*', series(img, browserSyncReload))
     watch('src/fonts/**/*.*', series(fonts, browserSyncReload))
+    watch('src/ocfilter/**/*.*', series(ocfilter, browserSyncReload))
 }
 
 exports.default = series(
@@ -83,6 +90,7 @@ exports.default = series(
     js,
     img,
     fonts,
+    ocfilter,
     browserSyncServe,
     watchFiles,
 )
