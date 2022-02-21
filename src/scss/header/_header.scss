@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.25);
   position: fixed;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid $stroke-dark;
   transition: all .4s ease;
 
   .container {
@@ -69,6 +69,9 @@
   &nav {
     .nav- {
       &category {
+        .title {
+          padding: 0 35px;
+        }
         .content {
           div {
             display: flex;
@@ -102,7 +105,6 @@
   }
 
   &tel {
-    margin-right: 30px;
     margin-left: auto;
 
     a {
@@ -113,14 +115,28 @@
   }
 
   &search {
-    margin-right: 30px;
+    margin: 0 30px;
   }
 
   &language {
-    margin-right: 30px;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: 300;
+    height: 100%;
+    margin: 0 30px;
+
+    .language-dropdown {
+      &-content {
+        left: -85px;
+      }
+    }
+  }
+
+  &currency {
+    height: 100%;
+
+    .currency-dropdown {
+      &-content {
+        left: -85px;
+      }
+    }
   }
 
   &login {
@@ -258,8 +274,74 @@
       }
     }
   }
+
+  &language {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: underline;
+
+          img {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
 }
 
+@media screen and(max-width: 1239px) {
+  .header- {
+    &burger {
+
+    }
+
+    &logo {
+
+    }
+
+    &nav {
+      .nav-category {
+        .title {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    &tel {
+
+    }
+
+    &search {
+      margin: 0 0 0 12px;
+    }
+
+    &currency {
+      margin: 0 12px;
+    }
+
+    &language {
+      margin: 0;
+    }
+
+    &login {
+      margin: 0 12px;
+    }
+
+    &cart {
+
+    }
+  }
+}
 
 @media screen and(min-width: 992px) {
   .header- {
@@ -280,7 +362,6 @@
             height: 100%;
             display: flex;
             align-items: center;
-            padding: 0 35px;
           }
 
           .content {
@@ -296,6 +377,15 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
+
+            > div {
+              width: 180px;
+              label {
+                span {
+                  height: 34px;
+                }
+              }
+            }
 
             ul {
               display: grid;
@@ -452,19 +542,21 @@
             }
 
 
-              div {
-                margin-right: 0;
-                > span {
-                  display: none;
+            div {
+              margin-right: 0;
+
+              > span {
+                display: none;
+              }
+
+              label {
+                &:first-of-type {
+                  margin-top: 20px;
                 }
 
-                label {
-                  &:first-of-type {
-                    margin-top: 20px;
-                  }
-                  //w100p
-                }
+                //w100p
               }
+            }
 
           }
         }
@@ -482,7 +574,11 @@
     }
 
     &search {
-      margin-right: 20px;
+      display: none;
+    }
+
+    &currency {
+      margin: 0;
     }
 
     &language {
@@ -490,7 +586,7 @@
     }
 
     &login {
-      margin-right: 20px;
+      margin: 15px;
     }
 
     &burger-menu {
@@ -523,9 +619,6 @@
     &logo {
       width: 60px;
       margin-right: auto;
-    }
-
-    &nav {
     }
 
     &tel {

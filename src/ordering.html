@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="container container-fluid">
+            <h1 class="head-page-title">
+                Корзина
+            </h1>
+            <div class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Корзина</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section> <!--  end head-page  -->
+
+    <!--  start ordering  -->
+    <section class="ordering">
+        <div class="container">
+
+        </div>
+    </section> <!--  end ordering  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

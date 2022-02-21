@@ -81,27 +81,12 @@
       margin-bottom: 20px;
       padding-bottom: 20px;
       border-bottom: 1px solid $stroke-dark;
+      display: flex;
+      justify-content: space-between;
 
       span {
         font-size: 15px;
-        display: flex;
-        justify-content: space-between;
 
-        &:after {
-          content: '\002B';
-          color: $main;
-          font-weight: 700;
-          font-size: 20px;
-        }
-      }
-    }
-
-    .title.active {
-      span {
-
-        &:after {
-          content: '\2013';
-        }
       }
     }
 
@@ -112,6 +97,7 @@
 
   h1 {
     margin-bottom: 10px;
+    font-size: 35px;
   }
 
   .collection {
@@ -123,19 +109,18 @@
   .row {
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
+    margin: 0 0 70px;
 
     .rrc {
-      align-self: flex-end;
-      margin: 0 20px 5px 0;
+      margin: 0 20px 0 0;
       font-size: 12px;
       color: $light-grey-2;
     }
 
-    b {
-      font-size: 30px;
-      line-height: 36px;
-      font-weight: 700;
+    .price {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 300;
     }
 
     .guarantee {
@@ -207,7 +192,7 @@
 
     p {
       font-size: 15px;
-      margin-left: 25px;
+      margin: 0 0 0 25px;
     }
 
     a {
@@ -241,7 +226,7 @@
     height: 100%;
   }
   .product-details-content-wrapper {
-    padding: 143px 20px 0;
+    padding: 20px 20px 0;
     overflow-y: visible;
 
     .accordion-menu {
@@ -278,10 +263,12 @@
   .product-details-content-wrapper {
     .row {
       flex-wrap: wrap;
-        b {
-          flex: 0 0 70%;
-          margin: 0 auto 0 0;
-        }
+
+      .price {
+        flex: 0 0 70%;
+        margin: 0 auto 0 0;
+      }
+
       .guarantee {
         margin: 20px 0 0 0;
       }

@@ -465,6 +465,7 @@
                     font-size: 14px !important;
                     color: #fff !important;
                     padding: 0 !important;
+                    background: transparent;
                   }
                 }
               }
@@ -547,8 +548,7 @@
           }
 
           .ocf-value-list {
-            background: $grafit-2 !important;
-            margin: -20px -17px 0 !important;
+            margin: 0 !important;
 
             .ocf-scroll-y {
               background-image: none !important;

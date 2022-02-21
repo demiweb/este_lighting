@@ -8,8 +8,10 @@
   ol {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 
     li {
+      margin-bottom: 3px;
       a {
         color: #fff;
         text-decoration: none;

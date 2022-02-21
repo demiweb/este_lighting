@@ -175,27 +175,6 @@ window.addEventListener('scroll', () => {
 })
 
 
-// Изменение языка
-const language = document.querySelector('.header-language')
-
-if (!language) {
-
-} else {
-    let lang = ""
-    language.addEventListener('click', function () {
-        if (this.dataset.language === 'UA') {
-            lang = "RU"
-            this.dataset.language = lang
-            this.innerHTML = lang
-        } else {
-            lang = "UA"
-            this.dataset.language = lang
-            this.innerHTML = lang
-        }
-    })
-}
-
-
 // Price фильтр
 const rangeSlider = document.getElementById('range-slider');
 
@@ -230,10 +209,19 @@ const dropdown = document.querySelectorAll('.dropdown-menu')
 
 if (!dropdown.length) {
 
-} else if (dropdown.length && window.innerWidth > 991) {
+} else if (dropdown.length) {
     dropdown.forEach(menu => {
         const title = menu.querySelector('.dropdown-head')
         const content = menu.querySelector('.dropdown-content')
+
+        window.addEventListener('click', function (e) {
+            if (e.target.closest('.dropdown-head') || e.target.closest('.dropdown-content')) {
+            } else {
+                title.classList.remove('active');
+                content.classList.remove('active');
+            }
+        })
+
 
         title.addEventListener('click', function () {
             this.classList.toggle('active')
@@ -246,7 +234,6 @@ if (!dropdown.length) {
                 content.classList.remove('active')
             }
         })
-
     })
 }
 

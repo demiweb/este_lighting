@@ -283,8 +283,55 @@
         <div class="header-search">
             <img src="img/svg/search.svg" alt="">
         </div>
+        <div class="header-currency">
+            <div class="currency-dropdown dropdown-menu">
+                <div class="currency-dropdown-head dropdown-head">
+                    <span id="currency-value">
+                        $
+                    </span>
+                </div>
+                <div class="currency-dropdown-content dropdown-content">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-1.svg" alt="">
+                                <span>USD $</span>
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>UAH ₴</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="header-language">
-            <span data-language="UA">UA</span>
+            <div class="language-dropdown dropdown-menu">
+                <div class="language-dropdown-head dropdown-head">
+                    <span id="language-value">
+                        UA
+                    </span>
+                </div>
+                <div class="language-dropdown-content dropdown-content">
+                    <ul>
+                        <li class="current">
+                            <a href="#">
+                                <img src="img/svg/currency-icon-3.svg" alt="">
+                                <span>RU</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>UA</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="header-login">
             <a href="#popup-login" class="show-popup"><img src="img/svg/user.svg" alt=""></a>
@@ -359,6 +406,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="burger-menu-language">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>
+                                    Українська
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-3.svg" alt="">
+                                <span>
+                                    Русский
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -384,7 +451,7 @@
                     Запонить меня
                 </label>
 
-                <input class="btn-def" type="submit" value="Создать аккаунт">
+                <input class="btn-main" type="submit" value="Создать аккаунт">
             </form>
             <a href="#">Забыли пароль?</a>
             <span>или</span>

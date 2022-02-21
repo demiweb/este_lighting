@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    @@include('parts/links.html')
+
+    <title>ESTE Lighting</title>
+
+</head>
+<body>
+<!-- Подключение хедера -->
+@@include('parts/header.html')
+
+<main>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="container container-fluid">
+            <h1 class="head-page-title">
+                Корзина
+            </h1>
+            <div class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Корзина</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section> <!--  end head-page  -->
+
+    <!--  start cart  -->
+    <section class="cart">
+        <div class="container">
+            <div class="cart-top">
+                <span class="cart-name">Товар</span>
+                <span class="cart-quantity">Кол-во</span>
+                <span class="cart-price">Цена</span>
+                <span class="cart-full-price">Итого</span>
+            </div>
+            <div class="cart-middle">
+                <ul>
+                    <li>
+                        <img src="img/order-history/img-1.png" alt="">
+                        <span class="name">Підвіс Este 6808/1P Chrome</span>
+                        <div class="quantity">
+                            <span class="minus">&ndash;</span>
+                            <span class="current">2</span>
+                            <span class="plus">&#43;</span>
+                        </div>
+                        <span class="price">7307.40 грн</span>
+                        <span class="full-price">14 614.80 грн</span>
+                        <div class="btn-remove">
+                            <button>
+                                <img src="img/svg/trash.svg" alt="">
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/order-history/img-1.png" alt="">
+                        <span class="name">Підвіс Este 6808/1P Chrome</span>
+                        <div class="quantity">
+                            <span class="minus">&ndash;</span>
+                            <span class="current">2</span>
+                            <span class="plus">&#43;</span>
+                        </div>
+                        <span class="price">7307.40 грн</span>
+                        <span class="full-price">7307.40 грн</span>
+                        <div class="btn-remove">
+                            <button>
+                                <img src="img/svg/trash.svg" alt="">
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/order-history/img-1.png" alt="">
+                        <span class="name">Підвіс Este 6808/1P Chrome</span>
+                        <div class="quantity">
+                            <span class="minus">&ndash;</span>
+                            <span class="current">2</span>
+                            <span class="plus">&#43;</span>
+                        </div>
+                        <span class="price">7307.40 грн</span>
+                        <span class="full-price">14 614.80 грн</span>
+                        <div class="btn-remove">
+                            <button>
+                                <img src="img/svg/trash.svg" alt="">
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-bottom">
+                <ul>
+                    <li>
+                        <span>Сумма, в наличии</span>
+                        <span>36 537 грн</span>
+                    </li>
+                    <li>
+                        <span>Сумма, ожидается</span>
+                        <span>0.00 грн</span>
+                    </li>
+                </ul>
+                <a class="btn-main" href="#">Отправить заказ на обработку</a>
+            </div>
+        </div>
+    </section> <!--  end cart  -->
+</main>
+
+<!-- Подключение popup -->
+@@include('parts/popup.html')
+
+<!-- Подключение футера -->
+@@include('parts/footer.html')
+
+<!-- Подключение скриптов -->
+@@include('parts/scripts.html')
+</body>
+</html>

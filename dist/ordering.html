@@ -432,23 +432,36 @@
 </header>
 
 <main>
-    <div class="header-plug"></div>
-
-    <!--  start error-page  -->
-    <section class="error-page">
-        <div class="container">
-            <div class="error-page-content">
-                <div class="img">
-                    <img src="img/404/img-1.png" alt="">
-                </div>
-                <p>Кажется, такой страницы не существует, можете вернуться на главную!</p>
-                <a href="#" class="btn-main">Главная страница</a>
-                <div class="circle-1"></div>
-                <div class="circle-2"></div>
-                <div class="shadow-circle"></div>
+    <!--  start head-page  -->
+    <section class="head-page">
+        <div class="container container-fluid">
+            <h1 class="head-page-title">
+                Корзина
+            </h1>
+            <div class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://example.com/dresses">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Корзина</span>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
             </div>
         </div>
-    </section> <!--  end error-page  -->
+    </section> <!--  end head-page  -->
+
+    <!--  start ordering  -->
+    <section class="ordering">
+        <div class="container">
+
+        </div>
+    </section> <!--  end ordering  -->
 </main>
 
 <!-- Подключение popup -->

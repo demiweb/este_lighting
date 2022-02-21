@@ -1,0 +1,140 @@
+@import '../common/vars';
+@import '../common/mixins';
+
+.cart {
+  padding: 40px 0 100px;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cart- {
+  &top {
+    display: flex;
+    align-items: center;
+    background: $inside;
+    color: $light-grey;
+    font-size: 15px;
+    height: 60px;
+    padding: 0 30px;
+
+    .cart- {
+      &quantity, &price, &full-price {
+        min-width: 170px;
+        text-align: center;
+      }
+    }
+
+    .cart-name {
+      margin-right: auto;
+    }
+
+    .cart-price {
+      margin: 0 60px;
+    }
+  }
+
+  &middle {
+    ul {
+      margin: 30px 0;
+      padding: 0 15px;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+
+        > img {
+          width: 64px;
+          height: 64px;
+          object-fit: cover;
+        }
+
+        .name {
+          margin-left: 30px;
+          color: $light-grey-2;
+          margin-right: auto;
+        }
+
+        .quantity {
+          height: 55px;
+          border: 1px solid #fff;
+          display: flex;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .minus, .plus {
+            width: 27px;
+            transition: all .4s ease;
+
+            &:hover {
+              cursor: pointer;
+              background: rgba(255, 255, 255, 0.15);
+            }
+          }
+
+          .current {
+            padding: 0 10px;
+          }
+        }
+
+        .price, .full-price {
+          min-width: 170px;
+        }
+
+        .price, .full-price, .quantity {
+          text-align: center;
+        }
+
+        .price {
+          margin: 0 50px 0 105px;
+        }
+
+        .btn-remove {
+          button {
+            background: transparent;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  &bottom {
+    ul {
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        background: $inside;
+
+        padding: 0 30px;
+
+        margin-bottom: 2px;
+
+        span {
+          color: $light-grey;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .btn-main {
+      max-width: 300px;
+      height: 55px;
+      margin-left: auto;
+    }
+  }
+}

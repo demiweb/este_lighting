@@ -283,8 +283,55 @@
         <div class="header-search">
             <img src="img/svg/search.svg" alt="">
         </div>
+        <div class="header-currency">
+            <div class="currency-dropdown dropdown-menu">
+                <div class="currency-dropdown-head dropdown-head">
+                    <span id="currency-value">
+                        $
+                    </span>
+                </div>
+                <div class="currency-dropdown-content dropdown-content">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-1.svg" alt="">
+                                <span>USD $</span>
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>UAH ₴</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="header-language">
-            <span data-language="UA">UA</span>
+            <div class="language-dropdown dropdown-menu">
+                <div class="language-dropdown-head dropdown-head">
+                    <span id="language-value">
+                        UA
+                    </span>
+                </div>
+                <div class="language-dropdown-content dropdown-content">
+                    <ul>
+                        <li class="current">
+                            <a href="#">
+                                <img src="img/svg/currency-icon-3.svg" alt="">
+                                <span>RU</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>UA</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="header-login">
             <a href="#popup-login" class="show-popup"><img src="img/svg/user.svg" alt=""></a>
@@ -359,6 +406,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="burger-menu-language">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-2.svg" alt="">
+                                <span>
+                                    Українська
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/currency-icon-3.svg" alt="">
+                                <span>
+                                    Русский
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -367,35 +434,11 @@
 <main>
 
     <div class="header-plug"></div>
+
     <!--  start product-details  -->
     <section class="product-details">
-
         <div class="product-details-content">
             <div class="product-details-content-wrapper">
-                <div class="breadcrumb">
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://example.com/dresses">
-                                <span itemprop="name">Главная</span></a>
-                            <meta itemprop="position" content="1"/>
-                        </li>
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://example.com/dresses">
-                                <span itemprop="name">Este line</span></a>
-                            <meta itemprop="position" content="1"/>
-                        </li>
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">Підвіс Este 6808/1P Chrome</span>
-                            <meta itemprop="position" content="2"/>
-                        </li>
-                    </ol>
-                </div>
-                <h1>
-                    Підвіс Este 6808/1P Chrome
-                </h1>
                 <div class="product-details-slider">
                     <div class="swiper product-swiper">
                         <div class="swiper-wrapper product-swiper-wrapper">
@@ -424,6 +467,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="breadcrumb">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="https://example.com/dresses">
+                                <span itemprop="name">Главная</span></a>
+                            <meta itemprop="position" content="1"/>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="https://example.com/dresses">
+                                <span itemprop="name">Este line</span></a>
+                            <meta itemprop="position" content="1"/>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">Підвіс Este 6808/1P Chrome</span>
+                            <meta itemprop="position" content="2"/>
+                        </li>
+                    </ol>
+                </div>
+                <h1>
+                    Підвіс Este 6808/1P Chrome
+                </h1>
                 <div class="collection">
                     Коллекция 00154
                 </div>
@@ -431,9 +498,9 @@
                     <span class="rrc">
                         РРЦ
                     </span>
-                    <b>
+                    <span class="price">
                         7307.40 ₴
-                    </b>
+                    </span>
                     <span class="guarantee">
                         Гарантия 36 месяцев
                     </span>
@@ -561,112 +628,44 @@
     <section class="recommendations">
         <div class="container">
             <h2>
-                Специально для вас
+                Другие товары из коллекции
             </h2>
             <div class="swiper recommendations-swiper">
                 <div class="swiper-wrapper recommendations-swiper-wrapper">
                     <div class="swiper-slide recommendations-swiper-slide">
-                        <div class="slide-top">
-                            <img class="slide-img" src="img/products/img-1.png" alt="">
-                            <div class="slide-panel">
-                                <div>
-                                <span class="minus">
-                                    <img src="img/svg/minus.svg" alt="">
-                                </span>
-                                    <span class="quantity">
-                                    1
-                                </span>
-                                    <span class="plus">
-                                    <img src="img/svg/plus.svg" alt="">
-                                </span>
-                                </div>
-                                <button class="btn-main">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="slide-bottom">
-                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                            <span class="prev-price">2171.10 ₴</span>
-                            <span class="new-price">1670.10 ₴</span>
+                        <img src="img/products/img-1.png" alt="">
+                        <div class="product-content">
+                            <p>Підвіс Este 6808/1P Chrome</p>
+                            <span>
+                                1670.10 ₴
+                            </span>
                         </div>
                     </div>
                     <div class="swiper-slide recommendations-swiper-slide">
-                        <div class="slide-top">
-                            <img class="slide-img" src="img/products/img-1.png" alt="">
-                            <div class="slide-panel">
-                                <div>
-                                <span class="minus">
-                                    <img src="img/svg/minus.svg" alt="">
-                                </span>
-                                    <span class="quantity">
-                                    1
-                                </span>
-                                    <span class="plus">
-                                    <img src="img/svg/plus.svg" alt="">
-                                </span>
-                                </div>
-                                <button class="btn-main">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="slide-bottom">
-                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                            <span class="prev-price">2171.10 ₴</span>
-                            <span class="new-price">1670.10 ₴</span>
+                        <img src="img/products/img-1.png" alt="">
+                        <div class="product-content">
+                            <p>Підвіс Este 6808/1P Chrome</p>
+                            <span>
+                                1670.10 ₴
+                            </span>
                         </div>
                     </div>
                     <div class="swiper-slide recommendations-swiper-slide">
-                        <div class="slide-top">
-                            <img class="slide-img" src="img/products/img-1.png" alt="">
-                            <div class="slide-panel">
-                                <div>
-                                <span class="minus">
-                                    <img src="img/svg/minus.svg" alt="">
-                                </span>
-                                    <span class="quantity">
-                                    1
-                                </span>
-                                    <span class="plus">
-                                    <img src="img/svg/plus.svg" alt="">
-                                </span>
-                                </div>
-                                <button class="btn-main">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="slide-bottom">
-                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                            <span class="prev-price">2171.10 ₴</span>
-                            <span class="new-price">1670.10 ₴</span>
+                        <img src="img/products/img-1.png" alt="">
+                        <div class="product-content">
+                            <p>Підвіс Este 6808/1P Chrome</p>
+                            <span>
+                                1670.10 ₴
+                            </span>
                         </div>
                     </div>
                     <div class="swiper-slide recommendations-swiper-slide">
-                        <div class="slide-top">
-                            <img class="slide-img" src="img/products/img-1.png" alt="">
-                            <div class="slide-panel">
-                                <div>
-                                <span class="minus">
-                                    <img src="img/svg/minus.svg" alt="">
-                                </span>
-                                    <span class="quantity">
-                                    1
-                                </span>
-                                    <span class="plus">
-                                    <img src="img/svg/plus.svg" alt="">
-                                </span>
-                                </div>
-                                <button class="btn-main">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="slide-bottom">
-                            <p class="item-name">Підвіс Este 6808/1P Chrome</p>
-                            <span class="prev-price">2171.10 ₴</span>
-                            <span class="new-price">1670.10 ₴</span>
+                        <img src="img/products/img-1.png" alt="">
+                        <div class="product-content">
+                            <p>Підвіс Este 6808/1P Chrome</p>
+                            <span>
+                                1670.10 ₴
+                            </span>
                         </div>
                     </div>
                 </div>
