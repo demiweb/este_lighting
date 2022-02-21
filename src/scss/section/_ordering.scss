@@ -1,0 +1,101 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.ordering {
+  padding: 70px 0 100px;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 30px;
+  }
+}
+
+.left-ordering {
+  width: 31.63%;
+  background: $dark-color-2;
+  padding: 52px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $light-grey;
+    margin-bottom: 32px;
+  }
+
+  a {
+    height: 55px;
+    width: 100%;
+  }
+}
+
+.right-ordering {
+  width: calc(68.37% - 30px);
+  background: $dark-color-2;
+  padding: 40px 52px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-column {
+    width: 40%;
+
+    span {
+      display: block;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    label {
+      display: block;
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .right-column {
+    width: 40%;
+
+    > span {
+      display: flex;
+      flex:0 0 auto;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    div {
+      margin-bottom: 25px;
+      display: flex;
+
+      .dotted {
+        display: block;
+        flex: auto;
+        border-bottom: 1px dotted $stroke-dark;
+        margin: 0 10px;
+      }
+    }
+  }
+}

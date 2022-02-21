@@ -17,34 +17,95 @@
 @@include('parts/header.html')
 
 <main>
-    <!--  start head-page  -->
-    <section class="head-page">
-        <div class="container container-fluid">
-            <h1 class="head-page-title">
-                Корзина
-            </h1>
-            <div class="breadcrumb">
-                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="https://example.com/dresses">
-                            <span itemprop="name">Главная</span></a>
-                        <meta itemprop="position" content="1"/>
-                    </li>
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">Корзина</span>
-                        <meta itemprop="position" content="2"/>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </section> <!--  end head-page  -->
+    <div class="header-plug"></div>
 
     <!--  start ordering  -->
     <section class="ordering">
         <div class="container">
+            <div class="left-ordering">
+                <span>
+                    Ваш заказ оформлен
+                </span>
+                <img src="img/svg/success.svg" alt="">
+                <p>
+                    Скоро мы свяжемся с вами!
+                </p>
+                <a class="btn-main" href="#">Перейти на главную страницу</a>
+            </div>
+            <div class="right-ordering">
+                <div class="left-column">
+                    <span>
+                        Ваши данные
+                    </span>
+                    <label>
+                        <input type="text" value="Андрей" readonly>
+                    </label>
+                    <label>
+                        <input type="text" value="Федоров" readonly>
+                    </label>
+                    <label>
+                        <input type="text" value="+ 38 (093) 178 50 93" readonly>
+                    </label>
+                    <label>
+                        <input type="text" value=" Andrey81028@gmail.com" readonly>
+                    </label>
+                    <label>
+                        <input type="text" value="Киев" readonly>
+                    </label>
+                    <label>
+                        <input type="text" value="Компания LampaUA" readonly>
+                    </label>
+                </div>
+                <div class="right-column">
+                    <span>
+                        Информация о заказе
+                    </span>
+                    <div>
+                        <span>
+                            Номер заказа
+                        </span>
+                        <span class="dotted">
 
+                        </span>
+                        <span>
+                            53867502
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Дата
+                        </span>
+                        <span class="dotted">
+
+                        </span>
+                        <span>
+                            07.02.2022
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Сумма, грн
+                        </span>
+                        <span class="dotted">
+
+                        </span>
+                        <span>
+                            30 229
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Сумма, долл
+                        </span>
+                        <span class="dotted">
+
+                        </span>
+                        <span>
+                            1127
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section> <!--  end ordering  -->
 </main>

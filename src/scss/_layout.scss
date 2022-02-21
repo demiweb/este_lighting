@@ -75,6 +75,9 @@ label {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+  &:after, &:before {
+    content: none;
+  }
 }
 
 @media screen and (max-width: 1440px) {
