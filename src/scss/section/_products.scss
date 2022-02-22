@@ -210,7 +210,6 @@
 
     .product-item {
       width: calc((100% / 5) - (120px / 5));
-      border: 1px solid $grafit-2;
 
       img {
         width: 100%;
@@ -219,16 +218,85 @@
       }
 
       .product-content {
+        border: 1px solid $grafit-2;
+        border-top: none;
+
         p {
           padding: 15px 15px 8px;
           color: $light-grey-2;
           margin-bottom: 0;
         }
 
-        span {
-          display: block;
+        .label {
           padding: 0 15px 18px;
-          font-size: 16px;
+          display: block;
+          text-align: left;
+
+          .new-price {
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          .last-price {
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: line-through;
+            margin-right: 10px;
+          }
+        }
+
+        .panel {
+          margin-bottom: 0 !important;
+          border: none !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          padding: 0 15px;
+          background: $grafit-2;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            border: 1px solid #fff;
+            height: 34px;
+            display: flex;
+            align-items: center;
+
+            .plus, .minus {
+              width: 22px;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all .3s ease;
+
+              &:hover {
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.15);
+              }
+            }
+
+            .quantity {
+              width: 32px;
+              text-align: center;
+            }
+          }
+
+          a {
+            height: 34px;
+            transition: all .3s ease;
+            font-size: 13px;
+            padding: 0 12px;
+
+            img {
+              display: none;
+            }
+          }
+
+          a.added {
+            background: $main-hover;
+          }
         }
       }
     }
@@ -418,6 +486,7 @@
               .ocf-icon {
                 filter: brightness(3);
               }
+
               &:after {
 
               }
@@ -570,7 +639,7 @@
       .ocf-footer {
         background: $grafit-1 !important;
         box-shadow: none !important;
-        padding: 10px 20px 510px 20px!important;
+        padding: 10px 20px 510px 20px !important;
 
         .ocf-between {
           flex-wrap: wrap !important;
@@ -645,6 +714,44 @@
 
   .products-list {
     padding: 0;
+
+    .product-item {
+      .product-content {
+        .panel {
+          height: 42px;
+          padding: 0 0 0 15px;
+
+          div {
+            height: 27px;
+
+            .plus, .minus {
+              width: 27px;
+            }
+
+            .quantity {
+              font-size: 10px;
+            }
+          }
+
+          a {
+            width: 52px;
+            height: 100%;
+
+            span {
+              display: none;
+            }
+
+            img {
+              display: block;
+            }
+          }
+
+          a.added {
+            background: $main-hover;
+          }
+        }
+      }
+    }
   }
 
   .products-description {
@@ -790,19 +897,45 @@
       .product-item {
         width: calc((100% / 2) - (20px / 2));
 
-        img {
-        }
-
         .product-content {
           p {
-            font-size: 10px;
             padding: 10px 10px 5px;
+            font-size: 10px;
           }
 
-          span {
-            font-size: 14px;
-            font-weight: 300;
+          .label {
             padding: 0 10px 10px;
+            .new-price {
+              font-size: 14px;
+              font-weight: 300;
+            }
+
+            .last-price {
+                font-size: 12px;
+            }
+          }
+
+          .panel {
+
+            div {
+
+              .plus, .minus {
+              }
+
+              .quantity {
+              }
+            }
+
+            a {
+              span {
+              }
+
+              img {
+              }
+            }
+
+            a.added {
+            }
           }
         }
       }

@@ -20,6 +20,10 @@
     border: 1px solid $h-border;
     text-decoration: none;
   }
+  &:focus {
+    color: $h-color;
+    text-decoration: none;
+  }
 }
 
 @mixin btn-small-sec($bg, $color, $border, $bg-hover, $color-hover, $border-hover) {

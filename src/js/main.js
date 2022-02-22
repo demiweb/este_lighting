@@ -491,3 +491,24 @@ function filterRename(el) {
         }
     })
 }
+
+const addToCartBtn = document.querySelectorAll('.add-to-cart')
+
+if (!addToCartBtn.length) {
+
+} else {
+    if (window.innerWidth > 767) {
+        addToCartBtn.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.innerHTML = 'Добавлено';
+                this.classList.add('added');
+
+                setTimeout(() => {
+                    this.innerHTML = 'В корзину';
+                    this.classList.remove('added');
+                }, 3000)
+            })
+        })
+    }
+}

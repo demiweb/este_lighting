@@ -6,6 +6,11 @@
 
   .container {
     display: flex;
+    flex-wrap: wrap;
+
+    > .log-out {
+      display: none;
+    }
   }
 }
 
@@ -46,6 +51,7 @@
 
 .personal-info-right {
   width: 74.43%;
+
   .title {
     margin-bottom: 40px;
   }
@@ -111,6 +117,7 @@
     border-top: 1px solid $grafit-2;
     border-bottom: 1px solid $grafit-2;
     font-size: 15px;
+
     span {
       display: block;
       color: $light-grey-2;
@@ -123,6 +130,7 @@
 
   &content {
     font-size: 15px;
+
     .accordion-head {
       display: flex;
       align-items: center;
@@ -214,6 +222,67 @@
             font-weight: 700;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .personal-info {
+    padding: 0 0 65px;
+    .container {
+      > .log-out {
+        display: flex;
+        align-items: center;
+        color: $red;
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .personal-info-left {
+    width: 100%;
+    display: flex;
+    margin-bottom: 24px;
+
+    a {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .log-out {
+      display: none;
+    }
+  }
+
+  .personal-info-right {
+    width: 100%;
+  }
+  .personal-info-form {
+    padding-right: 0;
+    margin-bottom: 46px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .personal-info {
+    .container {
+      padding: 0;
+      >.log-out {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .personal-info-form {
+    padding: 0 20px;
+    margin-bottom: 46px;
+    .form-top, .form-middle {
+      label {
+        width: 100%;
+        margin: 0;
       }
     }
   }

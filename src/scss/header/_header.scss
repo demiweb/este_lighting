@@ -114,13 +114,8 @@
     }
   }
 
-  &search {
-    margin: 0 30px;
-  }
-
   &language {
     height: 100%;
-    margin: 0 30px;
 
     .language-dropdown {
       &-content {
@@ -131,6 +126,7 @@
 
   &currency {
     height: 100%;
+    margin: 0 30px;
 
     .currency-dropdown {
       &-content {
@@ -140,7 +136,7 @@
   }
 
   &login {
-    margin-right: 30px;
+    margin: 0 30px;
   }
 
   &cart {
@@ -276,6 +272,7 @@
   }
 
   &language {
+    display: none;
     ul {
       list-style: none;
       display: flex;
@@ -304,11 +301,6 @@
     &burger {
 
     }
-
-    &logo {
-
-    }
-
     &nav {
       .nav-category {
         .title {
@@ -320,26 +312,15 @@
     &tel {
 
     }
-
-    &search {
-      margin: 0 0 0 12px;
-    }
-
     &currency {
-      margin: 0 12px;
     }
 
     &language {
-      margin: 0;
     }
 
     &login {
-      margin: 0 12px;
     }
 
-    &cart {
-
-    }
   }
 }
 
@@ -469,7 +450,7 @@
           display: flex;
           align-items: center;
           height: 55px;
-          margin-top: 78px;
+          margin-top: 28px;
 
           span {
             display: block;
@@ -573,10 +554,6 @@
       display: none;
     }
 
-    &search {
-      display: none;
-    }
-
     &currency {
       margin: 0;
     }
@@ -605,6 +582,12 @@
             }
           }
         }
+        &search {
+          margin: 100px 0 40px;
+        }
+        &language {
+          display: flex;
+        }
       }
     }
   }
@@ -623,10 +606,6 @@
 
     &tel {
       display: none;
-    }
-
-    &search {
-      margin-right: 20px;
     }
 
     &language {

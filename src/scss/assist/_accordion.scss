@@ -43,10 +43,12 @@
       max-height: 0;
       overflow: hidden;
       transition: all .4s ease;
+
+      .radio-btn {
+        .radio-input {
+          height: 34px;
+        }
+      }
     }
-  }
-
-  .accordion-content-mob.active {
-
   }
 }
