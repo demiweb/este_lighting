@@ -55,6 +55,10 @@
   .title {
     margin-bottom: 40px;
   }
+
+  .product-status-canceled {
+    color: $red !important;
+  }
 }
 
 .personal-info-form {
@@ -146,26 +150,6 @@
         text-align: center;
       }
 
-      .product- {
-        &number {
-
-        }
-
-        &date {
-
-        }
-
-        &status {
-          &-canceled {
-            color: $red;
-          }
-        }
-
-        &price {
-
-        }
-      }
-
       &:hover {
         background: $grafit-2;
       }
@@ -174,7 +158,7 @@
     .accordion-content {
       border-bottom: 1px solid $grafit-2;
 
-      div {
+      > div {
         margin: 30px 0 20px;
         display: flex;
         color: $light-grey;
@@ -227,14 +211,21 @@
   }
 }
 
+.info-right-mob {
+  display: none;
+  width: 100%;
+}
+
 @media screen and (max-width: 991px) {
   .personal-info {
     padding: 0 0 65px;
+
     .container {
       > .log-out {
         display: flex;
         align-items: center;
         color: $red;
+
         img {
           margin-right: 15px;
         }
@@ -264,13 +255,91 @@
     padding-right: 0;
     margin-bottom: 46px;
   }
+
+  .personal-info-right {
+    width: 100%;
+
+    .info-right- {
+      &content {
+        width: 100%;
+
+        .accordion-head {
+          padding: 24px 20px;
+
+          .product-title, .product-number {
+            width: auto;
+          }
+
+          .product-title {
+            color: $light-grey-2;
+            margin-right: 20px;
+          }
+
+          &:after {
+            margin-left: auto;
+          }
+        }
+
+        .accordion-content {
+          ul {
+            margin: 20px 0;
+          }
+
+          .product-des {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background: $grafit-3;
+            margin: 0;
+
+            div {
+              &:not(:last-of-type) {
+                margin: 0 0 5px !important;
+              }
+            }
+
+            .product- {
+              &date, &status, &price {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                  &:first-of-type {
+                    color: $light-grey-2;
+                    font-size: 13px;
+                    font-weight: 700;
+                  }
+
+                  &:last-of-type {
+                    font-size: 15px;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .info-right-desk {
+    display: none;
+  }
+
+  .info-right-mob {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .personal-info {
     .container {
       padding: 0;
-      >.log-out {
+
+      > .log-out {
         padding: 0 20px;
       }
     }
@@ -279,10 +348,76 @@
   .personal-info-form {
     padding: 0 20px;
     margin-bottom: 46px;
+
     .form-top, .form-middle {
       label {
         width: 100%;
         margin: 0;
+      }
+    }
+  }
+
+  .personal-info-right {
+    .info-right- {
+      &content {
+
+        .accordion-head {
+          padding: 16px 20px;
+        }
+
+        .accordion-content {
+          ul {
+            margin: 20px;
+
+            li {
+              height: 96px;
+
+              img {
+                width: 96px;
+                height: 96px;
+              }
+
+              div {
+                width: calc(100% - 96px);
+                height: 100%;
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                p, span {
+                  width: 100%;
+                }
+
+                p {
+                  padding: 0;
+                  font-size: 10px;
+                  margin: 0;
+                }
+
+                span {
+                  display: block;
+                  &:first-of-type {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 76px;
+                    border: 1px solid #fff;
+                    font-size: 10px;
+                    font-weight: 400;
+                    height: 26px;
+                  }
+
+                  &:last-of-type {
+                    text-align: left;
+                    font-size: 12px;
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
