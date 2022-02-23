@@ -44,7 +44,11 @@ new Swiper('.swiper-hero', {
     fadeEffect: {
         crossFade: true
     },
-    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        speed: 2000,
+    },
+
     direction: 'horizontal',
     loop: true,
     thumbs: {
@@ -62,8 +66,8 @@ new Swiper('.swiper-gallery', {
     centeredSlides: true,
     autoplay: {
         delay: 4000,
+        disableOnInteraction: false,
     },
-
     slideToClickedSlide: true,
     loop: false,
 
@@ -108,9 +112,9 @@ new Swiper('.swiper-gallery', {
                 paginationActive.classList.remove('time-start');
             }
         },
-        // slideChange: function (swiper) {
-        //     swiper.autoplay.start()
-        // }
+        slideChange: function (swiper) {
+            swiper.autoplay.start(1000)
+        }
 
     },
 
@@ -511,4 +515,43 @@ if (!addToCartBtn.length) {
             })
         })
     }
+}
+
+const horizontalParallax = document.querySelectorAll('.h-parallax');
+
+if (horizontalParallax.length) {
+    window.addEventListener('scroll', function () {
+        horizontalParallax.forEach(parallax => {
+            let wScroll = parallax.getBoundingClientRect().top
+            if (wScroll < 800) {
+                parallax.style.transform = `translateX(${0 + wScroll / 2}px)`
+            }
+        })
+    })
+
+
+//     let observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.intersectionRatio) {
+//                 console.log('sss')
+//                 // observer.unobserve(entry.target)
+//             } else {
+//                 console.log('1111')
+//             }
+//         })
+//     }, {threshold: .01})
+//
+//     if(window.innerWidth > 991) {
+//         horizintalParallax.forEach(elem => {
+//             observer.observe(elem)
+//         })
+//     }
+}
+
+const verticalParallax = document.querySelectorAll('.v-parallax');
+
+if (verticalParallax.length) {
+    verticalParallax.forEach(parallax => {
+        new Rellax(parallax)
+    })
 }

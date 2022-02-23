@@ -25,21 +25,23 @@
     margin-left: 56px;
     width: 54.79%;
 
-    .bg {
-      width: 461px;
-      height: 461px;
-      border: 1px solid $main;
-      border-radius: 50%;
+    .circle {
+      //width: 461px;
+      //height: 461px;
+      //border-radius: 50%;
       position: absolute;
-      z-index: -1;
+      //z-index: -1;
       top: 34px;
       left: 56px;
+      circle {
+        stroke: $main;
+      }
     }
 
     .title {
       font-size: 62px;
       line-height: 1.2;
-      font-weight: 700;
+      font-weight: 300;
       display: block;
       margin-bottom: 60px;
       position: relative;
@@ -55,6 +57,9 @@
         background: $main;
         filter: blur(60px);
         z-index: -1;
+        transform-origin: center;
+        transform: scale(.1);
+        animation: drop-shadow 4000ms ease-in-out forwards infinite;
       }
     }
 
@@ -103,6 +108,10 @@
       left: 2.42%;
       top: -231px;
       z-index: -1;
+    }
+    div:not(.bg) {
+      display: flex;
+      flex-direction: column;
     }
 
     q {
@@ -188,7 +197,7 @@
 
       .title {
         margin-bottom: 0;
-        font-size: 45px;
+        font-size: 30px;
 
         &:after {
           width: 109.5%;

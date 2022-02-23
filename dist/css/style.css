@@ -367,7 +367,9 @@ label {
   margin: 0 30px;
 }
 
-.header-cart {
+.header-cart a {
+  display: block;
+  text-decoration: none;
   position: relative;
 }
 
@@ -1497,6 +1499,40 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
   transition: all 0.4s ease;
 }
 
+@-webkit-keyframes drop-shadow {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes drop-shadow {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1527,6 +1563,7 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 
 .hero-title {
   margin-bottom: 30px;
+  font-size: 70px;
 }
 
 .hero-text {
@@ -1667,21 +1704,20 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
   width: 54.79%;
 }
 
-.about-us-top .content .bg {
-  width: 461px;
-  height: 461px;
-  border: 1px solid #0E5C6D;
-  border-radius: 50%;
+.about-us-top .content .circle {
   position: absolute;
-  z-index: -1;
   top: 34px;
   left: 56px;
+}
+
+.about-us-top .content .circle circle {
+  stroke: #0E5C6D;
 }
 
 .about-us-top .content .title {
   font-size: 62px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 300;
   display: block;
   margin-bottom: 60px;
   position: relative;
@@ -1699,6 +1735,14 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
   -webkit-filter: blur(60px);
           filter: blur(60px);
   z-index: -1;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-animation: drop-shadow 4000ms ease-in-out forwards infinite;
+          animation: drop-shadow 4000ms ease-in-out forwards infinite;
 }
 
 .about-us-top .content .text {
@@ -1763,6 +1807,16 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
   z-index: -1;
 }
 
+.about-us-bottom .content div:not(.bg) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about-us-bottom .content q {
   font-size: 20px;
   line-height: 1.5;
@@ -1816,6 +1870,7 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 }
 
 .gallery-top {
+  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4382,6 +4437,10 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
     padding: 108px 20px 50px;
   }
 
+  .hero-title {
+    font-size: 58px;
+  }
+
   .hero-text {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4501,7 +4560,7 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 
   .about-us-top .content .title {
     margin-bottom: 0;
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .about-us-top .content .title:after {

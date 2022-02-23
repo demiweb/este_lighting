@@ -143,8 +143,11 @@
   }
 
   &cart {
-    position: relative;
-
+    a {
+      display: block;
+      text-decoration: none;
+      position: relative;
+    }
     .product-quantity {
       position: absolute;
       top: 41%;
