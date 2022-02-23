@@ -151,7 +151,7 @@
       }
 
       &:hover {
-        background: $grafit-2;
+        background: $grafit-3;
       }
     }
 
@@ -232,6 +232,7 @@
       }
     }
   }
+
   .personal-info-left {
     width: 100%;
     display: flex;
@@ -251,6 +252,7 @@
   .personal-info-right {
     width: 100%;
   }
+
   .personal-info-form {
     padding-right: 0;
     margin-bottom: 46px;
@@ -324,6 +326,7 @@
       }
     }
   }
+
   .info-right-desk {
     display: none;
   }
@@ -331,6 +334,20 @@
   .info-right-mob {
     display: flex;
     flex-direction: column;
+    .accordion-content{
+      ul {
+        li {
+          display: flex;
+          div {
+            width: calc(100% - 64px);
+            display: flex;
+            p {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

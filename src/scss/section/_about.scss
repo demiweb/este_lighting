@@ -3,10 +3,13 @@
 
 .about {
   .bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
+    min-height: 800px;
     z-index: -1;
 
     img {
@@ -141,6 +144,81 @@
       left: 28.68%;
       top: -133px;
       z-index: -1;
+    }
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .about- {
+    &middle {
+      .about-middle- {
+        &right {
+          .shadow-circle {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &bottom {
+      .circle {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .about- {
+
+    &logo {
+      margin: 40px 0;
+    }
+
+    &top {
+      padding: 0 20% 0 0;
+      margin-bottom: 10px;
+
+      q {
+        font-size: 15px;
+      }
+    }
+
+    &middle {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .about-middle- {
+        &right {
+          width: 100%;
+
+          .img {
+            margin: 0 0 0 auto;
+          }
+        }
+
+        &left {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding-top: 10px;
+
+          p {
+            max-width: 68.30%;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+
+    &bottom {
+      margin-bottom: 50px;
+
+      .img {
+        width: 47.16%;
+        padding-top: 42.38%;
+        margin-left: 0;
+      }
     }
   }
 }

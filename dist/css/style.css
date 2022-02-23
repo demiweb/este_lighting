@@ -3239,7 +3239,7 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 }
 
 .info-right-content .accordion-head:hover {
-  background: #35383E;
+  background: #2B2E33;
 }
 
 .info-right-content .accordion-content {
@@ -3308,10 +3308,13 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 }
 
 .about .bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
+  min-height: 800px;
   z-index: -1;
 }
 
@@ -5093,6 +5096,31 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  .info-right-mob .accordion-content ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .info-right-mob .accordion-content ul li div {
+    width: calc(100% - 64px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .info-right-mob .accordion-content ul li div p {
+    margin-right: auto;
+  }
+
+  .about-middle .about-middle-right .shadow-circle {
+    display: none;
+  }
+
+  .about-bottom .circle {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5415,6 +5443,64 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
 
   .products-description ul li:nth-of-type(2) {
     margin: 0;
+  }
+
+  .about-logo {
+    margin: 40px 0;
+  }
+
+  .about-top {
+    padding: 0 20% 0 0;
+    margin-bottom: 10px;
+  }
+
+  .about-top q {
+    font-size: 15px;
+  }
+
+  .about-middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .about-middle .about-middle-right {
+    width: 100%;
+  }
+
+  .about-middle .about-middle-right .img {
+    margin: 0 0 0 auto;
+  }
+
+  .about-middle .about-middle-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .about-middle .about-middle-left p {
+    max-width: 68.3%;
+    margin-bottom: 40px;
+  }
+
+  .about-bottom {
+    margin-bottom: 50px;
+  }
+
+  .about-bottom .img {
+    width: 47.16%;
+    padding-top: 42.38%;
+    margin-left: 0;
   }
 }
 
