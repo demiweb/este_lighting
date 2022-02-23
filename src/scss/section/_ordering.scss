@@ -80,7 +80,7 @@
 
     > span {
       display: flex;
-      flex:0 0 auto;
+      flex: 0 0 auto;
       font-size: 18px;
       font-weight: 300;
       margin-bottom: 40px;
@@ -89,13 +89,80 @@
     div {
       margin-bottom: 25px;
       display: flex;
-
+        span {
+          &:first-of-type {
+            color: $light-grey;
+          }
+        }
       .dotted {
         display: block;
         flex: auto;
         border-bottom: 1px dotted $stroke-dark;
         margin: 0 10px;
       }
+    }
+  }
+}
+
+@media screen and(max-width: 1239px) {
+  .ordering {
+    padding: 70px 0 100px;
+
+    .container {
+      padding: 0;
+    }
+  }
+  .left-ordering {
+    a {
+      text-align: center;
+    }
+  }
+
+  .right-ordering {
+    .left-column, .right-column {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .ordering {
+    padding: 0;
+
+    .container {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .left-ordering {
+    width: 100%;
+    padding: 28px 32px;
+  }
+
+  .right-ordering {
+    width: 100%;
+    padding: 40px 20px 50px;
+
+    .left-column, .right-column {
+      width: 44%;
+      > span {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .right-ordering {
+    flex-direction: column;
+
+    .left-column, .right-column {
+      width: 100%;
+    }
+
+    .right-column {
+      padding-top: 50px;
     }
   }
 }

@@ -7,411 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Подключение линков -->
-    <link rel="stylesheet" href="ocfilter/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-<link rel="stylesheet" href="css/style.min.css">
-
+    @@include('parts/links.html')
 
     <title>ESTE Lighting</title>
 
 </head>
 <body>
 <!-- Подключение хедера -->
-<header class="header">
-    <div class="container">
-        <div class="header-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="header-logo">
-            <img src="img/svg/logo.svg" alt="">
-        </div>
-        <nav class="header-nav">
-            <div class="nav-head">
-                <img src="img/svg/btn-icon.svg" alt="">
-                <span>
-                    Каталог товаров
-                </span>
-            </div>
-            <div class="nav-category accordion-menu-mob dropdown-menu-hover">
-                <div class="title accordion-head-mob dropdown-head-hover">
-                    <span>
-                        ESTE line
-                    </span>
-                </div>
-                <div class="content accordion-content-mob dropdown-content-hover">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                LED Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Бра
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Настольные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Торшеры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подвесные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Точечные
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подсветки
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                    </ul>
-                    <div>
-                        <span>
-                            ESTE line
-                        </span>
-                        <label class="radio-btn">
-                            <input type="radio" name="category1-sort-by" checked>
-                            <span class="radio-input">Все товары</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category1-sort-by">
-                            <span class="radio-input">Новинки</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category1-sort-by">
-                            <span class="radio-input">Акции</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-category accordion-menu-mob dropdown-menu-hover">
-                <div class="title accordion-head-mob dropdown-head-hover">
-                    <span>
-                        BRAND line
-                    </span>
-                </div>
-                <div class="content accordion-content-mob dropdown-content-hover">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                LED Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Бра
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Настольные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Торшеры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подвесные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Точечные
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подсветки
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                    </ul>
-                    <div>
-                        <span>
-                            BRAND line
-                        </span>
-                        <label class="radio-btn">
-                            <input type="radio" name="category2-sort-by" checked>
-                            <span class="radio-input">Все товары</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category2-sort-by">
-                            <span class="radio-input">Новинки</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category2-sort-by">
-                            <span class="radio-input">Акции</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-category accordion-menu-mob dropdown-menu-hover">
-                <div class="title accordion-head-mob dropdown-head-hover">
-                    <span>
-                        SPECIAL line
-                    </span>
-                </div>
-                <div class="content accordion-content-mob dropdown-content-hover">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                LED Люстры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Бра
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Настольные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Торшеры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подвесные лампы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Точечные
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Подсветки
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Комплектующие
-                            </a>
-                        </li>
-                    </ul>
-                    <div>
-                        <span>
-                            SPECIAL line
-                        </span>
-                        <label class="radio-btn">
-                            <input type="radio" name="category3-sort-by" checked>
-                            <span class="radio-input">Все товары</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category3-sort-by">
-                            <span class="radio-input">Новинки</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="category3-sort-by">
-                            <span class="radio-input">Акции</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="nav-close">
-                <img src="img/svg/close.svg" alt="">
-            </a>
-        </nav>
-        <div class="header-tel">
-            <a href="tel:+380(73)8483992">
-                +380 (73) 848 39 92
-            </a>
-        </div>
-        <div class="header-currency">
-            <div class="currency-dropdown dropdown-menu">
-                <div class="currency-dropdown-head dropdown-head">
-                    <span id="currency-value">
-                        $
-                    </span>
-                </div>
-                <div class="currency-dropdown-content dropdown-content">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="img/svg/currency-icon-1.svg" alt="">
-                                <span>USD $</span>
-                            </a>
-                        </li>
-                        <li class="current">
-                            <a href="#">
-                                <img src="img/svg/currency-icon-2.svg" alt="">
-                                <span>UAH ₴</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="header-language">
-            <div class="language-dropdown dropdown-menu">
-                <div class="language-dropdown-head dropdown-head">
-                    <span id="language-value">
-                        UA
-                    </span>
-                </div>
-                <div class="language-dropdown-content dropdown-content">
-                    <ul>
-                        <li class="current">
-                            <a href="#">
-                                <img src="img/svg/currency-icon-3.svg" alt="">
-                                <span>RU</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/svg/currency-icon-2.svg" alt="">
-                                <span>UA</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="header-login">
-            <a href="#popup-login" class="show-popup"><img src="img/svg/user.svg" alt=""></a>
-        </div>
-        <div class="header-cart">
-            <img src="img/svg/cart.svg" alt="">
-            <span class="product-quantity">3</span>
-        </div>
-        <div class="header-burger-menu">
-            <a href="#" class="burger-menu-close">
-                <img src="img/svg/close.svg" alt="">
-            </a>
-            <div class="container">
-                <div class="burger-menu-search">
-                    <input type="text" placeholder="Поиск...">
-                    <img class="icon" src="img/svg/search.svg" alt="">
-                </div>
-                <div class="burger-menu-btn-mob">
-                    <a class="btn-main catalog-menu" href="#">
-                        <img src="img/svg/btn-icon.svg" alt="">
-                        <span>
-                            Каталог товаров
-                        </span>
-                    </a>
-                </div>
-                <div class="burger-menu-nav">
-                    <div class="nav-left">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    О компании
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-right">
-                        <a href="tel:+380 (73) 848 39 92">+380 (73) 848 39 92</a>
-                        <a href="mailto:estelightning@gmail.com">estelightning@gmail.com</a>
-                        <p>
-                            Пн-Вс 9:00-19:00
-                        </p>
-                        <div>
-                            <a href="#">
-                                <img src="img/svg/instagram_white.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="img/svg/linkedin_white.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="img/svg/telegram_white.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="burger-menu-language">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="img/svg/currency-icon-2.svg" alt="">
-                                <span>
-                                    Українська
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/svg/currency-icon-3.svg" alt="">
-                                <span>
-                                    Русский
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+@@include('parts/header.html')
 
 <main>
     <!--  start head-page  -->
@@ -830,7 +433,7 @@
 
                 </div><!-- /.ocf-container -->  </aside>
             <div class="products-list col-sm-8 col-md-9 col-lg-9">
-                <div class="product-item">
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -840,8 +443,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -851,8 +454,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -862,8 +465,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -873,8 +476,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -884,8 +487,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -895,8 +498,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -906,8 +509,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -917,8 +520,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -928,8 +531,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -939,8 +542,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -950,8 +553,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -961,8 +564,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -972,8 +575,8 @@
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item">
+                </a>
+                <a href="#" class="product-item">
                     <img src="img/products/img-1.png" alt="">
                     <div class="product-content">
                         <p>Підвіс Este 6808/1P Chrome</p>
@@ -983,7 +586,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="products-description">
@@ -1029,174 +632,13 @@
 </main>
 
 <!-- Подключение popup -->
-<div class="popup popup-consultation" id="popup-consultation">
-    <div class="popup-content">
-        <h4 class="popup-title">
-            Введите данные для консультации
-        </h4>
-        <p class="popup-text">
-            Мы свяжемся с вами, чтобы обсудить интересующие вас вопросы
-        </p>
-        <form action="" class="popup-form">
-            <label>
-                <input type="text" placeholder="Имя">
-            </label>
-            <label>
-                <input type="text" placeholder="Фамилия">
-            </label>
-            <label>
-                <input type="number" placeholder="+ 38 (0__) ___ __ __">
-            </label>
-            <label>
-                <input type="email" placeholder=" E-mail">
-            </label>
-            <input class="btn-main" type="submit" value="Отправить запрос на консультацию" data-message="Ваши данные успешно отправлены!">
-        </form>
-        <a href="#" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="popup popup-consultation-success" id="popup-consultation-success">
-    <div class="popup-content">
-        <p class="popup-message">
-
-        </p>
-        <img  class="popup-icon" src="img/svg/success.svg" alt="">
-        <a href="#" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="popup popup-login" id="popup-login">
-    <div class="popup-content">
-        <h4 class="popup-title">
-            Вход в аккаунт
-        </h4>
-        <form action="" class="popup-form">
-            <label>
-                <input type="text" placeholder="+ 38 (0__) ___ __ __">
-            </label>
-            <label>
-                <input type="password" placeholder="Пароль">
-            </label>
-            <label>
-                <input type="checkbox">
-                <span class="checkbox"></span>
-                Запонить меня
-            </label>
-            <input class="btn-main" type="submit" value="Войти" data-message="Вы вошли в аккаунт">
-        </form>
-        <div class="popup-footer">
-            <a href="#popup-login-forgot" class="popup-forgot">Забыли пароль?</a>
-            <span>или</span>
-            <p>Нет аккаунта?&nbsp;
-                <a href="">Регистрация</a>
-            </p>
-
-        </div>
-        <a href="#" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="popup popup-login-forgot" id="popup-login-forgot">
-    <div class="popup-content">
-        <h4 class="popup-title">
-            Забыли пароль?
-        </h4>
-        <p class="popup-text">
-            Введите ваш номер и мы вышлем вам
-            новый пароль
-        </p>
-        <form action="" class="popup-form">
-            <label>
-                <input type="text" placeholder="+ 38 (0__) ___ __ __">
-            </label>
-            <input class="btn-main" type="submit" value="Отправить">
-        </form>
-        <a href="#" class="popup-close">
-            <img src="img/svg/close.svg" alt="">
-        </a>
-    </div>
-</div>
-
-
-
-
+@@include('parts/popup.html')
 
 <!-- Подключение футера -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-logo">
-            <img src="img/svg/footer-logo.svg" alt="">
-        </div>
-        <div class="footer-nav">
-            <div class="footer-left">
-                <div>
-                    <span>
-                        Контакты
-                    </span>
-                    <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
-                    <a href="mailto:estelightning@gmail.com">estelightning@gmail.com</a>
-                    <p>Пн-Вс 9:00-19:00</p>
-                    <div>
-                        <a href="#">
-                            <img src="img/svg/instagram_white.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="img/svg/linkedin_white.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="img/svg/telegram_white.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-middle">
-                <div>
-                    <span>
-                        Коллекции
-                    </span>
-                    <a href="#">ESTE line</a>
-                    <a href="#">BRAND line</a>
-                    <a href="#">SPECIAL line</a>
-                </div>
-            </div>
-            <div class="footer-right">
-                <div>
-                    <span>
-                        Для клиентов
-                    </span>
-                    <a href="#">Оплата и доставка</a>
-                    <a href="#">Способы возврата</a>
-                    <div>
-                        <img src="img/svg/visa.svg" alt="">
-                        <img src="img/svg/mastercard.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copy">
-            © 2022 All rights reserved.
-        </div>
-    </div>
-</footer>
+@@include('parts/footer.html')
 
 <!-- Подключение скриптов -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!--<script src="js/main.min.js"></script>-->
-<script src="js/main.js"></script>
-
-
+@@include('parts/scripts.html')
 
 <!-- ocfilter-->
 <script type="text/javascript">

@@ -98,10 +98,6 @@
     align-items: center;
     margin-bottom: 20px;
 
-    span {
-
-    }
-
     div {
       padding: 5px 10px;
       background: $grafit-3;
@@ -534,11 +530,11 @@
 @media screen and(max-width: 575px) {
   .product-details- {
     &prices {
-      .rrc {
+      flex-wrap: wrap;
 
-      }
-      .guarantee {
+      .rrc-w-100 {
         width: 100%;
+        margin-bottom: 20px;
       }
     }
 
