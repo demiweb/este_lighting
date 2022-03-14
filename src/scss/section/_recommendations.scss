@@ -1,17 +1,29 @@
-.recommendations {
+ .recommendations {
   padding: 100px 0;
 
   h2 {
     margin-bottom: 50px;
   }
 }
-
+.recommendations-swiper {
+  padding: 20px ;
+  box-sizing: border-box;
+  margin: -20px;
+}
 .recommendations-swiper-slide {
   border: 1px solid $grafit-2;
 
   a {
     display: block;
     text-decoration: none;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+
+  }
+  > a {
+    &:hover {
+      box-shadow: 0 0 9px 3px rgba(232, 232, 232, 0.4);
+    }
   }
 
   .img {

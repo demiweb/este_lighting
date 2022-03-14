@@ -22,7 +22,7 @@
 
     <!--  start product-details  -->
     <section class="product-details">
-        <div class="product-details-left">
+        <div class="product-details-left js-anim anim-fadeR">
             <div class="product-details-guarantee">
                 Гарантия 36 месяцев
             </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-details-right">
+        <div class="product-details-right js-anim anim-blur anim-fadeT">
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope
@@ -112,9 +112,8 @@
                   <span class="minus">
                     &#8722;
                   </span>
-                    <span class="quantity">
-                    1
-                  </span>
+                    <input min="0" value="1" type="number" class="quantity"/>
+
                     <span class="plus">
                     &#43;
                   </span>
@@ -244,10 +243,10 @@
     <!--  start recommendations  -->
     <section class="recommendations">
         <div class="container">
-            <h2>
+            <h2 class="js-anim anim-fadeR">
                 Другие товары из коллекции
             </h2>
-            <div class="swiper recommendations-swiper">
+            <div class="swiper recommendations-swiper js-anim anim-fadeT">
                 <div class="swiper-wrapper recommendations-swiper-wrapper">
                     <div class="swiper-slide recommendations-swiper-slide">
                         <a href="#">
@@ -303,7 +302,7 @@
                     </div>
                 </div>
             </div>
-            <div class="recommendations-content">
+            <div class="recommendations-content js-anim anim-blur">
                 <div class="product-item">
                     <div class="img">
                         <img src="img/products/img-1.png" alt="">

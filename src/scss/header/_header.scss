@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 100;
   border-bottom: 1px solid $stroke-dark;
-  transition: all .4s ease;
+  transition: all .4s ease, background-color 0.4s ease;
 
   .container {
     height: 100%;
@@ -20,6 +20,7 @@
 .header- {
   &fixed {
     background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
   }
 
   &burger {
@@ -222,6 +223,7 @@
       top: 0;
       width: 34px;
       height: 34px;
+      transform: translate(0, 38%);
     }
   }
 
@@ -670,5 +672,8 @@
         }
       }
     }
+  }
+  .burger-menu-search .icon {
+    transform: translate(0, 18%);
   }
 }

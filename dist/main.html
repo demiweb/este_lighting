@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Подключение хедера -->
-<header class="header">
+<header class="header js-anim anim-blur">
     <div class="container">
         <div class="header-burger">
             <span></span>
@@ -424,14 +424,14 @@
 <main>
     <!--  start hero  -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="hero-date">
+        <div class="hero-content ">
+            <span class="hero-date js-anim anim-fadeT">
                 Winter 2022
             </span>
-            <h1 class="hero-title">
+            <h1 class="hero-title js-anim anim-fadeT">
                 Este collection
             </h1>
-            <div class="hero-text">
+            <div class="hero-text js-anim anim-fadeT">
                 <div class="h-line"></div>
                 <p>
                     Наша команда знає світло зовні та всередині, впорається із найскладнійшими світловими рішеннями та
@@ -442,7 +442,7 @@
                 <div class="swiper-wrapper swiper-hero-thumb-wrapper">
                     <div class="swiper-slide swiper-hero-thumb-slide">
                         <div class="slide-img">
-                            <img src="img/hero/slide-thumb-1.png" alt="">
+                            <img class="lazyload" data-src="img/hero/slide-thumb-1.png" alt="">
                             <span class="img-caption">
                                 ESTE line
                             </span>
@@ -450,7 +450,7 @@
                     </div>
                     <div class="swiper-slide swiper-hero-thumb-slide">
                         <div class="slide-img">
-                            <img src="img/hero/slide-thumb-2.png" alt="">
+                            <img class="lazyload" data-src="img/hero/slide-thumb-2.png" alt="">
                             <span class="img-caption">
                                 BRAND line
                             </span>
@@ -458,7 +458,7 @@
                     </div>
                     <div class="swiper-slide swiper-hero-thumb-slide">
                         <div class="slide-img">
-                            <img src="img/hero/slide-thumb-3.png" alt="">
+                            <img class="lazyload" data-src="img/hero/slide-thumb-3.png" alt="">
                             <span class="img-caption">
                                 SPECIAL line
                             </span>
@@ -469,42 +469,42 @@
             </div>
             <div class="hero-btn-mob">
                 <a class="btn-main catalog-menu" href="#">
-                    <img src="img/svg/btn-icon.svg" alt="">
+                    <img class="lazyload" data-src="img/svg/btn-icon.svg" alt="">
                     <span>
                         Каталог товаров
                     </span>
                 </a>
             </div>
             <div class="hero-gallery">
-                <a href="#">
-                    <img src="img/hero/slide-thumb-1.png" alt="">
+                <a href="#" class="js-anim anim-fadeR">
+                    <img class="lazyload" data-src="img/hero/slide-thumb-1.png" alt="">
                     <span>ESTE line</span>
                 </a>
-                <a href="#">
-                    <img src="img/hero/slide-thumb-2.png" alt="">
+                <a href="#" class="js-anim anim-fadeR">
+                    <img class="lazyload" data-src="img/hero/slide-thumb-2.png" alt="">
                     <span>BRAND line</span>
                 </a>
-                <a href="#">
-                    <img src="img/hero/slide-thumb-3.png" alt="">
+                <a href="#" class="js-anim anim-fadeR">
+                    <img class="lazyload" data-src="img/hero/slide-thumb-3.png" alt="">
                     <span>SPECIAL line</span>
                 </a>
             </div>
         </div>
-        <div class="swiper swiper-hero">
+        <div class="swiper swiper-hero js-anim anim-left">
             <div class="swiper-wrapper swiper-hero-wrapper">
                 <div class="swiper-slide swiper-hero-slide">
                     <div class="slide-img">
-                        <img src="img/hero/slide-1.png" alt="">
+                        <img class="lazyload" data-src="img/hero/slide-1.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide swiper-hero-slide">
                     <div class="slide-img">
-                        <img src="img/hero/slide-1.png" alt="">
+                        <img class="lazyload" data-src="img/hero/slide-1.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide swiper-hero-slide">
                     <div class="slide-img">
-                        <img src="img/hero/slide-1.png" alt="">
+                        <img class="lazyload" data-src="img/hero/slide-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -515,7 +515,7 @@
                     Смотреть коллекцию
                 </span>
                 <span class="icon">
-                    <img src="img/svg/arrow-right-1.svg" alt="">
+                    <img class="lazyload" data-src="img/svg/arrow-right-1.svg" alt="">
                 </span>
             </a>
         </div>
@@ -525,20 +525,24 @@
     <section class="about-us">
         <div class="container">
             <div class="about-us-top">
-                <div class="img">
-                    <img src="img/about-us/image-1.png" alt="">
+                <div class="img ">
+
+                    <picture>
+                        <source media="(max-width:650px)" srcset="img/about-us/image-3.png">
+                        <img class="lazyload" data-src="img/about-us/image-1.png" alt="Flowers">
+                    </picture>
                 </div>
-                <div class="content">
+                <div class="content ">
                     <svg class="circle" width="461" height="461">
-                            <circle cx="230.5" xy="0" r="230.5" stroke-width="1" fill="transparent">
+                            <circle cx="50%" cy="50%" r="49%" stroke-width="1" fill="transparent">
 
                             </circle>
                     </svg>
-                    <span class="title">
+                    <span class="title js-anim anim-fadeT">
                         ESTE <br>
                         lighting
                     </span>
-                    <div class="text">
+                    <div class="text js-anim anim-blur">
                         <span>
                             о компании
                         </span>
@@ -572,9 +576,9 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="img/about-us/image-2.png" alt="">
+                    <img class="lazyload" data-src="img/about-us/image-2.png" alt="">
                 </div>
-                <div class="text">
+                <div class="text js-anim anim-fadeT">
                         <span>
                             о компании
                         </span>
@@ -597,7 +601,7 @@
 
     <!--  start gallery  -->
     <section class="gallery">
-        <div class="gallery-top">
+        <div class="gallery-top js-anim anim-fadeB">
             <h2>
                 Наши <br>
                 Новинки
@@ -606,35 +610,35 @@
                 GALLERY
             </span>
         </div>
-        <div class="swiper swiper-gallery">
+        <div class="swiper swiper-gallery js-anim anim-blur">
 
             <div class="bg">
-                <img src="img/gallery/bg.png" alt="">
+                <img class="lazyload" data-src="img/gallery/bg.png" alt="">
             </div>
             <div class="swiper-wrapper swiper-gallery-wrapper">
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
                 <div class="swiper-slide swiper-gallery-slide">
-                    <img src="img/gallery/slide-1.png" alt="">
+                    <img class="lazyload" data-src="img/gallery/slide-1.png" alt="">
                 </div>
             </div>
 
@@ -654,15 +658,15 @@
     <!--  start about-company  -->
     <section class="about-company">
         <div class="container">
-            <div class="about-company-content">
-                <span class="about-company-signature">
+            <div class="about-company-content ">
+                <span class="about-company-signature js-anim anim-fadeT">
                     О Компании
                 </span>
-                <h2 class="about-company-title">
+                <h2 class="about-company-title  js-anim anim-fadeT">
                     ESTE <br>
                     lighting
                 </h2>
-                <div class="about-company-text">
+                <div class="about-company-text  js-anim anim-fadeT">
                     <div class="h-line"></div>
                     <div>
                         <p>
@@ -681,12 +685,12 @@
                     </div>
                 </div>
             </div>
-            <div class="about-company-img">
+            <div class="about-company-img  js-anim anim-right">
                 <div class="img-middle">
-                    <img src="img/about-company/img-1.png" alt="">
+                    <img class="lazyload" data-src="img/about-company/img-1.png" alt="">
                 </div>
                 <div class="img-right">
-                    <img src="img/about-company/img-2.png" alt="">
+                    <img class="lazyload" data-src="img/about-company/img-2.png" alt="">
                 </div>
                 <div class="circle-1"></div>
                 <div class="circle-2"></div>
@@ -698,9 +702,9 @@
     <section class="feedback">
         <div class="container">
             <div class="feedback-content">
-                <div class="feedback-left">
+                <div class="feedback-left js-anim anim-right">
                     <div class="bg">
-                        <img src="img/feedback/img-1.png" alt="">
+                        <img class="lazyload" data-src="img/feedback/img-1.png" alt="">
                     </div>
                     <span class="title">
                         Наши <br>
@@ -712,17 +716,17 @@
                     <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
                     <div>
                         <a href="#">
-                            <img src="img/svg/instagram_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/instagram_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/linkedin_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/linkedin_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/telegram_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/telegram_black.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="feedback-right">
+                <div class="feedback-right js-anim anim-fadeT">
                     <span class="title">
                         Заполните Форму,
                         чтобы связаться с нами
@@ -904,6 +908,9 @@
 </footer>
 
 <!-- Подключение скриптов -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

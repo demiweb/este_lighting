@@ -19,7 +19,7 @@
 <main>
     <!--  start head-page  -->
     <section class="head-page">
-        <div class="container container-fluid">
+        <div class="container container-fluid js-anim anim-fadeT">
             <h1 class="head-page-title">
                 Контакты
             </h1>
@@ -45,9 +45,9 @@
     <section class="feedback">
         <div class="container">
             <div class="feedback-content">
-                <div class="feedback-left">
+                <div class="feedback-left js-anim anim-fadeR">
                     <div class="bg">
-                        <img src="img/feedback/img-1.png" alt="">
+                        <img class="lazyload" data-src="img/feedback/img-1.png" alt="">
                     </div>
                     <span class="title">
                         Наши <br>
@@ -59,22 +59,22 @@
                     <a href="tel:+380(73)8483992">+380 (73) 848 39 92</a>
                     <div>
                         <a href="#">
-                            <img src="img/svg/instagram_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/instagram_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/linkedin_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/linkedin_black.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/svg/telegram_black.svg" alt="">
+                            <img class="lazyload" data-src="img/svg/telegram_black.svg" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="feedback-right">
-                    <span class="title">
+                    <span class="title js-anim anim-blur">
                         Заполните Форму,
                         чтобы связаться с нами
                     </span>
-                    <form action="">
+                    <form action="" class="js-anim anim-fadeT">
                         <label>
                             <input type="text" placeholder="Ваше имя">
                         </label>

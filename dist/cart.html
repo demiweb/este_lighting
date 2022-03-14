@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Подключение хедера -->
-<header class="header">
+<header class="header js-anim anim-blur">
     <div class="container">
         <div class="header-burger">
             <span></span>
@@ -424,7 +424,7 @@
 <main>
     <!--  start head-page  -->
     <section class="head-page">
-        <div class="container container-fluid">
+        <div class="container container-fluid js-anim anim-fadeT">
             <h1 class="head-page-title">
                 Корзина
             </h1>
@@ -447,7 +447,7 @@
     </section> <!--  end head-page  -->
 
     <!--  start cart  -->
-    <section class="cart">
+    <section class="cart js-anim anim-blur">
         <div class="container">
             <div class="cart-top">
                 <span class="cart-name">Товар</span>
@@ -457,57 +457,60 @@
             </div>
             <div class="cart-middle">
                 <ul>
-                    <li>
-                        <img src="img/order-history/img-1.png" alt="">
+                    <li class="js-anim anim-fadeT">
+                        <img class="lazyload" data-src="img/order-history/img-1.png" alt="">
                         <span class="name">Підвіс Este 6808/1P Chrome</span>
                         <div class="quantity">
                             <span class="minus">&ndash;</span>
-                            <span class="current">2</span>
+                                                            <input min="0" value="1" type="number" class="current"/>
+
                             <span class="plus">&#43;</span>
                         </div>
                         <span class="price">7307.40 грн</span>
                         <span class="full-price">14 614.80 грн</span>
                         <div class="btn-remove">
                             <button>
-                                <img src="img/svg/trash.svg" alt="">
+                                <img class="lazyload" data-src="img/svg/trash.svg" alt="">
                             </button>
                         </div>
                     </li>
-                    <li>
-                        <img src="img/order-history/img-1.png" alt="">
+                    <li class="js-anim anim-fadeT">
+                        <img class="lazyload" data-src="img/order-history/img-1.png" alt="">
                         <span class="name">Підвіс Este 6808/1P Chrome</span>
                         <div class="quantity">
                             <span class="minus">&ndash;</span>
-                            <span class="current">2</span>
+                                                            <input min="0" value="1" type="number" class="current"/>
+
                             <span class="plus">&#43;</span>
                         </div>
                         <span class="price">7307.40 грн</span>
                         <span class="full-price">7307.40 грн</span>
                         <div class="btn-remove">
                             <button>
-                                <img src="img/svg/trash.svg" alt="">
+                                <img class="lazyload" data-src="img/svg/trash.svg" alt="">
                             </button>
                         </div>
                     </li>
-                    <li>
-                        <img src="img/order-history/img-1.png" alt="">
+                    <li class="js-anim anim-fadeT">
+                        <img class="lazyload" data-src="img/order-history/img-1.png" alt="">
                         <span class="name">Підвіс Este 6808/1P Chrome</span>
                         <div class="quantity">
                             <span class="minus">&ndash;</span>
-                            <span class="current">2</span>
+                                                            <input min="0" value="1" type="number" class="current"/>
+
                             <span class="plus">&#43;</span>
                         </div>
                         <span class="price">7307.40 грн</span>
                         <span class="full-price">14 614.80 грн</span>
                         <div class="btn-remove">
                             <button>
-                                <img src="img/svg/trash.svg" alt="">
+                                <img class="lazyload" data-src="img/svg/trash.svg" alt="">
                             </button>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="cart-bottom">
+            <div class="cart-bottom js-anim anim-top">
                 <ul>
                     <li>
                         <span>Сумма, в наличии</span>
@@ -683,6 +686,9 @@
 </footer>
 
 <!-- Подключение скриптов -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

@@ -66,7 +66,7 @@
           border: 1px solid #fff;
           display: flex;
 
-          span {
+          span, input {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -83,7 +83,10 @@
           }
 
           .current {
-            padding: 0 10px;
+            padding: 0;
+            border: none !important;
+            text-align: center;
+            width: 32px;
           }
         }
 

@@ -195,6 +195,12 @@
 
       .quantity {
         width: 32px;
+        padding: 0;
+        border: none !important;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 

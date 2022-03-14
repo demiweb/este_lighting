@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Подключение хедера -->
-<header class="header">
+<header class="header js-anim anim-blur">
     <div class="container">
         <div class="header-burger">
             <span></span>
@@ -424,7 +424,7 @@
 <main>
     <!--  start head-page  -->
     <section class="head-page">
-        <div class="container">
+        <div class="container js-anim anim-fadeT">
             <h1 class="head-page-title">
                 О компании
             </h1>
@@ -449,19 +449,19 @@
     <!--  start about  -->
     <section class="about">
         <div class="bg">
-            <img src="img/about/bg-img.png" alt="">
+            <img class="lazyload" data-src="img/about/bg-img.png" alt="">
         </div>
         <div class="container">
-            <div class="about-logo">
-                <img src="img/svg/about-logo.svg" alt="">
+            <div class="about-logo js-anim anim-fadeR">
+                <img class="lazyload" data-src="img/svg/about-logo.svg" alt="">
             </div>
-            <div class="about-top">
+            <div class="about-top js-anim anim-fadeT">
                 <q>Наша команда знає світло зовні та всередині, впорається із найскладнійшими світловими рішеннями та
                     реалізує всі Ваші індивідуальні проекти.</q>
                 <span>-Marie Bernmen</span>
                 <span>CEO</span>
             </div>
-            <div class="about-middle">
+            <div class="about-middle js-anim anim-fadeT">
                 <div class="about-middle-left">
                     <div class="h-line"></div>
                     <p>
@@ -476,16 +476,16 @@
                         ставиться до кожного етапу свого ланцюжка поставок.
                     </p>
                 </div>
-                <div class="about-middle-right">
+                <div class="about-middle-right js-anim anim-blur">
                     <div class="img">
-                        <img src="img/about/img-1.png" alt="">
+                        <img class="lazyload" data-src="img/about/img-1.png" alt="">
                     </div>
                     <div class="shadow-circle"></div>
                 </div>
             </div>
-            <div class="about-bottom">
+            <div class="about-bottom js-anim anim-fadeT">
                 <div class="img">
-                    <img src="img/about/img-2.png" alt="">
+                    <img class="lazyload" data-src="img/about/img-2.png" alt="">
                 </div>
                 <div class="circle"></div>
             </div>
@@ -652,6 +652,9 @@
 </footer>
 
 <!-- Подключение скриптов -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
