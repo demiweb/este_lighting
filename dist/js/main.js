@@ -300,7 +300,7 @@ const dropdown = document.querySelectorAll('.dropdown-menu')
 if (!dropdown.length) {
 
 } else if (dropdown.length) {
-    dropdown.forEach(menu => {
+    dropdown.forEach((menu, k) => {
         const title = menu.querySelector('.dropdown-head')
         const content = menu.querySelector('.dropdown-content')
 
@@ -310,11 +310,19 @@ if (!dropdown.length) {
                 title.classList.remove('active');
                 content.classList.remove('active');
             }
-        })
+        });
 
 
         title.addEventListener('click', function () {
-            this.classList.toggle('active')
+            dropdown.forEach((bt, l) => {
+                if (l !== k) {
+                    bt.querySelector('.dropdown-head').classList.remove('active');
+                    bt.querySelector('.dropdown-content').classList.remove('active');
+
+                }
+                });
+
+            this.classList.toggle('active');
 
             // dropdown.forEach(elem => elem.querySelector(content).classList.remove('active'))
 
