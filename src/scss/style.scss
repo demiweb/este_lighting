@@ -12,6 +12,21 @@ img.lazyload, video.lazyload {
   //transition: opacity 0.3s ease, visibility 0.3s ease;
   animation: faddingImgAnim 0.5s ease;
 }
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background: #FAFAFA;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background: #0e5c6d;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
 
 @keyframes faddingImgAnim {

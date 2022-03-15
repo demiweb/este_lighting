@@ -2,9 +2,13 @@
 
 .about-us {
   padding-bottom: 100px;
-  overflow: hidden;
+  //overflow: hidden;
 }
-
+@media screen and (max-width: 1200px) {
+  .about-us {
+    overflow: hidden;
+  }
+}
 .about-us-top {
   width: 100%;
   display: flex;

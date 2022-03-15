@@ -1,7 +1,7 @@
 @import "../common/vars";
 
 .footer {
-  background: $main-dark;
+  background: #25282D;
   padding: 53px 0 46px;
 
   .container {
@@ -75,8 +75,8 @@
 
 .footer-middle {
   width: calc(100% / 3);
-  border-left: 1px solid #1F4651;
-  border-right: 1px solid #1F4651;
+  border-left: 1px solid #3C4046;
+  border-right: 1px solid #3C4046;
   padding-top: 40px;
   margin: 0 auto;
   display: flex;

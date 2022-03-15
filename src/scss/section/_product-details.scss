@@ -3,7 +3,7 @@
 .product-details {
   display: flex;
   height: calc(100vh - 77px);
-  min-height: 825px;
+  min-height: 400px;
   background: $grafit-2;
 }
 
@@ -302,15 +302,11 @@
 }
 
 @media screen and(max-width: 1439px) {
-  .product-details {
-    min-height: 625px;
-  }
+
 }
 
 @media screen and(max-width: 1239px) {
-  .product-details {
-    max-height: 625px;
-  }
+
 }
 
 @media screen and(max-width: 991px) {

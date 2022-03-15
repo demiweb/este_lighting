@@ -140,9 +140,10 @@ new Swiper('.swiper-hero', {
         swiper: {
             el: '.swiper-hero-thumb',
             slidesPerView: 3,
+            autoScrollOffset: 1,
         }
     }
-})
+});
 
 new Swiper('.swiper-gallery', {
     speed: 1000,
@@ -646,4 +647,26 @@ function startParallax() {
     }
 }
 startParallax();
+
+//show seo
+let hiddenCarr = [...document.querySelectorAll('.show-seo')];
+
+function openHideText() {
+    if (hiddenCarr.length) {
+        hiddenCarr.forEach((btn) => {
+            let hidden = btn.dataset.hidden;
+            let show = btn.dataset.show;
+            btn.addEventListener('click', () => {
+                if (btn.closest('.seo-section').classList.contains('visible')) {
+                    btn.closest('.seo-section').classList.remove('visible');
+                    btn.innerHTML = hidden;
+                } else {
+                    btn.closest('.seo-section').classList.add('visible');
+                    btn.innerHTML = show;
+                }
+            })
+        })
+    }
+}
+openHideText();
 
