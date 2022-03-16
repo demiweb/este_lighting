@@ -4788,6 +4788,16 @@ a.radio-btn {
   }
 }
 
+@media screen and (min-width: 526px) {
+  .new-hero ~ .hero {
+    display: none;
+  }
+
+  .new-hero ~ .about-us {
+    margin-top: 50px;
+  }
+}
+
 @media screen and (min-width: 651px) {
   .cart-middle ul li:not(:last-of-type),
   .info-right-content .accordion-content ul li:not(:last-of-type) {
