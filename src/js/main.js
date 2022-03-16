@@ -121,6 +121,44 @@ jsAnimBlocks.forEach((el, k) => {
 //scroll animation
 
 
+let newHero = [...document.querySelectorAll('.new-hero')];
+
+function startNewHeroBlock() {
+    if (newHero.length) {
+        newHero.forEach((blc) => {
+            let block = blc.querySelector('.new-hero__block');
+            let prev = blc.querySelector('.swiper-button-prev');
+            let next = blc.querySelector('.swiper-button-next');
+
+
+            new Swiper(block, {
+
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 800,
+                direction: 'horizontal',
+
+                centeredSlides: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                slideToClickedSlide: true,
+                loop: true,
+
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+            })
+        })
+    }
+}
+
+startNewHeroBlock()
 
 
 
