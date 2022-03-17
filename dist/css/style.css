@@ -4435,6 +4435,15 @@ input:not([type=radio], [type=submit], [type=checkbox], [type=date], [type=reset
           box-sizing: border-box;
 }
 
+.about-us-bottom .img {
+  height: auto;
+  padding-top: 0;
+}
+
+.about-us-bottom .img img {
+  position: static;
+}
+
 .seo-block h1,
 .seo-block h2,
 .seo-block h3,
