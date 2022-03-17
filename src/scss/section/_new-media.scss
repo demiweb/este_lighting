@@ -214,7 +214,11 @@
     width: calc(80% / 4 );
   }
 }
+
 @media screen and (max-width: 992px) {
+  .caterpillar {
+    content: '';
+  }
   .cart {
     padding: 20px 0;
   }
