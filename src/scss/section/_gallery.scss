@@ -5,9 +5,7 @@
   overflow-x: hidden;
 }
 
-
 .gallery-top {
-  padding-left: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,12 +24,14 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     color: transparent;
-    -webkit-text-stroke: 1px $main;
+    -webkit-text-stroke: 1px $color-2;
     margin-right: -159px;
   }
 }
 
 .swiper-gallery {
+  position: relative;
+
   .bg {
     position: absolute;
     top: 0;
@@ -40,44 +40,25 @@
     left: 0;
     z-index: 5;
     pointer-events: none;
-    &::before {
-      width: 36%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-      content: '';
-
-      background: linear-gradient(90deg, rgba(31, 33, 37, 0.9) 0%, rgba(31, 33, 37, 0) 100%);
-
-    }
-    &::after {
-      width: 36%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right:  0;
-      display: inline-block;
-      content: '';
-
-      background: linear-gradient(-90deg, rgba(31, 33, 37, 0.9) 0%, rgba(31, 33, 37, 0) 100%);
-    }
-
     img {
       width: 100%;
       height: 100%;
-      display: none;
     }
   }
 }
 
 .swiper-gallery-wrapper {
-  padding: 80px 0;
+  padding-bottom: 100px;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-gallery-slide {
-
+  transition: all .4s ease;
+  display: flex;
+  justify-content: center;
+  width: 16.64% !important;
   &:hover {
     cursor: pointer;
   }
@@ -85,53 +66,24 @@
   img {
     width: 100%;
     height: 100%;
-    transform: scale(.52);
-    transition: all .4s ease;
-    margin-left: 45%;
   }
 }
 
 .swiper-gallery-slide.swiper-slide {
   &-prev, &-next {
-    img {
-      width: 100%;
-      height: 100%;
-      transform: scale(0.67);
-    }
+    width: 22.10% !important;
   }
-
   &-prev {
-    img {
-      margin-left: 13%;
-    }
   }
-
   &-next {
-    img {
-      margin-left: -13%;
-    }
   }
+}
 
-  &-next + .swiper-gallery-slide{
-    img {
-      margin-left: -45%;
-    }
-  }
+.swiper-gallery-slide.swiper-slide-prev {
+
 }
 
 .swiper-gallery-slide.swiper-slide-active {
-  img {
-    width: 100%;
-    height: 100%;
-    transform: scale(.9);
-    margin: 0;
-  }
+  width: 30.15% !important;
 }
 
-@media screen and(max-width: 991px) {
-  .gallery-top {
-    span {
-      display: none;
-    }
-  }
-}

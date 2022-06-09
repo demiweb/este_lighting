@@ -244,7 +244,7 @@ new Swiper('.swiper-gallery', {
 
     breakpoints: {
         991: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
         0: {
             slidesPerView: 2,
@@ -358,7 +358,7 @@ if (!dropdown.length) {
                     bt.querySelector('.dropdown-content').classList.remove('active');
 
                 }
-                });
+            });
 
             this.classList.toggle('active');
 
@@ -453,6 +453,21 @@ if (!accordionDesc.length) {
     })
 }
 
+let btnBtnCallBack = [...document.querySelectorAll('.feedbackContainer .dib button')];
+
+function openBtnCallBackBlock() {
+    if (btnBtnCallBack.length) {
+        btnBtnCallBack.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.listed-help').classList.toggle('visible');
+            })
+        })
+    }
+}
+
+openBtnCallBackBlock();
+
+
 
 // Навешивание обработчика событий кнопкам для всплытия popup окон
 const showPopupBtn = document.querySelectorAll('.show-popup')
@@ -497,33 +512,6 @@ if (!popup.length) {
         popupContent.addEventListener('click', function (content) {
             content.stopPropagation();
         })
-
-
-        if (successBtn) {
-            successBtn.addEventListener('click', function (btn) {
-                btn.preventDefault();
-
-                const currentPopup = successBtn.closest('.popup');
-                const successPopup = document.getElementById('popup-consultation-success');
-                const popupMessage = successBtn.dataset.message;
-
-                if (currentPopup.classList.contains('popup-login')) {
-                    currentPopup.classList.remove('show');
-
-                    successPopup.classList.add('show');
-                    successPopup.querySelector('.popup-message').innerText = popupMessage;
-                } else if (currentPopup.classList.contains('popup-login-forgot')) {
-                    currentPopup.classList.remove('show');
-
-                    document.getElementById('popup-login').classList.add('show')
-                } else {
-                    currentPopup.classList.remove('show');
-
-                    successPopup.classList.add('show');
-                    successPopup.querySelector('.popup-message').innerText = popupMessage;
-                }
-            })
-        }
 
         if (popupForgot) {
             popupForgot.addEventListener('click', function (forgot) {
@@ -628,26 +616,6 @@ function filterRename(el) {
     })
 }
 
-const addToCartBtn = document.querySelectorAll('.add-to-cart')
-
-if (!addToCartBtn.length) {
-
-} else {
-    if (window.innerWidth > 767) {
-        addToCartBtn.forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                this.innerHTML = 'Добавлено';
-                this.classList.add('added');
-
-                setTimeout(() => {
-                    this.innerHTML = 'В корзину';
-                    this.classList.remove('added');
-                }, 3000)
-            })
-        })
-    }
-}
 
 const horizontalParallax = document.querySelectorAll('.h-parallax');
 
@@ -656,7 +624,7 @@ if (horizontalParallax.length) {
         horizontalParallax.forEach(parallax => {
             let wScroll = parallax.getBoundingClientRect().top
             if (wScroll < 800) {
-                parallax.style.transform = `translateX(${0 + wScroll / 1.3}px)`
+                parallax.style.transform = `translateX(${0 + wScroll / 1.6}px)`
             }
         })
     })
@@ -716,3 +684,289 @@ function openHideText() {
 }
 openHideText();
 
+//preloading
+
+let preloader = document.querySelector('.preloader');
+
+function offPreloader() {
+    if (preloader) {
+        setInterval(() => {
+            if (document.readyState === "complete") {
+                preloader.classList.add('hides');
+            }
+        }, 800)
+    }
+}
+
+offPreloader();
+
+$(document).ready(function() {
+    // Currency
+    $('#form-currency a').on('click', function(e) {
+        e.preventDefault();
+
+        $('#form-currency input[name=\'code\']').val($(this).attr('data-name'));
+
+        $('#form-currency').submit();
+    });
+
+    /* Search */
+    $('#search input[name=\'search\']').next().on('click', function() {
+
+        var url = $('base').attr('href') + 'index.php?route=product/search';
+
+        var value = $('header #search input[name=\'search\']').val();
+
+        if (value) {
+            url += '&search=' + encodeURIComponent(value);
+        }
+
+        location = url;
+
+        return false;
+    });
+
+    $('#search input[name=\'search\']').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('header #search input[name=\'search\']').next().trigger('click');
+        }
+    });
+
+    $('#menu-search input[name=\'menu_search\']').next().on('click', function() {
+
+        var url = $('base').attr('href') + 'index.php?route=product/search';
+
+        var value = $('header #menu-search input[name=\'menu_search\']').val();
+
+        if (value) {
+            url += '&search=' + encodeURIComponent(value);
+        }
+
+        location = url;
+
+        return false;
+    });
+
+    $('#menu-search input[name=\'menu_search\']').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('header #menu-search input[name=\'menu_search\']').next().trigger('click');
+        }
+    });
+
+    $('span.minus').on('click', function() {
+        var f = $(this).next('.quantity');
+        var q = parseInt(f.val());
+
+        if(q > 1) {
+            $(f).val(q - 1);
+        }
+    });
+
+    $('span.plus').on('click', function() {
+        var f = $(this).prev('.quantity');
+        var q = parseInt(f.val());
+
+        $(f).val(q + 1);
+    });
+
+    $('#send-contact-form').on('click', function() {
+        $.ajax({
+            url: 'index.php?route=extension/module/contact/send',
+            type: 'post',
+            dataType: 'json',
+            data: $("#send-contact").serialize(),
+            success: function(json) {
+                $('.text-danger').remove();
+
+                if (json['error']) {
+                    if (json['error']['name']) {
+                        $('#contact-name').after('<span class="text-danger">' + json['error']['name'] + '</span>');
+                    }
+
+                    if (json['error']['telephone']) {
+                        $('#contact-telephone').after('<span class="text-danger">' + json['error']['telephone'] + '</span>');
+                    }
+
+                    if (json['error']['text']) {
+                        $('#contact-text').after('<span class="text-danger">' + json['error']['text'] + '</span>');
+                    }
+                }
+
+                if (json['success']) {
+
+                    $('#popup-success .popup-message').load('index.php?route=common/notify/success');
+
+                    $('body').addClass('no-scroll');
+
+                    $('#send-contact input[name=\'name\']').val('');
+                    $('#send-contact input[name=\'telephone\']').val('');
+                    $('#send-contact input[name=\'text\']').val('');
+                }
+            }
+        });
+
+        return false;
+    });
+
+    $('#button-cart').on('click', function() {
+
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+            data: $('#product input[type=\'text\'], #product input[type=\'number\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+            dataType: 'json',
+            success: function(json) {
+
+                if (json['error']) {
+                    if (json['error']['option']) {
+                        for (i in json['error']['option']) {
+                            var element = $('#input-option' + i.replace('_', '-'));
+
+                            if (element.parent().hasClass('input-group')) {
+                                element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            } else {
+                                element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            }
+                        }
+                    }
+
+                    if (json['error']['recurring']) {
+                        $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                    }
+
+                    // Highlight any found errors
+                    $('.text-danger').parent().addClass('has-error');
+                }
+
+                if (json['success']) {
+                    $('#button-cart>span').text($('#button-cart').attr('data-text'));
+
+                    $('#popup-success .popup-message').html(json['success']);
+
+
+                    $('#cart>a>.product-quantity').html(json['total']);
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+
+        return false;
+    });
+
+    $('.phone').mask('+ 38 (099) 999 99 99');
+
+    $('#form-login input').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('#action-login').trigger('click');
+        }
+    });
+
+    $('#action-login').click(function() {
+        $.ajax({
+            url: 'index.php?route=common/login/login',
+            type: 'post',
+            data: $('#form-login input[type=\'text\'], #form-login input[type=\'password\']'),
+            dataType: 'json',
+            success: function(json) {
+                $('.text-danger').remove();
+
+                if(json['islogged']){
+                    window.location.href = "index.php?route=account/account";
+                }
+
+                if (json['error']) {
+                    if (json['error']['telephone']) {
+                        $('#login-telephone').after('<span class="text-danger">' + json['error']['telephone'] + '</span>');
+                    }
+
+                    if (json['error']['password']) {
+                        $('#login-password').after('<span class="text-danger">' + json['error']['password'] + '</span>');
+                    }
+
+                    if (json['error']['login']) {
+                        $('#action-login').after('<span class="text-danger">' + json['error']['login'] + '</span>');
+                    }
+
+                    if (json['error']['approved']) {
+                        $('#action-login').after('<span class="text-danger">' + json['error']['approved'] + '</span>');
+                    }
+                }
+
+                if(json['success']){
+                    $('#popup-success .popup-message').html(json['success']);
+
+
+                    setTimeout(function () {
+                        window.location.href = location.href;
+                    }, 2000);
+                }
+
+            }
+        });
+
+        return false;
+    });
+
+    $('#form-forgotten input').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('#action-forgot').trigger('click');
+        }
+    });
+
+    $('#action-forgot').click(function() {
+        $.ajax({
+            url: 'index.php?route=common/login/forgot',
+            type: 'post',
+            data: $('#form-forgotten input[type=\'text\']'),
+            dataType: 'json',
+            success: function(json) {
+                $('.text-danger').remove();
+
+                if (json['error']) {
+                    if (json['error']['telephone']) {
+                        $('#forgot-telephone').parent().after('<span class="text-danger">' + json['error']['telephone'] + '</span>');
+                    }
+                }
+
+                if(json['success']){
+                    $('#popup-success .popup-message').html(json['success']);
+                    $('#popup-login-forgot').removeClass('show');
+
+                }
+
+            }
+        });
+
+        return false;
+    });
+});
+
+var cart = {
+    'add': function(product_id, quantity) {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+            data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            dataType: 'json',
+            success: function(json) {
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
+
+                if (json['success']) {
+                    //json['success']
+
+                    $('#popup-success .popup-message').html(json['success']);
+
+
+                    $('#cart>a>.product-quantity').html(json['total']);
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    }
+}
